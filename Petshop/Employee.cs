@@ -19,6 +19,7 @@ namespace Petshop
         private MySqlCommand cmd;
         private MySqlDataReader myReader;
         private MySqlDataAdapter mySqlDataAdapter;
+        //Hii this is new!
         public Employee()
         {
 
