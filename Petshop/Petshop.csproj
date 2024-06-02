@@ -105,6 +105,12 @@
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="empDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empDash.Designer.cs">
+      <DependentUpon>empDash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empDash.resx">
+      <DependentUpon>empDash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
