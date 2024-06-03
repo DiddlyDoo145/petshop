@@ -91,3 +91,5 @@ C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.csproj.CoreCompileInputs
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.csproj.CopyComplete
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.exe
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.pdb
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empOne.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empTwo.resources
