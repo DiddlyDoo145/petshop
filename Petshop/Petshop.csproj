@@ -117,6 +117,18 @@
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="empOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empOne.Designer.cs">
+      <DependentUpon>empOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="empTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empTwo.Designer.cs">
+      <DependentUpon>empTwo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empOne.resx">
+      <DependentUpon>empOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empTwo.resx">
+      <DependentUpon>empTwo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
