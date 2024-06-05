@@ -42,20 +42,35 @@ namespace Petshop
             this.Tag = childForm;
             //childForm.BringToFront();
             childForm.Show();
-            childForm.Size = new Size(Convert.ToInt32(childForm.Width * 1.155), Convert.ToInt32(childForm.Height * 1.096));
+            childForm.Size = new Size(1335, 672);
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Location = new Point(xpos, ypos);
         }
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        private void attendanceBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm1(new empOne(), 5, 110);
+            OpenChildForm1(new empAttendance(), 5, 110);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void payrollBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm1(new empTwo(), 5, 110);
+            OpenChildForm1(new empPayroll(), 5, 110);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm1(new empManage(), 5, 110);
+        }
+
+        private void recordBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm1(new empAttendanceRecord(), 5, 110);
+        }
+
+        private void positionMngmntBtn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm1(new empPosition(), 5, 110);
         }
     }
 }
