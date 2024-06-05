@@ -21,7 +21,7 @@ namespace Practice1
         public void Initialize()
         {
             string connectionString;
-            connectionString = "Server=localhost; Database=petshopdb; Port=3306; User=root; Password=''";
+            connectionString = "Server=localhost; Database=petshop ; Port=3306; User=root; Password=''";
             myconnect = new MySqlConnection(connectionString);
         }
 
