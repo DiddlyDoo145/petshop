@@ -29,54 +29,69 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.positionMngmntBtn = new System.Windows.Forms.Button();
+            this.payrollBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.attendanceBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
+            this.recordBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.recordBtn);
+            this.panel2.Controls.Add(this.positionMngmntBtn);
+            this.panel2.Controls.Add(this.payrollBtn);
             this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.attendanceBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1844, 75);
+            this.panel2.Size = new System.Drawing.Size(1796, 75);
             this.panel2.TabIndex = 7;
             // 
-            // button3
+            // positionMngmntBtn
             // 
-            this.button3.Location = new System.Drawing.Point(1197, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(590, 66);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.positionMngmntBtn.Location = new System.Drawing.Point(1080, 3);
+            this.positionMngmntBtn.Name = "positionMngmntBtn";
+            this.positionMngmntBtn.Size = new System.Drawing.Size(350, 66);
+            this.positionMngmntBtn.TabIndex = 9;
+            this.positionMngmntBtn.Text = "Manage Position";
+            this.positionMngmntBtn.UseVisualStyleBackColor = true;
+            this.positionMngmntBtn.Click += new System.EventHandler(this.positionMngmntBtn_Click);
             // 
-            // button1
+            // payrollBtn
             // 
-            this.button1.Location = new System.Drawing.Point(5, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(590, 66);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.payrollBtn.Location = new System.Drawing.Point(368, 3);
+            this.payrollBtn.Name = "payrollBtn";
+            this.payrollBtn.Size = new System.Drawing.Size(350, 66);
+            this.payrollBtn.TabIndex = 8;
+            this.payrollBtn.Text = "Payroll";
+            this.payrollBtn.UseVisualStyleBackColor = true;
+            this.payrollBtn.Click += new System.EventHandler(this.payrollBtn_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(601, 6);
+            this.button2.Location = new System.Drawing.Point(724, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(590, 66);
+            this.button2.Size = new System.Drawing.Size(350, 66);
             this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
+            this.button2.Text = "MANAGE EMPLOYEE";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // attendanceBtn
+            // 
+            this.attendanceBtn.Location = new System.Drawing.Point(12, 3);
+            this.attendanceBtn.Name = "attendanceBtn";
+            this.attendanceBtn.Size = new System.Drawing.Size(350, 66);
+            this.attendanceBtn.TabIndex = 7;
+            this.attendanceBtn.Text = "Attendance";
+            this.attendanceBtn.UseVisualStyleBackColor = true;
+            this.attendanceBtn.Click += new System.EventHandler(this.attendanceBtn_Click);
             // 
             // panel4
             // 
@@ -86,7 +101,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1844, 57);
+            this.panel4.Size = new System.Drawing.Size(1796, 57);
             this.panel4.TabIndex = 6;
             // 
             // label26
@@ -100,12 +115,22 @@
             this.label26.TabIndex = 2;
             this.label26.Text = "Employee Management";
             // 
+            // recordBtn
+            // 
+            this.recordBtn.Location = new System.Drawing.Point(1436, 3);
+            this.recordBtn.Name = "recordBtn";
+            this.recordBtn.Size = new System.Drawing.Size(350, 66);
+            this.recordBtn.TabIndex = 10;
+            this.recordBtn.Text = "Attendance Records";
+            this.recordBtn.UseVisualStyleBackColor = true;
+            this.recordBtn.Click += new System.EventHandler(this.recordBtn_Click);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1844, 965);
+            this.BackColor = System.Drawing.Color.SeaGreen;
+            this.ClientSize = new System.Drawing.Size(1796, 965);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -122,10 +147,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button attendanceBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button positionMngmntBtn;
+        private System.Windows.Forms.Button payrollBtn;
+        private System.Windows.Forms.Button recordBtn;
     }
 }

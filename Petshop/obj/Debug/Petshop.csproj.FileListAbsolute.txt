@@ -80,7 +80,6 @@ C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.Runtime.CompilerServices.
 C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.csproj.AssemblyReference.cache
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Customer.resources
-C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empDash.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Employee.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Login.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Home.resources
@@ -91,5 +90,9 @@ C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.csproj.CoreCompileInputs
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.csproj.CopyComplete
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.exe
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.pdb
-C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empOne.resources
-C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empTwo.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empAttendanceRecord.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empManage.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empPayroll.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empAttendance.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.empPosition.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.attendance.resources

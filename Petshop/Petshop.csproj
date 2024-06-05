@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="attendance.Designer.cs">
+      <DependentUpon>attendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conclass.cs" />
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
@@ -105,11 +111,29 @@
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="empDash.cs">
+    <Compile Include="empAttendanceRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="empDash.Designer.cs">
-      <DependentUpon>empDash.cs</DependentUpon>
+    <Compile Include="empAttendanceRecord.Designer.cs">
+      <DependentUpon>empAttendanceRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="empPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empPosition.Designer.cs">
+      <DependentUpon>empPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="empManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empManage.Designer.cs">
+      <DependentUpon>empManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="empPayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empPayroll.Designer.cs">
+      <DependentUpon>empPayroll.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
@@ -117,17 +141,11 @@
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="empOne.cs">
+    <Compile Include="empAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="empOne.Designer.cs">
-      <DependentUpon>empOne.cs</DependentUpon>
-    </Compile>
-    <Compile Include="empTwo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="empTwo.Designer.cs">
-      <DependentUpon>empTwo.cs</DependentUpon>
+    <Compile Include="empAttendance.Designer.cs">
+      <DependentUpon>empAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -149,20 +167,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="attendance.resx">
+      <DependentUpon>attendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="empDash.resx">
-      <DependentUpon>empDash.cs</DependentUpon>
+    <EmbeddedResource Include="empAttendanceRecord.resx">
+      <DependentUpon>empAttendanceRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empPosition.resx">
+      <DependentUpon>empPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empManage.resx">
+      <DependentUpon>empManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empPayroll.resx">
+      <DependentUpon>empPayroll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="empOne.resx">
-      <DependentUpon>empOne.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="empTwo.resx">
-      <DependentUpon>empTwo.cs</DependentUpon>
+    <EmbeddedResource Include="empAttendance.resx">
+      <DependentUpon>empAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
