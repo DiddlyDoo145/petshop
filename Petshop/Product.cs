@@ -45,7 +45,7 @@ namespace Petshop
 
         private void productCategory_Click(object sender, EventArgs e)
         {
-            OpenChildForm1(new ProductsData(), 10, 95);
+            OpenChildForm1(new ProductsData(), 10, 95); 
         }
     }
 }
