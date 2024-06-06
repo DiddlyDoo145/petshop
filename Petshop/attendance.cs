@@ -18,6 +18,7 @@ namespace Petshop
         private MySqlDataReader myReader, myReader1, myReader2;
         public Label _Name;
         public Label _Desc;
+        public Label _No;
         public Label _Id;
         public PictureBox _Img;
         private DateTime _Date = DateTime.Now;
@@ -26,6 +27,7 @@ namespace Petshop
             InitializeComponent();
             _Name = empName;
             _Desc = empDesc;
+            _No = empNo;
             _Id = empId;
         }
         #region Properties
@@ -34,6 +36,7 @@ namespace Petshop
         private string _name;
         private string _id;
         private string _desc;
+        private string _no;
         private Image _img;
 
         [Category("Custom Props")]
@@ -110,12 +113,18 @@ namespace Petshop
             set { _id = value; empId.Text = value; }
         }
 
-
         [Category("Custom Props")]
         public string Desc
         {
             get { return _desc; }
             set { _desc = value; empDesc.Text = value; }
+        }
+
+        [Category("Custom Props")]
+        public string No
+        {
+            get { return _no; }
+            set { _desc = value; empNo.Text = value; }
         }
         #endregion
     }

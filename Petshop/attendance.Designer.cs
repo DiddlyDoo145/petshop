@@ -35,6 +35,9 @@
             this.empDesc = new System.Windows.Forms.Label();
             this.empName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.empNo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,9 +83,9 @@
             // 
             this.empDesc.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empDesc.ForeColor = System.Drawing.Color.Black;
-            this.empDesc.Location = new System.Drawing.Point(242, 100);
+            this.empDesc.Location = new System.Drawing.Point(315, 98);
             this.empDesc.Name = "empDesc";
-            this.empDesc.Size = new System.Drawing.Size(269, 34);
+            this.empDesc.Size = new System.Drawing.Size(214, 28);
             this.empDesc.TabIndex = 6;
             this.empDesc.Text = "Position";
             // 
@@ -106,11 +109,44 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // empNo
+            // 
+            this.empNo.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empNo.ForeColor = System.Drawing.Color.Black;
+            this.empNo.Location = new System.Drawing.Point(388, 126);
+            this.empNo.Name = "empNo";
+            this.empNo.Size = new System.Drawing.Size(137, 28);
+            this.empNo.TabIndex = 11;
+            this.empNo.Text = "Position";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(228, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 28);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Job Title:";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(228, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 28);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Contact Number:";
+            // 
             // attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.empNo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.absent);
             this.Controls.Add(this.present);
@@ -133,5 +169,8 @@
         private System.Windows.Forms.Label empDesc;
         private System.Windows.Forms.Label empName;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label empNo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

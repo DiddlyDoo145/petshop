@@ -32,7 +32,7 @@ namespace Petshop
             attendanceFl.Controls.Clear();
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, employee.employee_fname, employee.employee_lname, position.position_desc FROM employee RIGHT JOIN position ON employee.position_id = position.position_id WHERE employee.employee_id > '0'", dbConnect.myconnect);
+            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, employee.employee_fname, employee.employee_lname, employee.employee_cNumber, position.position_desc FROM employee RIGHT JOIN position ON employee.position_id = position.position_id WHERE employee.employee_id > '0'", dbConnect.myconnect);
             myReader = cmd.ExecuteReader();
             while (myReader.Read())
             {
@@ -46,6 +46,7 @@ namespace Petshop
                     employeeAttendance[i] = new attendance();
                     employeeAttendance[i].employeeName = myReader["employee_fname"].ToString() + " " + myReader["employee_lname"].ToString();
                     employeeAttendance[i].Desc = myReader["position_desc"].ToString();
+                    employeeAttendance[i].No = myReader["employee_cNumber"].ToString();
                     employeeAttendance[i].Id = myReader["employee_id"].ToString();
                     attendanceFl.Controls.Add(employeeAttendance[i]);
                 }
