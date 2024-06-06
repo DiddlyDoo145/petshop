@@ -138,7 +138,7 @@ namespace Petshop
             dbConnect.OpenConnection();
             cmd = new MySqlCommand("INSERT INTO product (product_name, pCategory_id, product_price, product_stock, strCategory_id) VALUES ('"+productname.Text+"', '"+pCategory_ID.Text+"', '"+product_price.Text+"', '"+product_stock.Text+"', '"+strCategory_ID.Text+"')", dbConnect.myconnect);
             myReader = cmd.ExecuteReader();
-            MessageBox.Show("Added Successfully", "Success");
+            MessageBox.Show("New Product Successfully Added", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dbConnect.CloseConnection();
             productname.Clear();
             product_price.Clear();

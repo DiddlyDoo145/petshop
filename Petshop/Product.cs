@@ -38,24 +38,14 @@ namespace Petshop
             childForm.Location = new Point(xpos, ypos);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void productData_Click(object sender, EventArgs e)
         {
             OpenChildForm1(new ProductsData(), 10, 95);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void productCategory_Click(object sender, EventArgs e)
         {
-            OpenChildForm1(new ProductCategory(), 10, 95);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            OpenChildForm1(new storeCategory(), 10, 95);
+            OpenChildForm1(new ProductsData(), 10, 95);
         }
     }
 }
