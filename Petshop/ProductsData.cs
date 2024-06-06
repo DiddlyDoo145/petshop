@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MaterialSkin.Controls;
+using MySql.Data.MySqlClient;
 using Practice1;
 using System;
 using System.Collections.Generic;
@@ -278,10 +279,11 @@ namespace Petshop
             {
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
-                cmd = new MySqlCommand("DELETE FROM product WHERE product_id = @id", dbConnect.myconnect);
-                cmd.Parameters.AddWithValue("@id", product_id);
+                cmd = new MySqlCommand("DELETE FROM product WHERE product_id = @id AND ", dbConnect.myconnect);
+                cmd.Parameters.AddWithValue("@id", product_id.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Deleted Successfully", "Success");
+               /* MessageBox.Show("Deleted Successfully", "Success");*/
+                MaterialMessageBox.Show("Deleted Successfully", "Success");
                 dbConnect.CloseConnection();
                 productname.Clear();
                 product_price.Clear();
