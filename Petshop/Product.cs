@@ -12,14 +12,10 @@ namespace Petshop
 {
     public partial class Product : Form
     {
-        private Form currentchildForm1;
         public Product()
         {
             InitializeComponent();
         }
-
-       
-
         private void OpenChildForm1(Form childForm, int xpos, int ypos)
         {
             if (currentchildForm1 != null)
@@ -47,5 +43,6 @@ namespace Petshop
         {
             OpenChildForm1(new ProductsData(), 10, 95); 
         }
+
     }
 }
