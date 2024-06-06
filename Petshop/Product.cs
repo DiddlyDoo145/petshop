@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Petshop
 {
     public partial class Product : Form
     {
+        private Form currentchildForm1;
         public Product()
         {
             InitializeComponent();
