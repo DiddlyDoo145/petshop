@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -165,29 +165,11 @@
     <Compile Include="Product.Designer.cs">
       <DependentUpon>Product.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductCategory.Designer.cs">
-      <DependentUpon>ProductCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductsData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductsData.Designer.cs">
-      <DependentUpon>ProductsData.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="attendance.resx">
       <DependentUpon>attendance.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="storeCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="storeCategory.Designer.cs">
-      <DependentUpon>storeCategory.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,12 +200,6 @@
     <EmbeddedResource Include="Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductCategory.resx">
-      <DependentUpon>ProductCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProductsData.resx">
-      <DependentUpon>ProductsData.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -233,9 +209,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="storeCategory.resx">
-      <DependentUpon>storeCategory.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
