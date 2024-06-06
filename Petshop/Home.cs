@@ -48,5 +48,10 @@ namespace Petshop
         {
             OpenChildForm(new Customer(), 180, 70);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
