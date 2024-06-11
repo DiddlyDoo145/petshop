@@ -30,11 +30,12 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.product = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.customer = new System.Windows.Forms.Button();
+            this.product = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -64,33 +66,15 @@
             this.panel1.Size = new System.Drawing.Size(232, 1102);
             this.panel1.TabIndex = 1;
             // 
-            // product
+            // button2
             // 
-            this.product.Location = new System.Drawing.Point(32, 607);
-            this.product.Name = "product";
-            this.product.Size = new System.Drawing.Size(165, 53);
-            this.product.TabIndex = 2;
-            this.product.Text = "Product";
-            this.product.UseVisualStyleBackColor = true;
-            this.product.Click += new System.EventHandler(this.product_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(32, 508);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 53);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Billing";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(32, 880);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 53);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Log-out";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(32, 869);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 53);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Analytics";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.analytics_Click);
             // 
             // button5
             // 
@@ -101,6 +85,24 @@
             this.button5.Text = "Home";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(32, 959);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(165, 53);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Log-out";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(32, 508);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(165, 53);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Billing";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // customer
             // 
             this.customer.Location = new System.Drawing.Point(32, 694);
@@ -110,6 +112,16 @@
             this.customer.Text = "Customer";
             this.customer.UseVisualStyleBackColor = true;
             this.customer.Click += new System.EventHandler(this.customer_Click);
+            // 
+            // product
+            // 
+            this.product.Location = new System.Drawing.Point(32, 607);
+            this.product.Name = "product";
+            this.product.Size = new System.Drawing.Size(165, 53);
+            this.product.TabIndex = 2;
+            this.product.Text = "Product";
+            this.product.UseVisualStyleBackColor = true;
+            this.product.Click += new System.EventHandler(this.product_Click);
             // 
             // panel2
             // 
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button customer;
         private System.Windows.Forms.Button product;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
     }
 }

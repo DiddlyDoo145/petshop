@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScottPlot;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +48,11 @@ namespace Petshop
         private void customer_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Customer(), 180, 70);
+        }
+
+        private void analytics_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Analytics(), 180, 70);
         }
     }
 }

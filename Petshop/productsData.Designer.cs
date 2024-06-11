@@ -68,7 +68,7 @@
             // 
             this.productname.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productname.Location = new System.Drawing.Point(87, 71);
-            this.productname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productname.Margin = new System.Windows.Forms.Padding(4);
             this.productname.Multiline = true;
             this.productname.Name = "productname";
             this.productname.Size = new System.Drawing.Size(200, 30);
@@ -78,7 +78,7 @@
             // 
             this.product_price.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.product_price.Location = new System.Drawing.Point(577, 71);
-            this.product_price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.product_price.Margin = new System.Windows.Forms.Padding(4);
             this.product_price.Multiline = true;
             this.product_price.Name = "product_price";
             this.product_price.Size = new System.Drawing.Size(207, 30);
@@ -89,7 +89,7 @@
             // 
             this.product_stock.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.product_stock.Location = new System.Drawing.Point(819, 71);
-            this.product_stock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.product_stock.Margin = new System.Windows.Forms.Padding(4);
             this.product_stock.Multiline = true;
             this.product_stock.Name = "product_stock";
             this.product_stock.Size = new System.Drawing.Size(207, 30);
@@ -104,7 +104,7 @@
             this.pCategory.Items.AddRange(new object[] {
             "SELECT CATEGORY"});
             this.pCategory.Location = new System.Drawing.Point(327, 71);
-            this.pCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pCategory.Margin = new System.Windows.Forms.Padding(4);
             this.pCategory.Name = "pCategory";
             this.pCategory.Size = new System.Drawing.Size(191, 29);
             this.pCategory.TabIndex = 3;
@@ -118,7 +118,7 @@
             this.strCategory.Items.AddRange(new object[] {
             "SELECT CATEGORY"});
             this.strCategory.Location = new System.Drawing.Point(1060, 71);
-            this.strCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.strCategory.Margin = new System.Windows.Forms.Padding(4);
             this.strCategory.Name = "strCategory";
             this.strCategory.Size = new System.Drawing.Size(225, 29);
             this.strCategory.TabIndex = 4;
@@ -130,7 +130,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(695, 150);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 37);
             this.button2.TabIndex = 14;
@@ -144,7 +144,7 @@
             this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit.Location = new System.Drawing.Point(507, 150);
-            this.Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Edit.Margin = new System.Windows.Forms.Padding(4);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(156, 37);
             this.Edit.TabIndex = 13;
@@ -158,7 +158,7 @@
             this.AddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCategory.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddCategory.Location = new System.Drawing.Point(327, 150);
-            this.AddCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddCategory.Margin = new System.Windows.Forms.Padding(4);
             this.AddCategory.Name = "AddCategory";
             this.AddCategory.Size = new System.Drawing.Size(156, 37);
             this.AddCategory.TabIndex = 12;
@@ -193,7 +193,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ProductTable.DefaultCellStyle = dataGridViewCellStyle2;
             this.ProductTable.Location = new System.Drawing.Point(92, 310);
-            this.ProductTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProductTable.Margin = new System.Windows.Forms.Padding(4);
             this.ProductTable.Name = "ProductTable";
             this.ProductTable.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -347,7 +347,7 @@
             this.Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reset.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reset.Location = new System.Drawing.Point(876, 150);
-            this.Reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Reset.Margin = new System.Windows.Forms.Padding(4);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(156, 37);
             this.Reset.TabIndex = 25;
@@ -381,7 +381,7 @@
             this.Controls.Add(this.product_price);
             this.Controls.Add(this.productname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductsData";
             this.Text = "ProductsData";
             this.Load += new System.EventHandler(this.ProductsData_Load);
