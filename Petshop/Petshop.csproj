@@ -189,14 +189,38 @@
     <Compile Include="Product.Designer.cs">
       <DependentUpon>Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCategory.Designer.cs">
+      <DependentUpon>ProductCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="productsData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="productsData.Designer.cs">
       <DependentUpon>productsData.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductTransac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductTransac.Designer.cs">
+      <DependentUpon>ProductTransac.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="attendance.resx">
       <DependentUpon>attendance.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,8 +254,14 @@
     <EmbeddedResource Include="Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductCategory.resx">
+      <DependentUpon>ProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="productsData.resx">
       <DependentUpon>productsData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductTransac.resx">
+      <DependentUpon>ProductTransac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -242,6 +272,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

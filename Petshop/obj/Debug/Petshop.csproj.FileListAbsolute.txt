@@ -163,3 +163,7 @@ C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\bin\Debug\System.
 C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\bin\Debug\System.Text.Json.xml
 C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\bin\Debug\System.ValueTuple.xml
 C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\bin\Debug\MaterialSkin.dll
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.productcategory.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.ProductTransac.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Purchase.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Services.resources
