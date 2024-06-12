@@ -29,35 +29,47 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.recordBtn = new System.Windows.Forms.Button();
             this.positionMngmntBtn = new System.Windows.Forms.Button();
             this.payrollBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.attendanceBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
-            this.recordBtn = new System.Windows.Forms.Button();
+            this.oT = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.oT);
             this.panel2.Controls.Add(this.recordBtn);
+            this.panel2.Controls.Add(this.attendanceBtn);
             this.panel2.Controls.Add(this.positionMngmntBtn);
             this.panel2.Controls.Add(this.payrollBtn);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.attendanceBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 57);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1796, 75);
             this.panel2.TabIndex = 7;
             // 
+            // recordBtn
+            // 
+            this.recordBtn.Location = new System.Drawing.Point(1196, 3);
+            this.recordBtn.Name = "recordBtn";
+            this.recordBtn.Size = new System.Drawing.Size(290, 66);
+            this.recordBtn.TabIndex = 10;
+            this.recordBtn.Text = "Attendance Records";
+            this.recordBtn.UseVisualStyleBackColor = true;
+            this.recordBtn.Click += new System.EventHandler(this.recordBtn_Click);
+            // 
             // positionMngmntBtn
             // 
-            this.positionMngmntBtn.Location = new System.Drawing.Point(1080, 3);
+            this.positionMngmntBtn.Location = new System.Drawing.Point(900, 3);
             this.positionMngmntBtn.Name = "positionMngmntBtn";
-            this.positionMngmntBtn.Size = new System.Drawing.Size(350, 66);
+            this.positionMngmntBtn.Size = new System.Drawing.Size(290, 66);
             this.positionMngmntBtn.TabIndex = 9;
             this.positionMngmntBtn.Text = "Manage Position";
             this.positionMngmntBtn.UseVisualStyleBackColor = true;
@@ -65,9 +77,9 @@
             // 
             // payrollBtn
             // 
-            this.payrollBtn.Location = new System.Drawing.Point(368, 3);
+            this.payrollBtn.Location = new System.Drawing.Point(308, 3);
             this.payrollBtn.Name = "payrollBtn";
-            this.payrollBtn.Size = new System.Drawing.Size(350, 66);
+            this.payrollBtn.Size = new System.Drawing.Size(290, 66);
             this.payrollBtn.TabIndex = 8;
             this.payrollBtn.Text = "Payroll";
             this.payrollBtn.UseVisualStyleBackColor = true;
@@ -75,9 +87,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(724, 3);
+            this.button2.Location = new System.Drawing.Point(604, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(350, 66);
+            this.button2.Size = new System.Drawing.Size(290, 66);
             this.button2.TabIndex = 6;
             this.button2.Text = "MANAGE EMPLOYEE";
             this.button2.UseVisualStyleBackColor = true;
@@ -87,7 +99,7 @@
             // 
             this.attendanceBtn.Location = new System.Drawing.Point(12, 3);
             this.attendanceBtn.Name = "attendanceBtn";
-            this.attendanceBtn.Size = new System.Drawing.Size(350, 66);
+            this.attendanceBtn.Size = new System.Drawing.Size(290, 66);
             this.attendanceBtn.TabIndex = 7;
             this.attendanceBtn.Text = "Attendance";
             this.attendanceBtn.UseVisualStyleBackColor = true;
@@ -115,15 +127,15 @@
             this.label26.TabIndex = 2;
             this.label26.Text = "Employee Management";
             // 
-            // recordBtn
+            // oT
             // 
-            this.recordBtn.Location = new System.Drawing.Point(1436, 3);
-            this.recordBtn.Name = "recordBtn";
-            this.recordBtn.Size = new System.Drawing.Size(350, 66);
-            this.recordBtn.TabIndex = 10;
-            this.recordBtn.Text = "Attendance Records";
-            this.recordBtn.UseVisualStyleBackColor = true;
-            this.recordBtn.Click += new System.EventHandler(this.recordBtn_Click);
+            this.oT.Location = new System.Drawing.Point(1492, 3);
+            this.oT.Name = "oT";
+            this.oT.Size = new System.Drawing.Size(290, 66);
+            this.oT.TabIndex = 11;
+            this.oT.Text = "Salary Management";
+            this.oT.UseVisualStyleBackColor = true;
+            this.oT.Click += new System.EventHandler(this.oT_Click);
             // 
             // Employee
             // 
@@ -154,5 +166,6 @@
         private System.Windows.Forms.Button positionMngmntBtn;
         private System.Windows.Forms.Button payrollBtn;
         private System.Windows.Forms.Button recordBtn;
+        private System.Windows.Forms.Button oT;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(attendance));
-            this.absent = new System.Windows.Forms.Button();
+            this.timeOut = new System.Windows.Forms.Button();
             this.present = new System.Windows.Forms.Button();
             this.empId = new System.Windows.Forms.Label();
             this.empDesc = new System.Windows.Forms.Label();
@@ -38,30 +38,31 @@
             this.empNo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // absent
+            // timeOut
             // 
-            this.absent.BackColor = System.Drawing.Color.Red;
-            this.absent.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.absent.ForeColor = System.Drawing.Color.White;
-            this.absent.Location = new System.Drawing.Point(391, 178);
-            this.absent.Name = "absent";
-            this.absent.Size = new System.Drawing.Size(123, 42);
-            this.absent.TabIndex = 9;
-            this.absent.Text = "Absent";
-            this.absent.UseVisualStyleBackColor = false;
-            this.absent.Click += new System.EventHandler(this.absent_Click);
+            this.timeOut.BackColor = System.Drawing.Color.Red;
+            this.timeOut.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeOut.ForeColor = System.Drawing.Color.White;
+            this.timeOut.Location = new System.Drawing.Point(396, 178);
+            this.timeOut.Name = "timeOut";
+            this.timeOut.Size = new System.Drawing.Size(133, 42);
+            this.timeOut.TabIndex = 9;
+            this.timeOut.Text = "Time out";
+            this.timeOut.UseVisualStyleBackColor = false;
+            this.timeOut.Click += new System.EventHandler(this.timeOut_Click);
             // 
             // present
             // 
             this.present.BackColor = System.Drawing.Color.ForestGreen;
             this.present.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.present.ForeColor = System.Drawing.Color.White;
-            this.present.Location = new System.Drawing.Point(262, 178);
+            this.present.Location = new System.Drawing.Point(247, 178);
             this.present.Name = "present";
-            this.present.Size = new System.Drawing.Size(123, 42);
+            this.present.Size = new System.Drawing.Size(133, 42);
             this.present.TabIndex = 8;
             this.present.Text = "Present";
             this.present.UseVisualStyleBackColor = false;
@@ -139,16 +140,30 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Contact Number:";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.ForestGreen;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(407, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 42);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Time in";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.empNo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.absent);
+            this.Controls.Add(this.timeOut);
             this.Controls.Add(this.present);
             this.Controls.Add(this.empId);
             this.Controls.Add(this.empDesc);
@@ -163,7 +178,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button absent;
+        private System.Windows.Forms.Button timeOut;
         private System.Windows.Forms.Button present;
         private System.Windows.Forms.Label empId;
         private System.Windows.Forms.Label empDesc;
@@ -172,5 +187,6 @@
         private System.Windows.Forms.Label empNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

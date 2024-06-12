@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using Practice1;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,7 @@ namespace Petshop
 {
     public partial class empManage : Form
     {
-        string imagelocation = "";
-        string jobID, address;
+        string jobID, address, otrID, otID, jobSalary, shiftID;
         private Conclass dbConnect;
         private MySqlCommand cmd;
         private MySqlDataReader myReader, myReader1, myReader2;
@@ -25,6 +25,8 @@ namespace Petshop
             jobList();
             loadEmployee();
             jobTitle.SelectedIndex = 0;
+            startShift.SelectedIndex = 0;
+            endShift.SelectedIndex = 0;
             employeeId = "";
         }
 
@@ -51,7 +53,7 @@ namespace Petshop
             employees.ReadOnly = true;
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, position.position_desc, employee.employee_fname, employee.employee_lname, employee.employee_cNumber, employee.employee_ecNumber FROM employee RIGHT JOIN position ON employee.position_id = position.position_id WHERE employee.employee_id > '0'", dbConnect.myconnect);
+            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, position.position_desc, employee.employee_fname, employee.employee_lname, shift.shift_start, shift.shift_end, employee.employee_cNumber, employee.employee_ecNumber FROM employee RIGHT JOIN position ON employee.position_id = position.position_id RIGHT JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.employee_id > '0' && position.position_desc != 'N/A'", dbConnect.myconnect);
             MySqlDataAdapter da = new MySqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();
@@ -113,16 +115,44 @@ namespace Petshop
                 }
             }
         }
+        private void loadShift()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("SELECT shift_id FROM shift WHERE shift_start = @start AND shift_end = @end", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@start", startShift.SelectedIndex.ToString());
+            cmd.Parameters.AddWithValue("@end", endShift.SelectedIndex.ToString());
+            myReader = cmd.ExecuteReader();
+            if (myReader.Read())
+            {
+                shiftID = myReader["shift_id"].ToString();
+            }
+            else
+            {
+                dbConnect.CloseConnection();
+                dbConnect = new Conclass();
+                dbConnect.OpenConnection();
+                MySqlCommand cmd1 = new MySqlCommand("INSERT INTO shift VALUES('', @nstart, @nend); SELECT LAST_INSERT_ID();", dbConnect.myconnect);
+                cmd1.Parameters.AddWithValue("@nstart", startShift.SelectedIndex.ToString());
+                cmd1.Parameters.AddWithValue("@nend", endShift.SelectedIndex.ToString());
+                object result = cmd1.ExecuteScalar();
+                int num = (result == DBNull.Value) ? 0 : Convert.ToInt32(result);
+                shiftID = num.ToString();
+                dbConnect.CloseConnection();
+            }
+        }
         #endregion
-
+        #region Clicks
         private void employees_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             employeeId = employees.Rows[e.RowIndex].Cells[0].Value.ToString();
             jobTitle.SelectedItem = employees.Rows[e.RowIndex].Cells[1].Value.ToString();
             fName.Text = employees.Rows[e.RowIndex].Cells[2].Value.ToString();
             sName.Text = employees.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cNum.Text = employees.Rows[e.RowIndex].Cells[4].Value.ToString();
-            eCnum.Text = employees.Rows[e.RowIndex].Cells[5].Value.ToString();
+            startShift.SelectedItem = employees.Rows[e.RowIndex].Cells[4].Value.ToString();
+            endShift.SelectedItem = employees.Rows[e.RowIndex].Cells[5].Value.ToString();
+            cNum.Text = employees.Rows[e.RowIndex].Cells[6].Value.ToString();
+            eCnum.Text = employees.Rows[e.RowIndex].Cells[7].Value.ToString();
             retrieveAddress();
         }
 
@@ -138,26 +168,14 @@ namespace Petshop
             addMuni.Clear();
             employeeId = "";
         }
-
-        #region CRUD
-        #region img
-        /*        private void addImg_Click(object sender, EventArgs e)
-                {
-                    OpenFileDialog openfd = new OpenFileDialog();
-                    openfd.Filter = "Select Image(*.jpg; *.jpeg; *.gif;) | *.jpg; *.jpeg; *.gif;";
-                    if (openfd.ShowDialog() == DialogResult.OK)
-                    {
-                        imagelocation = openfd.FileName.ToString();
-                        empImg.ImageLocation = imagelocation;
-                    }
-                }*/
         #endregion
+        #region CRUD
         private void empSearch_Click(object sender, EventArgs e)
         {
             employees.ReadOnly = true;
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, position.position_desc, employee.employee_fname, employee.employee_lname, employee.employee_cNumber, employee.employee_ecNumber FROM employee RIGHT JOIN position ON employee.position_id = position.position_id WHERE employee.employee_id > '0' AND CONCAT (employee.employee_fname, employee.employee_lname, position.position_desc) LIKE @item", dbConnect.myconnect);
+            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, position.position_desc, employee.employee_fname, employee.employee_lname shift.shift_start, shift.shift_end, employee.employee_cNumber, employee.employee_ecNumber FROM employee RIGHT JOIN position ON employee.position_id = position.position_id RIGHT JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.employee_id > '0' AND CONCAT (employee.employee_fname, employee.employee_lname, position.position_desc) LIKE @item", dbConnect.myconnect);
             cmd.Parameters.AddWithValue("@item", "%" + empSearchBox.Text + "%");
             MySqlDataAdapter da = new MySqlDataAdapter();
             da.SelectCommand = cmd;
@@ -169,7 +187,7 @@ namespace Petshop
 
         private void addEmp_Click(object sender, EventArgs e)
         {
-            if (fName.TextLength == 0 || sName.TextLength == 0 || cNum.TextLength == 0 || eCnum.TextLength == 0 || addCity.TextLength == 0 || addMuni.TextLength == 0 || addBrgy.TextLength == 0 || jobTitle.SelectedIndex == 0 /*|| fbProfile.TextLength == 0*/)
+            if (fName.TextLength == 0 || sName.TextLength == 0 || cNum.TextLength == 0 || eCnum.TextLength == 0 || addCity.TextLength == 0 || addMuni.TextLength == 0 || addBrgy.TextLength == 0 || jobTitle.SelectedIndex == 0 || startShift.SelectedIndex < 1 || endShift.SelectedIndex < 1 /*|| fbProfile.TextLength == 0*/)
             {
                 MessageBox.Show("Fields with " + "'*'" + " are Required. Please Complete the Form.", "Notice!");
             }
@@ -194,13 +212,17 @@ namespace Petshop
                     dbConnect.CloseConnection();
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
-                    MySqlCommand cmd1 = new MySqlCommand("SELECT position_id FROM position WHERE position_desc = @job", dbConnect.myconnect);
+                    MySqlCommand cmd1 = new MySqlCommand("SELECT position_id, position_salary FROM position WHERE position_desc = @job", dbConnect.myconnect);
                     cmd1.Parameters.AddWithValue("@job", jobTitle.SelectedItem);
-                    object id = cmd1.ExecuteScalar();
-                    int jID = (id == DBNull.Value) ? 0 : Convert.ToInt32(id);
-                    jobID = jID.ToString();
+                    myReader1 = cmd1.ExecuteReader();
+                    if (myReader1.Read())
+                    {
+                        jobID = myReader1["position_id"].ToString();
+                        jobSalary = myReader1["position_salary"].ToString();
+                    }
                     dbConnect.CloseConnection();
                     loadAddress();
+                    loadShift();
                     /*                    int age = DateTime.Today.Year - bDate.Value.Year;*/
                     /*                    MessageBox.Show("" + age);*/
                     /*                    if (imagelocation == "")
@@ -208,57 +230,30 @@ namespace Petshop
                     dbConnect.CloseConnection();
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
-                    MySqlCommand cmd4 = new MySqlCommand("INSERT INTO employee(employee_id, employee_fname, employee_lname, employee_cNumber, employee_ecNumber, position_id, address_id) VALUES('', @Fname, @Sname, @Cnum, @Enum, @JobID, @address)", dbConnect.myconnect);
+                    MySqlCommand cmd4 = new MySqlCommand("INSERT INTO employee(employee_id, employee_fname, employee_lname, employee_cNumber, employee_ecNumber, position_id, shift_id, address_id) VALUES('', @Fname, @Sname, @Cnum, @Enum, @JobID, @shift, @address); SELECT LAST_INSERT_ID();", dbConnect.myconnect);
                     cmd4.Parameters.AddWithValue("@Fname", fName.Text);
                     cmd4.Parameters.AddWithValue("@Sname", sName.Text);
                     cmd4.Parameters.AddWithValue("@Cnum", cNum.Text);
                     cmd4.Parameters.AddWithValue("@Enum", eCnum.Text);
                     cmd4.Parameters.AddWithValue("@JobID", jobID);
+                    cmd4.Parameters.AddWithValue("@shift", shiftID);
                     cmd4.Parameters.AddWithValue("@address", address);
-                    int affectedColumn = cmd4.ExecuteNonQuery();
-                    if (affectedColumn != 0)
-                    {
-                        MessageBox.Show("New Employee Added Sucessfully");
-                        fName.Clear();
-                        sName.Clear();
-                        cNum.Clear();
-                        eCnum.Clear();
-                        jobTitle.SelectedIndex = 0;
-                        addMuni.Clear();
-                        addCity.Clear();
-                        addBrgy.Clear();
-                        loadEmployee();
-                    }
-                    #region img1
-                    /*                    }*/
-                    /*                    else
-                                        {
-                                            byte[] img = null;
-                                            FileStream Stream = new FileStream(imagelocation, FileMode.Open, FileAccess.Read);
-                                            BinaryReader brs = new BinaryReader(Stream);
-                                            img = brs.ReadBytes((int)Stream.Length);
-                                            dbConnect.CloseConnection();
-                                            dbConnect = new Conclass();
-                                            dbConnect.OpenConnection();
-                                            MySqlCommand cmd4 = new MySqlCommand("INSERT INTO employee VALUES('', @Img,@Fname, @Cnum, @Enum, @Fb, @Age, @Bdate, @JobID, @address)", dbConnect.myconnect);
-                                            cmd4.Parameters.AddWithValue("@Img", img);
-                                            cmd4.Parameters.AddWithValue("@Fname", fName.Text);
-                                            cmd4.Parameters.AddWithValue("@Mname", mName.Text);
-                                            cmd4.Parameters.AddWithValue("@Sname", sName.Text);
-                                            cmd4.Parameters.AddWithValue("@Cnum", cNum.Text);
-                                            cmd4.Parameters.AddWithValue("@Enum", eCnum.Text);
-                                            cmd4.Parameters.AddWithValue("@Fb", fbProfile.Text);
-                                            cmd4.Parameters.AddWithValue("@Age", age);
-                                            cmd4.Parameters.AddWithValue("@Bdate", bDate.Value.ToString("yyyy-MM-dd"));
-                                            cmd4.Parameters.AddWithValue("@JobID", jobID);
-                                            cmd4.Parameters.AddWithValue("@address", address);
-                                            int affectedColumn = cmd4.ExecuteNonQuery();
-                                            if (affectedColumn != 0)
-                                            {
-                                                MessageBox.Show("New Employee Added Sucessfully");
-                                            }
-                                        }*/
-                    #endregion
+                    object result = cmd4.ExecuteScalar();
+                    int num = (result == DBNull.Value) ? 0 : Convert.ToInt32(result);
+                    employeeId = num.ToString();
+                    MessageBox.Show("New Employee Added Sucessfully");
+                    fName.Clear();
+                    sName.Clear();
+                    cNum.Clear();
+                    eCnum.Clear();
+                    jobTitle.SelectedIndex = 0;
+                    startShift.SelectedIndex = 0;
+                    endShift.SelectedIndex = 0;
+                    addMuni.Clear();
+                    addCity.Clear();
+                    addBrgy.Clear();
+                    loadEmployee();
+                    retrieveOTR();
                 }
             }
         }
@@ -297,16 +292,18 @@ namespace Petshop
                     jobID = jID.ToString();
                     dbConnect.CloseConnection();
                     loadAddress();
+                    loadShift();
                     dbConnect.CloseConnection();
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
-                    MySqlCommand cmd4 = new MySqlCommand("UPDATE employee SET employee_fname = @Fname, employee_lname = @Sname, position_id = @JobID, employee_cNumber = @Cnum, employee_ecNumber = @Enum, address_id = @address WHERE employee_id = @uempid", dbConnect.myconnect);
+                    MySqlCommand cmd4 = new MySqlCommand("UPDATE employee SET employee_fname = @Fname, employee_lname = @Sname, position_id = @JobID, employee_cNumber = @Cnum, employee_ecNumber = @Enum, shift_id = @shift, address_id = @address WHERE employee_id = @uempid", dbConnect.myconnect);
                     cmd4.Parameters.AddWithValue("@uempid", employeeId);
                     cmd4.Parameters.AddWithValue("@Fname", fName.Text);
                     cmd4.Parameters.AddWithValue("@Sname", sName.Text);
                     cmd4.Parameters.AddWithValue("@Cnum", cNum.Text);
                     cmd4.Parameters.AddWithValue("@Enum", eCnum.Text);
                     cmd4.Parameters.AddWithValue("@JobID", jobID);
+                    cmd4.Parameters.AddWithValue("@shift", shiftID);
                     cmd4.Parameters.AddWithValue("@address", address);
                     int affectedColumn = cmd4.ExecuteNonQuery();
                     if (affectedColumn != 0)
@@ -317,6 +314,8 @@ namespace Petshop
                         cNum.Clear();
                         eCnum.Clear();
                         jobTitle.SelectedIndex = 0;
+                        startShift.SelectedIndex = 0;
+                        endShift.SelectedIndex = 0;
                         addMuni.Clear();
                         addCity.Clear();
                         addBrgy.Clear();
@@ -332,7 +331,7 @@ namespace Petshop
             {
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM employee WHERE employee_id = @id", dbConnect.myconnect);
+                MySqlCommand cmd = new MySqlCommand("UPDATE employee SET position_id = '6' WHERE employee_id = @id", dbConnect.myconnect);
                 cmd.Parameters.AddWithValue("@id", employeeId);
                 int delete = cmd.ExecuteNonQuery();
                 if (delete > 0)
@@ -343,11 +342,86 @@ namespace Petshop
                     cNum.Clear();
                     eCnum.Clear();
                     jobTitle.SelectedIndex = 0;
+                    startShift.SelectedIndex = 0;
+                    endShift.SelectedIndex = 0;
                     addMuni.Clear();
                     addCity.Clear();
                     addBrgy.Clear();
                     loadEmployee();
                     employeeId = "";
+                }
+            }
+        }
+        #endregion
+        #region ADD Payroll
+        private void retrieveOTR()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("SELECT otRate_id FROM overtime_rate WHERE position_id = @Jid", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@Jid", jobID);
+            myReader = cmd.ExecuteReader();
+            if (myReader.Read())
+            {
+                otrID = myReader["otRate_id"].ToString();
+            }
+            dbConnect.CloseConnection();
+            insertOT();
+        }
+        private void insertOT()
+        {
+            DateTime monthyear = DateTime.Now;
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO overtime VALUES('', @otr, @empid, '0', @date, '0'); SELECT LAST_INSERT_ID();", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@otr", otrID);
+            cmd.Parameters.AddWithValue("@empid", employeeId);
+            cmd.Parameters.AddWithValue("@date", monthyear.ToString("MM-yyyy"));
+            object result = cmd.ExecuteScalar();
+            int num = (result == DBNull.Value) ? 0 : Convert.ToInt32(result);
+            otID = num.ToString();
+            dbConnect.CloseConnection();
+            MessageBox.Show("overtime inserted");
+            addPayroll();
+        }
+        private void addPayroll()
+        {
+            DateTime monthyear = DateTime.Now;
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO payroll VALUES('', @employee, @otid, @date, @salary)", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@employee", employeeId);
+            cmd.Parameters.AddWithValue("@otid", otID);
+            cmd.Parameters.AddWithValue("@date", monthyear.ToString("MM-yyyy"));
+            cmd.Parameters.AddWithValue("@salary", jobSalary);
+            int insert = cmd.ExecuteNonQuery();
+            if(insert > 0)
+            {
+                MessageBox.Show("payroll inserted");
+            }
+        }
+        #endregion
+        #region EDIT Payroll
+
+        #endregion
+        #region Overtime
+        private void getOT()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd= new MySqlCommand("SELECT employee_id FROM employee", dbConnect.myconnect);
+            myReader = cmd.ExecuteReader();
+            while(myReader.Read())
+            {
+                employeeId = myReader["employee_id"].ToString();
+                DateTime monthyear = DateTime.Now;
+                MySqlCommand cmd1 = new MySqlCommand("SELECT employee_id FROM overtime WHERE overtime.employee_id = @id AND overtime.overtime_date != '07-2024'", dbConnect.myconnect);
+                cmd1.Parameters.AddWithValue("@id", employeeId);
+                cmd1.Parameters.AddWithValue("@date", monthyear.ToString("MM-yyyy"));
+                myReader1 = cmd1.ExecuteReader();
+                if (myReader1.Read())
+                {
+                    insertOT();
                 }
             }
         }

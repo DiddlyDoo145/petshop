@@ -148,6 +148,12 @@
     <Compile Include="empAttendanceRecord.Designer.cs">
       <DependentUpon>empAttendanceRecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="empOt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empOt.Designer.cs">
+      <DependentUpon>empOt.cs</DependentUpon>
+    </Compile>
     <Compile Include="empPosition.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="empAttendanceRecord.resx">
       <DependentUpon>empAttendanceRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empOt.resx">
+      <DependentUpon>empOt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="empPosition.resx">
       <DependentUpon>empPosition.cs</DependentUpon>
