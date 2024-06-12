@@ -29,10 +29,12 @@ namespace Petshop
         }
         private void employee()
         {
+            DayOfWeek currentDay = DateTime.Now.DayOfWeek;
             attendanceFl.Controls.Clear();
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, employee.employee_fname, employee.employee_lname, employee.employee_cNumber, position.position_desc FROM employee RIGHT JOIN position ON employee.position_id = position.position_id WHERE employee.employee_id > '0'", dbConnect.myconnect);
+            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, employee.employee_fname, employee.employee_lname, employee.employee_cNumber, position.position_desc FROM employee RIGHT JOIN position ON employee.position_id = position.position_id RIGHT JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.employee_id > '0' AND (DAYOFWEEK(CURDATE()) BETWEEN DAYOFWEEK(shift.shift_start) AND DAYOFWEEK(shift.shift_end))", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@shift", currentDay.ToString());
             myReader = cmd.ExecuteReader();
             while (myReader.Read())
             {

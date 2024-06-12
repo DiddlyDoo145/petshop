@@ -23,8 +23,8 @@ namespace Petshop
 
         private void reload_Click(object sender, EventArgs e)
         {
-            retrieveRecord();
             specificDate.Value = DateTime.Now;
+            retrieveRecord();
         }
 
         private void specificDate_ValueChanged(object sender, EventArgs e)

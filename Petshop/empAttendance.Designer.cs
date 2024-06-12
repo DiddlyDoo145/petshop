@@ -56,10 +56,11 @@
             // 
             // attendanceFl
             // 
+            this.attendanceFl.AutoScroll = true;
             this.attendanceFl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.attendanceFl.Location = new System.Drawing.Point(52, 90);
+            this.attendanceFl.Location = new System.Drawing.Point(37, 90);
             this.attendanceFl.Name = "attendanceFl";
-            this.attendanceFl.Size = new System.Drawing.Size(1674, 725);
+            this.attendanceFl.Size = new System.Drawing.Size(1698, 725);
             this.attendanceFl.TabIndex = 3;
             // 
             // empAttendance

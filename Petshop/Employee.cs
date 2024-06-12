@@ -72,5 +72,10 @@ namespace Petshop
         {
             OpenChildForm1(new empPosition(), 5, 110);
         }
+
+        private void oT_Click(object sender, EventArgs e)
+        {
+            OpenChildForm1(new empOt(), 5, 110);
+        }
     }
 }

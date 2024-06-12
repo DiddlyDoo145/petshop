@@ -41,7 +41,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.textBox1);
+/*            this.panel1.Controls.Add(this.textBox1);*/
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -50,12 +50,12 @@
             // 
             // panel2
             // 
-            this.textBox1.Location = new System.Drawing.Point(457, 74);
+/*            this.textBox1.Location = new System.Drawing.Point(457, 74);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(217, 30);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 0;*/
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
