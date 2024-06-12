@@ -229,3 +229,7 @@ C:\Users\ACER\Documents\GitHub\petshop\Petshop\bin\Debug\System.Threading.Tasks.
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\bin\Debug\System.ValueTuple.xml
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.ProductsData.resources
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.csproj.Up2Date
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.productcategory.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.ProductTransac.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Purchase.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Services.resources
