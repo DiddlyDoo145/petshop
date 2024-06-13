@@ -89,7 +89,7 @@
             // 
             // addEmp
             // 
-            this.addEmp.BackColor = System.Drawing.Color.Lime;
+            this.addEmp.BackColor = System.Drawing.Color.DarkSlateGray;
             this.addEmp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addEmp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
@@ -525,7 +525,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -545,8 +545,10 @@
             // 
             // updateEmp
             // 
-            this.updateEmp.BackColor = System.Drawing.Color.Orange;
+            this.updateEmp.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.updateEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateEmp.ForeColor = System.Drawing.Color.White;
             this.updateEmp.Location = new System.Drawing.Point(1183, 582);
             this.updateEmp.Name = "updateEmp";
             this.updateEmp.Size = new System.Drawing.Size(230, 46);
@@ -557,8 +559,10 @@
             // 
             // deleteEmp
             // 
-            this.deleteEmp.BackColor = System.Drawing.Color.Orange;
+            this.deleteEmp.BackColor = System.Drawing.Color.Red;
             this.deleteEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteEmp.ForeColor = System.Drawing.Color.White;
             this.deleteEmp.Location = new System.Drawing.Point(1430, 582);
             this.deleteEmp.Name = "deleteEmp";
             this.deleteEmp.Size = new System.Drawing.Size(230, 46);
@@ -677,8 +681,10 @@
             // 
             // empSearch
             // 
-            this.empSearch.BackColor = System.Drawing.Color.Orange;
+            this.empSearch.BackColor = System.Drawing.Color.DarkSlateGray;
             this.empSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.empSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empSearch.ForeColor = System.Drawing.Color.White;
             this.empSearch.Location = new System.Drawing.Point(660, 127);
             this.empSearch.Name = "empSearch";
             this.empSearch.Size = new System.Drawing.Size(128, 32);
@@ -691,7 +697,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1805, 858);
             this.Controls.Add(this.empSearch);
             this.Controls.Add(this.label3);

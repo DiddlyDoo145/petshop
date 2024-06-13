@@ -54,5 +54,10 @@ namespace Petshop
         {
             OpenChildForm(new Analytics(), 180, 70);
         }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
