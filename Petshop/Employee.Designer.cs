@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.oT = new System.Windows.Forms.Button();
             this.recordBtn = new System.Windows.Forms.Button();
+            this.attendanceBtn = new System.Windows.Forms.Button();
             this.positionMngmntBtn = new System.Windows.Forms.Button();
             this.payrollBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.attendanceBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
-            this.oT = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -52,24 +52,44 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1796, 75);
+            this.panel2.Size = new System.Drawing.Size(1867, 75);
             this.panel2.TabIndex = 7;
+            // 
+            // oT
+            // 
+            this.oT.Location = new System.Drawing.Point(1557, 3);
+            this.oT.Name = "oT";
+            this.oT.Size = new System.Drawing.Size(305, 66);
+            this.oT.TabIndex = 11;
+            this.oT.Text = "Salary Management";
+            this.oT.UseVisualStyleBackColor = true;
+            this.oT.Click += new System.EventHandler(this.oT_Click);
             // 
             // recordBtn
             // 
-            this.recordBtn.Location = new System.Drawing.Point(1196, 3);
+            this.recordBtn.Location = new System.Drawing.Point(1247, 3);
             this.recordBtn.Name = "recordBtn";
-            this.recordBtn.Size = new System.Drawing.Size(290, 66);
+            this.recordBtn.Size = new System.Drawing.Size(305, 66);
             this.recordBtn.TabIndex = 10;
             this.recordBtn.Text = "Attendance Records";
             this.recordBtn.UseVisualStyleBackColor = true;
             this.recordBtn.Click += new System.EventHandler(this.recordBtn_Click);
             // 
+            // attendanceBtn
+            // 
+            this.attendanceBtn.Location = new System.Drawing.Point(3, 3);
+            this.attendanceBtn.Name = "attendanceBtn";
+            this.attendanceBtn.Size = new System.Drawing.Size(305, 66);
+            this.attendanceBtn.TabIndex = 7;
+            this.attendanceBtn.Text = "Attendance";
+            this.attendanceBtn.UseVisualStyleBackColor = true;
+            this.attendanceBtn.Click += new System.EventHandler(this.attendanceBtn_Click);
+            // 
             // positionMngmntBtn
             // 
-            this.positionMngmntBtn.Location = new System.Drawing.Point(900, 3);
+            this.positionMngmntBtn.Location = new System.Drawing.Point(936, 3);
             this.positionMngmntBtn.Name = "positionMngmntBtn";
-            this.positionMngmntBtn.Size = new System.Drawing.Size(290, 66);
+            this.positionMngmntBtn.Size = new System.Drawing.Size(305, 66);
             this.positionMngmntBtn.TabIndex = 9;
             this.positionMngmntBtn.Text = "Manage Position";
             this.positionMngmntBtn.UseVisualStyleBackColor = true;
@@ -77,9 +97,9 @@
             // 
             // payrollBtn
             // 
-            this.payrollBtn.Location = new System.Drawing.Point(308, 3);
+            this.payrollBtn.Location = new System.Drawing.Point(314, 3);
             this.payrollBtn.Name = "payrollBtn";
-            this.payrollBtn.Size = new System.Drawing.Size(290, 66);
+            this.payrollBtn.Size = new System.Drawing.Size(305, 66);
             this.payrollBtn.TabIndex = 8;
             this.payrollBtn.Text = "Payroll";
             this.payrollBtn.UseVisualStyleBackColor = true;
@@ -87,23 +107,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(604, 3);
+            this.button2.Location = new System.Drawing.Point(625, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(290, 66);
+            this.button2.Size = new System.Drawing.Size(305, 66);
             this.button2.TabIndex = 6;
             this.button2.Text = "MANAGE EMPLOYEE";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // attendanceBtn
-            // 
-            this.attendanceBtn.Location = new System.Drawing.Point(12, 3);
-            this.attendanceBtn.Name = "attendanceBtn";
-            this.attendanceBtn.Size = new System.Drawing.Size(290, 66);
-            this.attendanceBtn.TabIndex = 7;
-            this.attendanceBtn.Text = "Attendance";
-            this.attendanceBtn.UseVisualStyleBackColor = true;
-            this.attendanceBtn.Click += new System.EventHandler(this.attendanceBtn_Click);
             // 
             // panel4
             // 
@@ -113,7 +123,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1796, 57);
+            this.panel4.Size = new System.Drawing.Size(1867, 57);
             this.panel4.TabIndex = 6;
             // 
             // label26
@@ -127,22 +137,12 @@
             this.label26.TabIndex = 2;
             this.label26.Text = "Employee Management";
             // 
-            // oT
-            // 
-            this.oT.Location = new System.Drawing.Point(1492, 3);
-            this.oT.Name = "oT";
-            this.oT.Size = new System.Drawing.Size(290, 66);
-            this.oT.TabIndex = 11;
-            this.oT.Text = "Salary Management";
-            this.oT.UseVisualStyleBackColor = true;
-            this.oT.Click += new System.EventHandler(this.oT_Click);
-            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(1796, 965);
+            this.ClientSize = new System.Drawing.Size(1867, 965);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

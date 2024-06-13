@@ -39,22 +39,22 @@ namespace Petshop
       
         private void productCategory_Click(object sender, EventArgs e)
         {
-            OpenChildForm1(new ProductsData(), 10, 95); 
+            OpenChildForm1(new ProductsData(), 30, 135); 
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            OpenChildForm1(new productcategory(), 10, 95);
+            OpenChildForm1(new productcategory(), 30, 135);
         }
 
         private void TransacBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm1(new ProductTransac(), 10, 95);
+            OpenChildForm1(new ProductTransac(), 30, 135);
         }
 
         private void services_Click(object sender, EventArgs e)
         {
-            OpenChildForm1(new Services(), 10, 95);
+            OpenChildForm1(new Services(), 30, 135);
         }
     }
 }
