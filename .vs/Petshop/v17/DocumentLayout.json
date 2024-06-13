@@ -3,52 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\product.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\product.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\analytics.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\productsdata.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\productsdata.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\analytics.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\productsdata.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\productsdata.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\product.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\product.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +74,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Program.cs",
+              "RelativeDocumentMoniker": "Petshop\\Program.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Program.cs",
+              "RelativeToolTip": "Petshop\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T08:41:55.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Product.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Product.Designer.cs",
               "RelativeDocumentMoniker": "Petshop\\Product.Designer.cs",
@@ -87,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "attendance.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\attendance.cs",
               "RelativeDocumentMoniker": "Petshop\\attendance.cs",
@@ -95,50 +108,24 @@
               "RelativeToolTip": "Petshop\\attendance.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAEwBEAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:35:14.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T11:35:14.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Analytics.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs",
-              "RelativeDocumentMoniker": "Petshop\\Analytics.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs [Design]",
-              "RelativeToolTip": "Petshop\\Analytics.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:32:19.46Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Analytics.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs",
-              "RelativeDocumentMoniker": "Petshop\\Analytics.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs",
-              "RelativeToolTip": "Petshop\\Analytics.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAgwHEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:28:01.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Analytics.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.Designer.cs",
               "RelativeDocumentMoniker": "Petshop\\Analytics.Designer.cs",
               "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.Designer.cs",
               "RelativeToolTip": "Petshop\\Analytics.Designer.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAzwBwAAAAhAAAA",
+              "ViewState": "AQIAAG8BAAAAAAAAAAAIwHwBAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T11:25:11.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ProductsData.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\productsData.Designer.cs",
               "RelativeDocumentMoniker": "Petshop\\productsData.Designer.cs",
@@ -146,50 +133,46 @@
               "RelativeToolTip": "Petshop\\productsData.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T05:20:45.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T05:20:45.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Home.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Home.cs",
               "RelativeDocumentMoniker": "Petshop\\Home.cs",
               "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Home.cs",
               "RelativeToolTip": "Petshop\\Home.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAA0wDYAAAA0AAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAowDYAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:21:52.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T11:21:52.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductsData.cs",
+              "DocumentIndex": 6,
+              "Title": "productsData.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\ProductsData.cs",
               "RelativeDocumentMoniker": "Petshop\\ProductsData.cs",
               "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\ProductsData.cs",
               "RelativeToolTip": "Petshop\\ProductsData.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAYwCUAAAAkAAAA",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAIwCgAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T05:14:25.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T05:14:25.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductsData.cs [Design]",
+              "DocumentIndex": 11,
+              "Title": "productsData.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\ProductsData.cs",
               "RelativeDocumentMoniker": "Petshop\\ProductsData.cs",
               "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\ProductsData.cs [Design]",
               "RelativeToolTip": "Petshop\\ProductsData.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T05:13:11.366Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-06T05:13:11.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Product.cs",
               "RelativeDocumentMoniker": "Petshop\\Product.cs",
@@ -202,15 +185,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Product.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Product.cs",
-              "RelativeDocumentMoniker": "Petshop\\Product.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Product.cs [Design]",
-              "RelativeToolTip": "Petshop\\Product.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "Analytics.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs",
+              "RelativeDocumentMoniker": "Petshop\\Analytics.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs",
+              "RelativeToolTip": "Petshop\\Analytics.cs",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAAAM0AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T05:10:50.838Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-11T11:28:01.857Z",
+              "EditorCaption": ""
             }
           ]
         }
@@ -220,12 +204,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "65d61dfb-58ec-4118-9838-99de060800df",
+        "Id": "a8479e2d-f538-4784-a458-f6ce3764a489",
         "Display": 1,
-        "X": 336,
-        "Y": 102,
-        "Width": 1035,
-        "Height": 514,
+        "X": 43,
+        "Y": 98,
+        "Width": 1264,
+        "Height": 627,
         "WindowState": 2
       },
       "DocumentGroups": [
@@ -235,14 +219,26 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Home.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Home.cs",
-              "RelativeDocumentMoniker": "Petshop\\Home.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Home.cs [Design]",
-              "RelativeToolTip": "Petshop\\Home.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "Analytics.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs",
+              "RelativeDocumentMoniker": "Petshop\\Analytics.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs [Design]",
+              "RelativeToolTip": "Petshop\\Analytics.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:18:26.067Z",
+              "WhenOpened": "2024-06-11T11:32:19.46Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Product.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Product.cs",
+              "RelativeDocumentMoniker": "Petshop\\Product.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Product.cs [Design]",
+              "RelativeToolTip": "Petshop\\Product.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T05:10:50.838Z",
               "EditorCaption": " [Design]"
             }
           ]

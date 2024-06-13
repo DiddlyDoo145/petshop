@@ -324,3 +324,9 @@ C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.csproj
 C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.csproj.CopyComplete
 C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.exe
 C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.pdb
+C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.empOt.resources
+C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.productcategory.resources
+C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.ProductTransac.resources
+C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Purchase.resources
+C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Services.resources
+C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\ScottPlot.Analytics.resources
