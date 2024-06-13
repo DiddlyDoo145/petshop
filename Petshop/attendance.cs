@@ -101,41 +101,6 @@ namespace Petshop
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            getSalary();
-        }
-
-        private void absent_Click(object sender, EventArgs e)
-        {
-            dbConnect = new Conclass();
-            dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM attendance WHERE employee_id = @id AND attendance_date = @date", dbConnect.myconnect);
-            cmd.Parameters.AddWithValue("@id", empId.Text);
-            cmd.Parameters.AddWithValue("@date", _Date.ToString("MM-dd-yyyy"));
-            myReader = cmd.ExecuteReader();
-            if (myReader.Read())
-            {
-                MessageBox.Show("Employee attendance have already been marked for today", "Notice!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                string status = "Absent";
-                dbConnect.CloseConnection();
-                dbConnect = new Conclass();
-                dbConnect.OpenConnection();
-                MySqlCommand cmd1 = new MySqlCommand("INSERT INTO attendance VALUES('', @empid, @date, @stat)", dbConnect.myconnect);
-                cmd1.Parameters.AddWithValue("@empid", empId.Text);
-                cmd1.Parameters.AddWithValue("@date", _Date.ToString("MM-dd-yyyy"));
-                cmd1.Parameters.AddWithValue("@stat", status);
-                int insert = cmd1.ExecuteNonQuery();
-                if (insert > 0)
-                {
-                    MessageBox.Show("Employee attendance set to absent");
-                }
-            }
-        }
-
         private void timeOut_Click(object sender, EventArgs e)
         {
             string status = "Timed out";
@@ -198,7 +163,7 @@ namespace Petshop
         {
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT position.position_salary FROM position RIGHT JOIN employee ON position.position_id = employee.position_id WHERE employee.employee_id = @id", dbConnect.myconnect);
+            MySqlCommand cmd = new MySqlCommand("SELECT position.position_salary FROM position INNER JOIN employee ON position.position_id = employee.position_id WHERE employee.employee_id = @id", dbConnect.myconnect);
             cmd.Parameters.AddWithValue("@id", empId.Text);
             myReader = cmd.ExecuteReader();
             if(myReader.Read())

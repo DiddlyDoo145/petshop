@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.otDgv = new System.Windows.Forms.DataGridView();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.label2 = new System.Windows.Forms.Label();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.otPay = new MaterialSkin.Controls.MaterialTextBox2();
-            this.payBtn = new MaterialSkin.Controls.MaterialButton();
-            this.jobTitle = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.payBtn = new MaterialSkin.Controls.MaterialButton();
+            this.jobTitle = new MaterialSkin.Controls.MaterialTextBox2();
+            this.otPay = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.otDgv)).BeginInit();
             this.materialCard1.SuspendLayout();
-            this.materialCard2.SuspendLayout();
             this.materialCard3.SuspendLayout();
+            this.materialCard2.SuspendLayout();
             this.SuspendLayout();
             // 
             // otDgv
@@ -62,6 +62,31 @@
             this.otDgv.RowTemplate.Height = 24;
             this.otDgv.Size = new System.Drawing.Size(952, 674);
             this.otDgv.TabIndex = 3;
+            this.otDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.otDgv_CellClick);
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "otRate_id";
+            this.Column2.HeaderText = "Overtime Pay ID";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "position_desc";
+            this.Column1.HeaderText = "Job Title";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "otRate_pay";
+            this.Column3.HeaderText = "OT Rate";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // materialCard1
             // 
@@ -79,59 +104,22 @@
             this.materialCard1.Size = new System.Drawing.Size(1779, 822);
             this.materialCard1.TabIndex = 4;
             // 
-            // label2
+            // materialCard3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(381, 32);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Overtime Pay Management";
-            // 
-            // materialCard2
-            // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.label2);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(14, 14);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(1751, 57);
-            this.materialCard2.TabIndex = 5;
-            // 
-            // otPay
-            // 
-            this.otPay.AnimateReadOnly = false;
-            this.otPay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.otPay.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.otPay.Depth = 0;
-            this.otPay.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.otPay.HideSelection = true;
-            this.otPay.Hint = "Overtime pay per hour";
-            this.otPay.LeadingIcon = null;
-            this.otPay.Location = new System.Drawing.Point(38, 140);
-            this.otPay.MaxLength = 32767;
-            this.otPay.MouseState = MaterialSkin.MouseState.OUT;
-            this.otPay.Name = "otPay";
-            this.otPay.PasswordChar = '\0';
-            this.otPay.PrefixSuffixText = null;
-            this.otPay.ReadOnly = false;
-            this.otPay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.otPay.SelectedText = "";
-            this.otPay.SelectionLength = 0;
-            this.otPay.SelectionStart = 0;
-            this.otPay.ShortcutsEnabled = true;
-            this.otPay.Size = new System.Drawing.Size(334, 48);
-            this.otPay.TabIndex = 7;
-            this.otPay.TabStop = false;
-            this.otPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.otPay.TrailingIcon = null;
-            this.otPay.UseSystemPasswordChar = false;
+            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.materialCard3.Controls.Add(this.payBtn);
+            this.materialCard3.Controls.Add(this.jobTitle);
+            this.materialCard3.Controls.Add(this.otPay);
+            this.materialCard3.Depth = 0;
+            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard3.Location = new System.Drawing.Point(1184, 249);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard3.Name = "materialCard3";
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard3.Size = new System.Drawing.Size(418, 321);
+            this.materialCard3.TabIndex = 10;
             // 
             // payBtn
             // 
@@ -184,46 +172,59 @@
             this.jobTitle.UseSystemPasswordChar = false;
             this.jobTitle.TextChanged += new System.EventHandler(this.jobTitle_TextChanged);
             // 
-            // materialCard3
+            // otPay
             // 
-            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.materialCard3.Controls.Add(this.payBtn);
-            this.materialCard3.Controls.Add(this.jobTitle);
-            this.materialCard3.Controls.Add(this.otPay);
-            this.materialCard3.Depth = 0;
-            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(1184, 249);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(418, 321);
-            this.materialCard3.TabIndex = 10;
+            this.otPay.AnimateReadOnly = false;
+            this.otPay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.otPay.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.otPay.Depth = 0;
+            this.otPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.otPay.HideSelection = true;
+            this.otPay.Hint = "Overtime pay per hour";
+            this.otPay.LeadingIcon = null;
+            this.otPay.Location = new System.Drawing.Point(38, 140);
+            this.otPay.MaxLength = 32767;
+            this.otPay.MouseState = MaterialSkin.MouseState.OUT;
+            this.otPay.Name = "otPay";
+            this.otPay.PasswordChar = '\0';
+            this.otPay.PrefixSuffixText = null;
+            this.otPay.ReadOnly = false;
+            this.otPay.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.otPay.SelectedText = "";
+            this.otPay.SelectionLength = 0;
+            this.otPay.SelectionStart = 0;
+            this.otPay.ShortcutsEnabled = true;
+            this.otPay.Size = new System.Drawing.Size(334, 48);
+            this.otPay.TabIndex = 7;
+            this.otPay.TabStop = false;
+            this.otPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.otPay.TrailingIcon = null;
+            this.otPay.UseSystemPasswordChar = false;
             // 
-            // Column2
+            // materialCard2
             // 
-            this.Column2.DataPropertyName = "otRate_id";
-            this.Column2.HeaderText = "Overtime Pay ID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.label2);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(14, 14);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(1751, 57);
+            this.materialCard2.TabIndex = 5;
             // 
-            // Column1
+            // label2
             // 
-            this.Column1.DataPropertyName = "position_desc";
-            this.Column1.HeaderText = "Job Title";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "otRate_pay";
-            this.Column3.HeaderText = "OT Rate";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(17, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(381, 32);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Overtime Pay Management";
             // 
             // empOt
             // 
@@ -237,9 +238,9 @@
             this.Load += new System.EventHandler(this.empOt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.otDgv)).EndInit();
             this.materialCard1.ResumeLayout(false);
+            this.materialCard3.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
-            this.materialCard3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
