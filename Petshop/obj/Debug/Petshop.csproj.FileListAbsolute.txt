@@ -324,3 +324,4 @@ C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.csproj
 C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.csproj.CopyComplete
 C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.exe
 C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.pdb
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\ScottPlot.Analytics.resources

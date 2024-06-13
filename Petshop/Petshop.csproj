@@ -234,6 +234,9 @@
     <Compile Include="Services.Designer.cs">
       <DependentUpon>Services.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Analytics.resx">
+      <DependentUpon>Analytics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="attendance.resx">
       <DependentUpon>attendance.cs</DependentUpon>
     </EmbeddedResource>

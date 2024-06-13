@@ -37,7 +37,7 @@ namespace ScottPlot
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
+            #region commment
             /*// Add the control to the panel
             panel1.Controls.Add(FormsPlot1);
 
@@ -45,11 +45,12 @@ namespace ScottPlot
             double[] data = ScottPlot.Generate.Sin();
             FormsPlot1.Plot.Add.Signal(data);
             FormsPlot1.Refresh();*/
+            #endregion
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            double val1 = 0, val2 = 0, comp = 0;
+ /*           double val1 = 0, val2 = 0, comp = 0;
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
 
@@ -91,8 +92,8 @@ namespace ScottPlot
 
 
 
-            dbConnect.CloseConnection();
-
+            dbConnect.CloseConnection();*/
+            #region comment
             /*chart1.Series["Salary"].Points.AddXY("Mon", 1000);
             chart1.Series["Salary"].Points.AddXY("Tue", 5000);
             chart1.Series["Salary"].Points.AddXY("Wed", 1500);
@@ -102,6 +103,7 @@ namespace ScottPlot
             chart1.Series["Salary"].Points.AddXY("Today", 7000);*/
             /*chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
             chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = System.Drawing.Color.White;*/
+            #endregion
         }
 
         private void chart1_Click(object sender, EventArgs e)

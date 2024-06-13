@@ -28,37 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.services = new MaterialSkin.Controls.MaterialButton();
             this.TransacBtn = new MaterialSkin.Controls.MaterialButton();
             this.pCategorybtn = new MaterialSkin.Controls.MaterialButton();
             this.productCategory = new MaterialSkin.Controls.MaterialButton();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1328, 765);
-            this.panel3.TabIndex = 0;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.services);
-            this.panel4.Controls.Add(this.TransacBtn);
-            this.panel4.Controls.Add(this.pCategorybtn);
-            this.panel4.Controls.Add(this.productCategory);
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1328, 58);
+            this.panel4.Size = new System.Drawing.Size(1867, 58);
             this.panel4.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.services);
+            this.panel3.Controls.Add(this.TransacBtn);
+            this.panel3.Controls.Add(this.pCategorybtn);
+            this.panel3.Controls.Add(this.productCategory);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 58);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1867, 75);
+            this.panel3.TabIndex = 6;
             // 
             // services
             // 
@@ -73,8 +71,8 @@
             this.services.MouseState = MaterialSkin.MouseState.HOVER;
             this.services.Name = "services";
             this.services.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.services.Size = new System.Drawing.Size(88, 58);
-            this.services.TabIndex = 5;
+            this.services.Size = new System.Drawing.Size(88, 75);
+            this.services.TabIndex = 9;
             this.services.Text = "Services";
             this.services.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.services.UseAccentColor = false;
@@ -94,8 +92,8 @@
             this.TransacBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.TransacBtn.Name = "TransacBtn";
             this.TransacBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.TransacBtn.Size = new System.Drawing.Size(192, 58);
-            this.TransacBtn.TabIndex = 4;
+            this.TransacBtn.Size = new System.Drawing.Size(192, 75);
+            this.TransacBtn.TabIndex = 8;
             this.TransacBtn.Text = "Product Transaction";
             this.TransacBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.TransacBtn.UseAccentColor = false;
@@ -115,8 +113,8 @@
             this.pCategorybtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.pCategorybtn.Name = "pCategorybtn";
             this.pCategorybtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.pCategorybtn.Size = new System.Drawing.Size(167, 58);
-            this.pCategorybtn.TabIndex = 3;
+            this.pCategorybtn.Size = new System.Drawing.Size(167, 75);
+            this.pCategorybtn.TabIndex = 7;
             this.pCategorybtn.Text = "Product Category";
             this.pCategorybtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.pCategorybtn.UseAccentColor = false;
@@ -136,8 +134,8 @@
             this.productCategory.MouseState = MaterialSkin.MouseState.HOVER;
             this.productCategory.Name = "productCategory";
             this.productCategory.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.productCategory.Size = new System.Drawing.Size(97, 58);
-            this.productCategory.TabIndex = 2;
+            this.productCategory.Size = new System.Drawing.Size(97, 75);
+            this.productCategory.TabIndex = 6;
             this.productCategory.Text = "Products";
             this.productCategory.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.productCategory.UseAccentColor = false;
@@ -147,13 +145,13 @@
             // Product
             // 
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1328, 765);
+            this.ClientSize = new System.Drawing.Size(1867, 965);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Product";
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -166,11 +164,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private MaterialSkin.Controls.MaterialButton productCategory;
-        private MaterialSkin.Controls.MaterialButton pCategorybtn;
-        private MaterialSkin.Controls.MaterialButton TransacBtn;
+        private System.Windows.Forms.Panel panel3;
         private MaterialSkin.Controls.MaterialButton services;
+        private MaterialSkin.Controls.MaterialButton TransacBtn;
+        private MaterialSkin.Controls.MaterialButton pCategorybtn;
+        private MaterialSkin.Controls.MaterialButton productCategory;
     }
 }
