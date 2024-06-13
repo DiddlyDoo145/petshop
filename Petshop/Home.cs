@@ -31,33 +31,43 @@ namespace Petshop
             this.Tag = childForm;
             //childForm.BringToFront();
             childForm.Show();
-            childForm.Size = new Size(Convert.ToInt32(childForm.Width * 1.155), Convert.ToInt32(childForm.Height * 1.096));
+            childForm.Size = new Size(/*Convert.ToInt32(childForm.Width * 1.155), Convert.ToInt32(childForm.Height * 1.096 - 5)*/1400, 782);
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Location = new Point(xpos, ypos);
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Employee(), 180, 70);
+            OpenChildForm(new Employee(), 133, 80);
         }
 
         private void product_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Product(), 180, 70);
+            OpenChildForm(new Product(), 133, 80);
         }
 
         private void customer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Customer(), 180, 70);
+            OpenChildForm(new Customer(), 133, 80);
         }
 
         private void analytics_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Analytics(), 180, 70);
+            OpenChildForm(new Analytics(), 133, 80);
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Home(), 133, 80);
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            OpenChildForm(new Analytics(), 133, 80);
         }
     }
 }
