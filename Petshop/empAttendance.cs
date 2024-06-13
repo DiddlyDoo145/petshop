@@ -25,15 +25,16 @@ namespace Petshop
 
         private void empOne_Load(object sender, EventArgs e)
         {
-            employee();
+            attendanceFl.Controls.Clear();
+            loadFL();
         }
-        private void employee()
+        private void loadFL()
         {
-            DayOfWeek currentDay = DateTime.Now.DayOfWeek;
+            int currentDay = (int)DateTime.Now.DayOfWeek + 1;
             attendanceFl.Controls.Clear();
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, employee.employee_fname, employee.employee_lname, employee.employee_cNumber, position.position_desc FROM employee RIGHT JOIN position ON employee.position_id = position.position_id RIGHT JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.employee_id > '0' AND (DAYOFWEEK(CURDATE()) BETWEEN DAYOFWEEK(shift.shift_start) AND DAYOFWEEK(shift.shift_end))", dbConnect.myconnect);
+            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, employee.employee_fname, employee.employee_lname, employee.employee_cNumber, position.position_desc FROM employee INNER JOIN position ON employee.position_id = position.position_id INNER JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.employee_id > '0' AND employee.position_id != '6' AND (shift.shift_start <= @shift AND shift.shift_end >= @shift) OR (shift.shift_start > shift.shift_end AND (@shift >= shift.shift_start OR @shift <= shift.shift_end))", dbConnect.myconnect);
             cmd.Parameters.AddWithValue("@shift", currentDay.ToString());
             myReader = cmd.ExecuteReader();
             while (myReader.Read())
@@ -42,7 +43,7 @@ namespace Petshop
                 attendance[] employeeAttendance = new attendance[rowcount];
                 for (int i = 0; i < employeeAttendance.Length; i++)
                 {
-/*                    byte[] img = (byte[])(myReader["empImg"]);
+ /*                   byte[] img = (byte[])(myReader["empImg"]);
                     MemoryStream ms = new MemoryStream(img);*/
                     int controlCount = attendanceFl.Controls.Count;
                     employeeAttendance[i] = new attendance();

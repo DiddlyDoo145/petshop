@@ -19,16 +19,30 @@ namespace Petshop
 
         private void empPayroll_Load(object sender, EventArgs e)
         {
-            loadPayroll();
+            DateTime monthyear = DateTime.Now;
+            loadPayroll(monthyear);
+        }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            DateTime monthyear = DateTime.Now;
+            loadPayroll(monthyear);
+            dateTimePicker1.Value = monthyear;
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime monthyear = dateTimePicker1.Value;
+            loadPayroll(monthyear);
         }
 
         public empPayroll()
         {
             InitializeComponent();
         }
-        private void loadPayroll()
+        private void loadPayroll(DateTime monthyear)
         {
-            DateTime monthyear = DateTime.Now;
+
             payrollDgv.ReadOnly = true;
             dbConnect = new Conclass();
             dbConnect.OpenConnection();

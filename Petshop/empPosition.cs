@@ -87,6 +87,15 @@ namespace Petshop
             cmd.ExecuteNonQuery();
             dbConnect.CloseConnection();
         }
+        private void deleteOT()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("UPDATE overtime_rate SET position_id = '6', otRate_pay = '0' WHERE position_id = @id", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@id", jobid);
+            cmd.ExecuteNonQuery();
+            dbConnect.CloseConnection();
+        }
         #region CRUD
         private void addJobBtn_Click(object sender, EventArgs e)
         {
@@ -194,6 +203,7 @@ namespace Petshop
                     if (MessageBox.Show("All employee under this title will be labeled N/A. Proceed?", "Notice!", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         changePosition();
+                        deleteOT();
                         dbConnect = new Conclass();
                         dbConnect.OpenConnection();
                         MySqlCommand cmd = new MySqlCommand("DELETE FROM position WHERE position_id = @id", dbConnect.myconnect);
@@ -202,6 +212,7 @@ namespace Petshop
                         MessageBox.Show("Job successfully deleted", "Delete successful");
                         jobTitle.Clear();
                         jobSalary.Clear();
+                        dbConnect.CloseConnection();
                         jobList();
                     }
                 }

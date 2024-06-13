@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.payrollDgv = new System.Windows.Forms.DataGridView();
-            this.refresh = new MaterialSkin.Controls.MaterialButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refresh = new MaterialSkin.Controls.MaterialButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -87,26 +87,6 @@
             this.payrollDgv.Size = new System.Drawing.Size(1728, 597);
             this.payrollDgv.TabIndex = 2;
             // 
-            // refresh
-            // 
-            this.refresh.AutoSize = false;
-            this.refresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.refresh.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.refresh.Depth = 0;
-            this.refresh.HighEmphasis = true;
-            this.refresh.Icon = null;
-            this.refresh.Location = new System.Drawing.Point(1630, 124);
-            this.refresh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.refresh.MouseState = MaterialSkin.MouseState.HOVER;
-            this.refresh.Name = "refresh";
-            this.refresh.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.refresh.Size = new System.Drawing.Size(121, 36);
-            this.refresh.TabIndex = 3;
-            this.refresh.Text = "Refresh";
-            this.refresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.refresh.UseAccentColor = false;
-            this.refresh.UseVisualStyleBackColor = true;
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "payroll_id";
@@ -155,6 +135,27 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // refresh
+            // 
+            this.refresh.AutoSize = false;
+            this.refresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.refresh.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.refresh.Depth = 0;
+            this.refresh.HighEmphasis = true;
+            this.refresh.Icon = null;
+            this.refresh.Location = new System.Drawing.Point(1630, 124);
+            this.refresh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.refresh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.refresh.Name = "refresh";
+            this.refresh.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.refresh.Size = new System.Drawing.Size(121, 36);
+            this.refresh.TabIndex = 3;
+            this.refresh.Text = "Refresh";
+            this.refresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.refresh.UseAccentColor = false;
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -162,6 +163,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(108, 22);
             this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label2
             // 

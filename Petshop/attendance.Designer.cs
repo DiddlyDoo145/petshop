@@ -38,7 +38,6 @@
             this.empNo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,25 +139,11 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Contact Number:";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(407, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 42);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Time in";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.empNo);
@@ -187,6 +172,5 @@
         private System.Windows.Forms.Label empNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
     }
 }

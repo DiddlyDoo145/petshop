@@ -259,7 +259,7 @@ namespace Petshop
         }
         private void updateEmp_Click(object sender, EventArgs e)
         {
-            if (fName.TextLength == 0 || sName.TextLength == 0 || cNum.TextLength == 0 || eCnum.TextLength == 0 || addCity.TextLength == 0 || addMuni.TextLength == 0 || addBrgy.TextLength == 0 || jobTitle.SelectedIndex == 0 /*|| fbProfile.TextLength == 0*/)
+            if (fName.TextLength == 0 || sName.TextLength == 0 || cNum.TextLength == 0 || eCnum.TextLength == 0 || addCity.TextLength == 0 || addMuni.TextLength == 0 || addBrgy.TextLength == 0 || jobTitle.SelectedIndex == 0 || startShift.SelectedIndex < 1 || endShift.SelectedIndex < 1/*|| fbProfile.TextLength == 0*/)
             {
                 MessageBox.Show("Fields with " + "'*'" + " are Required. Please Complete the Form.", "Notice!");
             }
@@ -381,7 +381,6 @@ namespace Petshop
             int num = (result == DBNull.Value) ? 0 : Convert.ToInt32(result);
             otID = num.ToString();
             dbConnect.CloseConnection();
-            MessageBox.Show("overtime inserted");
             addPayroll();
         }
         private void addPayroll()
@@ -389,16 +388,12 @@ namespace Petshop
             DateTime monthyear = DateTime.Now;
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO payroll VALUES('', @employee, @otid, @date, @salary)", dbConnect.myconnect);
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO payroll VALUES('', @employee, @otid, @salary, @date)", dbConnect.myconnect);
             cmd.Parameters.AddWithValue("@employee", employeeId);
             cmd.Parameters.AddWithValue("@otid", otID);
             cmd.Parameters.AddWithValue("@date", monthyear.ToString("MM-yyyy"));
             cmd.Parameters.AddWithValue("@salary", jobSalary);
-            int insert = cmd.ExecuteNonQuery();
-            if(insert > 0)
-            {
-                MessageBox.Show("payroll inserted");
-            }
+            cmd.ExecuteNonQuery();
         }
         #endregion
         #region EDIT Payroll

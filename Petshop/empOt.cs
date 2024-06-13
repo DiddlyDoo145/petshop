@@ -61,6 +61,12 @@ namespace Petshop
             otDgv.DataSource = dt;
             dbConnect.CloseConnection();
         }
+
+        private void otDgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            jobTitle.Text = otDgv.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
         private void loadJob()
         {
             string name = otDgv.Rows[0].Cells[1].Value.ToString();
