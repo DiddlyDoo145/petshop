@@ -29,6 +29,8 @@ namespace Petshop
 
         private void ProductsData_Load(object sender, EventArgs e)
         {
+            productID = "";
+
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             cmd = new MySqlCommand("SELECT pCategory_name FROM productcategory WHERE pCategory_name != 'NULL'", dbConnect.myconnect);
@@ -53,7 +55,7 @@ namespace Petshop
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             DataTable dt = new DataTable();
-            mySqlDataAdapter = new MySqlDataAdapter("SELECT product_id, product_name, pCategory_name, product_price, product_stock, strCategory_desc FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE product_stock > '0' AND product_price > '0'", dbConnect.myconnect);
+            mySqlDataAdapter = new MySqlDataAdapter("SELECT product_id, product_name, pCategory_name, product_price, product_stock, strCategory_desc FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE  product_price > 0 OR product_stock > 0", dbConnect.myconnect);
             mySqlDataAdapter.Fill(dt);
             ProductTable.DataSource = dt;
             ProductTable.Columns[0].Visible = false;
@@ -62,7 +64,7 @@ namespace Petshop
         }
 
 
-        int Key = 0;
+       
         private void ProductTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
@@ -75,7 +77,7 @@ namespace Petshop
                 pCategory.Text = ProductTable.Rows[e.RowIndex].Cells[2].Value.ToString();
                 product_price.Text = ProductTable.Rows[e.RowIndex].Cells[3].Value.ToString();
                 product_stock.Text = ProductTable.Rows[e.RowIndex].Cells[4].Value.ToString();
-                if (productname.Text == "")
+                if (productID == "")
                 {
                     productID = "";
                 }
@@ -163,7 +165,7 @@ namespace Petshop
                 product_price.Clear();
                 product_stock.Clear();
                 pCategory.SelectedIndex = 0;
-                Key = 0;
+                productID = "";
                 dbConnect.CloseConnection();
                 return;
             }
@@ -197,7 +199,7 @@ namespace Petshop
                     product_price.Clear();
                     product_stock.Clear();
                     pCategory.SelectedIndex = 0;
-                    Key = 0;
+                    productID = "";
                     populategv();
                 }
 
@@ -211,24 +213,11 @@ namespace Petshop
 
         private void Edit_Click_1(object sender, EventArgs e)
         {
-           
-            if (productID == "")
+
+            if (productID != "")
             {
-                dbConnect = new Conclass();
-                dbConnect.OpenConnection();
-                cmd = new MySqlCommand("SELECT product_id FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE product_name = @ename AND pCategory_name = @eca", dbConnect.myconnect);
-                cmd.Parameters.AddWithValue("@ename", productname.Text);
-                cmd.Parameters.AddWithValue("@eca", pCategory.Text);
-                myReader = cmd.ExecuteReader();
-                if (myReader.Read() == true)
-                {
-                    
-                    productID = myReader["product_id"].ToString();
-                    
-                }
-                        
-            }
-            if (MaterialMessageBox.Show("Are you sure you want to update this product?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                if (MaterialMessageBox.Show("Are you sure you want to update this product?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
@@ -245,11 +234,12 @@ namespace Petshop
                     product_price.Clear();
                     product_stock.Clear();
                     pCategory.SelectedIndex = 0;
-                    Key = 0;
+                    productID = "";
                     populategv();
                     dbConnect.CloseConnection();
-                
-              
+
+
+                }
             }
             else
             {
@@ -278,7 +268,7 @@ namespace Petshop
                 product_price.Clear();
                 product_stock.Clear();
                 pCategory.SelectedIndex = 0;
-                Key = 0;
+                productID = "";
                 populategv();
                 dbConnect.CloseConnection();
             }
@@ -293,7 +283,7 @@ namespace Petshop
         private void Reset_Click(object sender, EventArgs e)
         {
             pCategory_ID.ResetText();
-            Key = 0;
+            productID = "";
             productname.Clear();
             product_price.Clear();
             product_stock.Clear();
@@ -305,7 +295,21 @@ namespace Petshop
         {
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            cmd = new MySqlCommand("SELECT pCategory_id FROM productcategory WHERE pCategory_name = '" + pCategory.Text + "'", dbConnect.myconnect);
+            cmd = new MySqlCommand("SELECT product_id FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE product_name = @ename AND pCategory_name = @eca", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@ename", productname.Text);
+            cmd.Parameters.AddWithValue("@eca", pCategory.Text);
+            myReader = cmd.ExecuteReader();
+            if (myReader.Read() == true)
+            {
+
+                productID = myReader["product_id"].ToString();
+
+            }
+
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            cmd = new MySqlCommand("SELECT pCategory_id FROM productcategory WHERE pCategory_name = @pC", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@pC", pCategory.Text);
             myReader = cmd.ExecuteReader();
             if (myReader.Read() == true)
             {
@@ -336,13 +340,20 @@ namespace Petshop
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void productname_TextChanged(object sender, EventArgs e)
         {
-            Purchase f1 = new Purchase();
-            f1.Show();
-            Visible = true;
-        }
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            cmd = new MySqlCommand("SELECT product_id FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE product_name = @ename AND pCategory_name = @eca", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@ename", productname.Text);
+            cmd.Parameters.AddWithValue("@eca", pCategory.Text);
+            myReader = cmd.ExecuteReader();
+            if (myReader.Read() == true)
+            {
 
-      
+                productID = myReader["product_id"].ToString();
+
+            }
+        }
     }
 }
