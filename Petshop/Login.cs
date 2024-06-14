@@ -15,21 +15,14 @@ namespace Petshop
         public Login()
         {
             InitializeComponent();
+            this.BackColor = Color.SaddleBrown;
+            this.TransparencyKey = Color.SaddleBrown;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void materialTextBox21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            Form bg = new Home();
+            bg.Show();
         }
     }
 }
