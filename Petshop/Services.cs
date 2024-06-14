@@ -236,6 +236,10 @@ namespace Petshop
             SPrice.Clear();
             Key = 0;
         }
-      
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
