@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScottPlot;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
 
 namespace Petshop
@@ -36,37 +38,41 @@ namespace Petshop
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Employee(), 133, 80);
+            OpenChildForm(new Employee(), 175, 100);
         }
 
         private void product_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Product(), 133, 80);
+            OpenChildForm(new Product(), 175, 100);
         }
 
         private void customer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Customer(), 133, 80);
+            OpenChildForm(new Customer(), 175, 100);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Analytics(), 133, 80);
-        }
-
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
+            OpenChildForm(new Analytics(), 175, 100);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Home(), 133, 80);
+            OpenChildForm(new Home(), 175, 100);
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new Analytics(), 133, 80);
+            OpenChildForm(new Analytics(), 175, 100);
+        }
+        private void analytics_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Analytics(), 175, 100);
+        }
+
+        private void OpenForm()
+        {
+
         }
     }
 }
