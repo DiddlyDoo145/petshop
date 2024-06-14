@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Petshop
 {
     public partial class Product : Form
@@ -18,6 +17,9 @@ namespace Petshop
         {
             InitializeComponent();
         }
+
+       
+
         private void OpenChildForm1(Form childForm, int xpos, int ypos)
         {
             if (currentchildForm1 != null)

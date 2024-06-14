@@ -30,10 +30,10 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.services = new MaterialSkin.Controls.MaterialButton();
             this.TransacBtn = new MaterialSkin.Controls.MaterialButton();
             this.pCategorybtn = new MaterialSkin.Controls.MaterialButton();
             this.productCategory = new MaterialSkin.Controls.MaterialButton();
-            this.services = new MaterialSkin.Controls.MaterialButton();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,27 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1328, 58);
             this.panel4.TabIndex = 1;
+            // 
+            // services
+            // 
+            this.services.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.services.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.services.Depth = 0;
+            this.services.Dock = System.Windows.Forms.DockStyle.Left;
+            this.services.HighEmphasis = true;
+            this.services.Icon = null;
+            this.services.Location = new System.Drawing.Point(456, 0);
+            this.services.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.services.MouseState = MaterialSkin.MouseState.HOVER;
+            this.services.Name = "services";
+            this.services.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.services.Size = new System.Drawing.Size(88, 58);
+            this.services.TabIndex = 5;
+            this.services.Text = "Services";
+            this.services.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.services.UseAccentColor = false;
+            this.services.UseVisualStyleBackColor = true;
+            this.services.Click += new System.EventHandler(this.services_Click);
             // 
             // TransacBtn
             // 
@@ -121,27 +142,6 @@
             this.productCategory.UseAccentColor = false;
             this.productCategory.UseVisualStyleBackColor = true;
             this.productCategory.Click += new System.EventHandler(this.productCategory_Click);
-            // 
-            // services
-            // 
-            this.services.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.services.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.services.Depth = 0;
-            this.services.Dock = System.Windows.Forms.DockStyle.Left;
-            this.services.HighEmphasis = true;
-            this.services.Icon = null;
-            this.services.Location = new System.Drawing.Point(456, 0);
-            this.services.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.services.MouseState = MaterialSkin.MouseState.HOVER;
-            this.services.Name = "services";
-            this.services.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.services.Size = new System.Drawing.Size(192, 58);
-            this.services.TabIndex = 5;
-            this.services.Text = "Services";
-            this.services.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.services.UseAccentColor = false;
-            this.services.UseVisualStyleBackColor = true;
-            this.services.Click += new System.EventHandler(this.services_Click);
             // 
             // Product
             // 
