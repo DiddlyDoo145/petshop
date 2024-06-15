@@ -27,14 +27,14 @@ namespace Petshop
             }
             currentchildForm = childForm;
             childForm.TopLevel = false;
-            childForm.Dock = DockStyle.None;
-            this.Controls.Add(childForm);
+            childForm.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(childForm);
             this.Tag = childForm;
             //childForm.BringToFront();
             childForm.Show();
-            childForm.Size = new Size(/*Convert.ToInt32(childForm.Width * 1.155), Convert.ToInt32(childForm.Height * 1.096 - 5)*/1400, 782);
+            /*childForm.Size = new Size(*//*Convert.ToInt32(childForm.Width * 1.155), Convert.ToInt32(childForm.Height * 1.096 - 5)*//*1400, 782);*/
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Location = new Point(xpos, ypos);
+            /*childForm.Location = new Point(xpos, ypos);*/
         }
         private void button1_Click(object sender, EventArgs e)
         {

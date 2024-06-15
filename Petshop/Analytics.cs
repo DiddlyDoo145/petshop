@@ -38,7 +38,7 @@ namespace ScottPlot
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+           /* Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));*/
 
             /*// Add the control to the panel
             panel1.Controls.Add(FormsPlot1);
@@ -53,7 +53,7 @@ namespace ScottPlot
         {
             double val1 = 0, val2 = 0, comp = 0;
 
-           /* #region load
+            #region load
             load_SalesChart();
             load_PieChart();
 
@@ -105,7 +105,7 @@ namespace ScottPlot
 
 
             dbConnect.CloseConnection();
-            #endregion*/
+            #endregion
 
             /*chart1.Series["Salary"].Points.AddXY("Mon", 1000);
             chart1.Series["Salary"].Points.AddXY("Tue", 5000);

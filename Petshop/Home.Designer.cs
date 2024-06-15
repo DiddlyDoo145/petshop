@@ -55,6 +55,7 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.materialCard5.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -91,7 +92,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(231, 1136);
+            this.panel1.Size = new System.Drawing.Size(231, 1102);
             this.panel1.TabIndex = 0;
             // 
             // materialCard5
@@ -399,6 +400,14 @@
             this.pictureBox13.TabIndex = 8;
             this.pictureBox13.TabStop = false;
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(237, 120);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1802, 938);
+            this.panel3.TabIndex = 2;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -406,7 +415,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2589, 1136);
+            this.ClientSize = new System.Drawing.Size(2589, 1102);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -474,5 +484,6 @@
         private MaterialSkin.Controls.MaterialCard materialCard5;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel3;
     }
 }

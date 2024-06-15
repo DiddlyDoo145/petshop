@@ -74,8 +74,15 @@ namespace Petshop
             MySqlDataAdapter da = new MySqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();
-            da.Fill(dt);
-            jobDgv.DataSource = dt;
+            if(dt.Rows.Count == 0)
+            {
+
+            }
+            else
+            {
+                da.Fill(dt);
+                jobDgv.DataSource = dt;
+            }
             dbConnect.CloseConnection();
         }
         private void changePosition()
