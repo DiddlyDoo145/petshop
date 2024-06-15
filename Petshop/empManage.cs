@@ -180,8 +180,15 @@ namespace Petshop
             MySqlDataAdapter da = new MySqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();
-            da.Fill(dt);
-            employees.DataSource = dt;
+            if(dt.Rows.Count == 0)
+            {
+
+            }
+            else
+            {
+                da.Fill(dt);
+                employees.DataSource = dt;
+            }
             dbConnect.CloseConnection();
         }
 
