@@ -330,3 +330,5 @@ C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.ProductTransac.
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Purchase.resources
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Services.resources
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\ScottPlot.Analytics.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\ScottPlot.Analytics.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.BlurBg.resources

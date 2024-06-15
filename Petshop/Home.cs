@@ -69,10 +69,5 @@ namespace Petshop
         {
             OpenChildForm(new Analytics(), 175, 100);
         }
-
-        private void OpenForm()
-        {
-
-        }
     }
 }

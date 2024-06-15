@@ -52,8 +52,8 @@ namespace ScottPlot
         private void Form1_Load(object sender, EventArgs e)
         {
             double val1 = 0, val2 = 0, comp = 0;
-            
 
+           /* #region load
             load_SalesChart();
             load_PieChart();
 
@@ -105,6 +105,7 @@ namespace ScottPlot
 
 
             dbConnect.CloseConnection();
+            #endregion*/
 
             /*chart1.Series["Salary"].Points.AddXY("Mon", 1000);
             chart1.Series["Salary"].Points.AddXY("Tue", 5000);
