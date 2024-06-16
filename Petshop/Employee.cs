@@ -77,5 +77,10 @@ namespace Petshop
         {
             OpenChildForm1(new empOt(), 30, 110);
         }
+
+        private void Employee_Load(object sender, EventArgs e)
+        {
+            OpenChildForm1(new empAttendance(), 30, 110);
+        }
     }
 }
