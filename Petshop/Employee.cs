@@ -23,10 +23,7 @@ namespace Petshop
         //Hii this is new!
         public Employee()
         {
-
-
             InitializeComponent();
-
         }
         #region kim
         public void OpenChildForm1(Form childForm, int xpos, int ypos)
@@ -37,14 +34,14 @@ namespace Petshop
             }
             currentchildForm1 = childForm;
             childForm.TopLevel = false;
-            childForm.Dock = DockStyle.None;
-            this.Controls.Add(childForm);
+            childForm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(childForm);
             this.Tag = childForm;
             //childForm.BringToFront();
             childForm.Show();
-            childForm.Size = new Size(1335, 665);
+/*            childForm.Size = new Size(1335, 665);*/
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Location = new Point(xpos, ypos);
+            /*            childForm.Location = new Point(xpos, ypos);*/
         }
         #endregion
 
@@ -60,7 +57,9 @@ namespace Petshop
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+
             OpenChildForm1(new empManage(), 30, 110);
+
         }
 
         private void recordBtn_Click(object sender, EventArgs e)

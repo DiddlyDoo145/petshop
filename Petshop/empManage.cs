@@ -66,9 +66,9 @@ namespace Petshop
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             MySqlCommand cmd2 = new MySqlCommand("SELECT address_id FROM address WHERE address_city = @city AND address_muni = @municipality AND address_brgy = @brgy", dbConnect.myconnect);
-            cmd2.Parameters.AddWithValue("@city", addCity.Text);
-            cmd2.Parameters.AddWithValue("@municipality", addMuni.Text);
-            cmd2.Parameters.AddWithValue("@brgy", addBrgy.Text);
+            cmd2.Parameters.AddWithValue("@city", newCity.Text);
+            cmd2.Parameters.AddWithValue("@municipality", newMunicipality.Text);
+            cmd2.Parameters.AddWithValue("@brgy", newBarangay.Text);
             myReader2 = cmd2.ExecuteReader();
             if (myReader2.Read())
             {
@@ -81,9 +81,9 @@ namespace Petshop
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
                 MySqlCommand cmd3 = new MySqlCommand("INSERT INTO address VALUES (' ', @newCity, @newMuni, @newBrgy); SELECT LAST_INSERT_ID();", dbConnect.myconnect);
-                cmd3.Parameters.AddWithValue("@newCity", addCity.Text);
-                cmd3.Parameters.AddWithValue("@newMuni", addMuni.Text);
-                cmd3.Parameters.AddWithValue("@newBrgy", addBrgy.Text);
+                cmd3.Parameters.AddWithValue("@newCity", newCity.Text);
+                cmd3.Parameters.AddWithValue("@newMuni", newMunicipality.Text);
+                cmd3.Parameters.AddWithValue("@newBrgy", newBarangay.Text);
                 object result = cmd3.ExecuteScalar();
                 int num = (result == DBNull.Value) ? 0 : Convert.ToInt32(result);
                 address = num.ToString();
@@ -109,9 +109,9 @@ namespace Petshop
                 myReader1 = cmd1.ExecuteReader();
                 if (myReader1.Read())
                 {
-                    addCity.Text = myReader1["address_city"].ToString();
-                    addMuni.Text = myReader1["address_muni"].ToString();
-                    addBrgy.Text = myReader1["address_brgy"].ToString();
+                    newCity.Text = myReader1["address_city"].ToString();
+                    newMunicipality.Text = myReader1["address_muni"].ToString();
+                    newBarangay.Text = myReader1["address_brgy"].ToString();
                 }
             }
         }
@@ -153,26 +153,26 @@ namespace Petshop
             {
                 employeeId = employees.Rows[e.RowIndex].Cells[0].Value.ToString();
                 jobTitle.SelectedItem = employees.Rows[e.RowIndex].Cells[1].Value.ToString();
-                fName.Text = employees.Rows[e.RowIndex].Cells[2].Value.ToString();
-                sName.Text = employees.Rows[e.RowIndex].Cells[3].Value.ToString();
+                firstName.Text = employees.Rows[e.RowIndex].Cells[2].Value.ToString();
+                lastName.Text = employees.Rows[e.RowIndex].Cells[3].Value.ToString();
                 startShift.SelectedItem = employees.Rows[e.RowIndex].Cells[4].Value.ToString();
                 endShift.SelectedItem = employees.Rows[e.RowIndex].Cells[5].Value.ToString();
-                cNum.Text = employees.Rows[e.RowIndex].Cells[6].Value.ToString();
-                eCnum.Text = employees.Rows[e.RowIndex].Cells[7].Value.ToString();
+                contactNumber.Text = employees.Rows[e.RowIndex].Cells[6].Value.ToString();
+                emergencyNumber.Text = employees.Rows[e.RowIndex].Cells[7].Value.ToString();
                 retrieveAddress();
             }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            fName.Clear();
-            sName.Clear();
-            cNum.Clear();
-            eCnum.Clear();
+            firstName.Clear();
+            lastName.Clear();
+            contactNumber.Clear();
+            emergencyNumber.Clear();
             jobTitle.SelectedIndex = 0;
-            addBrgy.Clear();
-            addCity.Clear();
-            addMuni.Clear();
+            newBarangay.Clear();
+            newCity.Clear();
+            newMunicipality.Clear();
             employeeId = "";
         }
         #endregion
@@ -200,9 +200,19 @@ namespace Petshop
             }
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void addEmp_Click(object sender, EventArgs e)
         {
-            if (fName.TextLength == 0 || sName.TextLength == 0 || cNum.TextLength == 0 || eCnum.TextLength == 0 || addCity.TextLength == 0 || addMuni.TextLength == 0 || addBrgy.TextLength == 0 || jobTitle.SelectedIndex == 0 || startShift.SelectedIndex < 1 || endShift.SelectedIndex < 1 /*|| fbProfile.TextLength == 0*/)
+            if (firstName.TextLength == 0 || lastName.TextLength == 0 || contactNumber.TextLength == 0 || emergencyNumber.TextLength == 0 || newCity.TextLength == 0 || newMunicipality.TextLength == 0 || newBarangay.TextLength == 0 || jobTitle.SelectedIndex == 0 || startShift.SelectedIndex < 1 || endShift.SelectedIndex < 1 /*|| fbProfile.TextLength == 0*/)
             {
                 MessageBox.Show("Fields with " + "'*'" + " are Required. Please Complete the Form.", "Notice!");
             }
@@ -214,9 +224,9 @@ namespace Petshop
             {
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM employee WHERE employee_fname = @fname AND employee_lname = @sname", dbConnect.myconnect);
-                cmd.Parameters.AddWithValue("@fname", fName.Text);
-                cmd.Parameters.AddWithValue("@sname", sName.Text);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM employee WHERE employee_fname = @firstName AND employee_lname = @lastName", dbConnect.myconnect);
+                cmd.Parameters.AddWithValue("@firstName", firstName.Text);
+                cmd.Parameters.AddWithValue("@lastName", lastName.Text);
                 myReader = cmd.ExecuteReader();
                 if (myReader.Read())
                 {
@@ -245,11 +255,11 @@ namespace Petshop
                     dbConnect.CloseConnection();
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
-                    MySqlCommand cmd4 = new MySqlCommand("INSERT INTO employee(employee_id, employee_fname, employee_lname, employee_cNumber, employee_ecNumber, position_id, shift_id, address_id) VALUES('', @Fname, @Sname, @Cnum, @Enum, @JobID, @shift, @address); SELECT LAST_INSERT_ID();", dbConnect.myconnect);
-                    cmd4.Parameters.AddWithValue("@Fname", fName.Text);
-                    cmd4.Parameters.AddWithValue("@Sname", sName.Text);
-                    cmd4.Parameters.AddWithValue("@Cnum", cNum.Text);
-                    cmd4.Parameters.AddWithValue("@Enum", eCnum.Text);
+                    MySqlCommand cmd4 = new MySqlCommand("INSERT INTO employee(employee_id, employee_fname, employee_lname, employee_cNumber, employee_ecNumber, position_id, shift_id, address_id) VALUES('', @firstName, @lastName, @contactNumber, @Enum, @JobID, @shift, @address); SELECT LAST_INSERT_ID();", dbConnect.myconnect);
+                    cmd4.Parameters.AddWithValue("@firstName", firstName.Text);
+                    cmd4.Parameters.AddWithValue("@lastName", lastName.Text);
+                    cmd4.Parameters.AddWithValue("@contactNumber", contactNumber.Text);
+                    cmd4.Parameters.AddWithValue("@Enum", emergencyNumber.Text);
                     cmd4.Parameters.AddWithValue("@JobID", jobID);
                     cmd4.Parameters.AddWithValue("@shift", shiftID);
                     cmd4.Parameters.AddWithValue("@address", address);
@@ -257,16 +267,16 @@ namespace Petshop
                     int num = (result == DBNull.Value) ? 0 : Convert.ToInt32(result);
                     employeeId = num.ToString();
                     MessageBox.Show("New Employee Added Sucessfully");
-                    fName.Clear();
-                    sName.Clear();
-                    cNum.Clear();
-                    eCnum.Clear();
+                    firstName.Clear();
+                    lastName.Clear();
+                    contactNumber.Clear();
+                    emergencyNumber.Clear();
                     jobTitle.SelectedIndex = 0;
                     startShift.SelectedIndex = 0;
                     endShift.SelectedIndex = 0;
-                    addMuni.Clear();
-                    addCity.Clear();
-                    addBrgy.Clear();
+                    newMunicipality.Clear();
+                    newCity.Clear();
+                    newBarangay.Clear();
                     loadEmployee();
                     retrieveOTR();
                 }
@@ -274,7 +284,7 @@ namespace Petshop
         }
         private void updateEmp_Click(object sender, EventArgs e)
         {
-            if (fName.TextLength == 0 || sName.TextLength == 0 || cNum.TextLength == 0 || eCnum.TextLength == 0 || addCity.TextLength == 0 || addMuni.TextLength == 0 || addBrgy.TextLength == 0 || jobTitle.SelectedIndex == 0 || startShift.SelectedIndex < 1 || endShift.SelectedIndex < 1/*|| fbProfile.TextLength == 0*/)
+            if (firstName.TextLength == 0 || lastName.TextLength == 0 || contactNumber.TextLength == 0 || emergencyNumber.TextLength == 0 || newCity.TextLength == 0 || newMunicipality.TextLength == 0 || newBarangay.TextLength == 0 || jobTitle.SelectedIndex == 0 || startShift.SelectedIndex < 1 || endShift.SelectedIndex < 1/*|| fbProfile.TextLength == 0*/)
             {
                 MessageBox.Show("Fields with " + "'*'" + " are Required. Please Complete the Form.", "Notice!");
             }
@@ -286,10 +296,10 @@ namespace Petshop
             {
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM employee WHERE employee_fname = @fname AND employee_lname = @sname AND employee_id != @id", dbConnect.myconnect);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM employee WHERE employee_fname = @firstName AND employee_lname = @lastName AND employee_id != @id", dbConnect.myconnect);
                 cmd.Parameters.AddWithValue("@id", employeeId);
-                cmd.Parameters.AddWithValue("@fname", fName.Text);
-                cmd.Parameters.AddWithValue("@sname", sName.Text);
+                cmd.Parameters.AddWithValue("@firstName", firstName.Text);
+                cmd.Parameters.AddWithValue("@lastName", lastName.Text);
                 myReader = cmd.ExecuteReader();
                 if (myReader.Read())
                 {
@@ -311,12 +321,12 @@ namespace Petshop
                     dbConnect.CloseConnection();
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
-                    MySqlCommand cmd4 = new MySqlCommand("UPDATE employee SET employee_fname = @Fname, employee_lname = @Sname, position_id = @JobID, employee_cNumber = @Cnum, employee_ecNumber = @Enum, shift_id = @shift, address_id = @address WHERE employee_id = @uempid", dbConnect.myconnect);
+                    MySqlCommand cmd4 = new MySqlCommand("UPDATE employee SET employee_fname = @firstName, employee_lname = @lastName, position_id = @JobID, employee_cNumber = @contactNumber, employee_ecNumber = @Enum, shift_id = @shift, address_id = @address WHERE employee_id = @uempid", dbConnect.myconnect);
                     cmd4.Parameters.AddWithValue("@uempid", employeeId);
-                    cmd4.Parameters.AddWithValue("@Fname", fName.Text);
-                    cmd4.Parameters.AddWithValue("@Sname", sName.Text);
-                    cmd4.Parameters.AddWithValue("@Cnum", cNum.Text);
-                    cmd4.Parameters.AddWithValue("@Enum", eCnum.Text);
+                    cmd4.Parameters.AddWithValue("@firstName", firstName.Text);
+                    cmd4.Parameters.AddWithValue("@lastName", lastName.Text);
+                    cmd4.Parameters.AddWithValue("@contactNumber", contactNumber.Text);
+                    cmd4.Parameters.AddWithValue("@Enum", emergencyNumber.Text);
                     cmd4.Parameters.AddWithValue("@JobID", jobID);
                     cmd4.Parameters.AddWithValue("@shift", shiftID);
                     cmd4.Parameters.AddWithValue("@address", address);
@@ -324,16 +334,16 @@ namespace Petshop
                     if (affectedColumn != 0)
                     {
                         MessageBox.Show("Employee information updated", "Update successful");
-                        fName.Clear();
-                        sName.Clear();
-                        cNum.Clear();
-                        eCnum.Clear();
+                        firstName.Clear();
+                        lastName.Clear();
+                        contactNumber.Clear();
+                        emergencyNumber.Clear();
                         jobTitle.SelectedIndex = 0;
                         startShift.SelectedIndex = 0;
                         endShift.SelectedIndex = 0;
-                        addMuni.Clear();
-                        addCity.Clear();
-                        addBrgy.Clear();
+                        newMunicipality.Clear();
+                        newCity.Clear();
+                        newBarangay.Clear();
                         loadEmployee();
                         employeeId = "";
                     }
@@ -352,16 +362,16 @@ namespace Petshop
                 if (delete > 0)
                 {
                     MessageBox.Show("Employee deleted successfully", "Delete Successful");
-                    fName.Clear();
-                    sName.Clear();
-                    cNum.Clear();
-                    eCnum.Clear();
+                    firstName.Clear();
+                    lastName.Clear();
+                    contactNumber.Clear();
+                    emergencyNumber.Clear();
                     jobTitle.SelectedIndex = 0;
                     startShift.SelectedIndex = 0;
                     endShift.SelectedIndex = 0;
-                    addMuni.Clear();
-                    addCity.Clear();
-                    addBrgy.Clear();
+                    newMunicipality.Clear();
+                    newCity.Clear();
+                    newBarangay.Clear();
                     loadEmployee();
                     employeeId = "";
                 }

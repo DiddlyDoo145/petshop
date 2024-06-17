@@ -79,14 +79,14 @@ namespace Petshop
         private void AddProduct_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(servicename.Text.Trim()))
+            if (string.IsNullOrEmpty(serviceName.Text.Trim()))
             {
-                errorProvider1.SetError(servicename, "Please Input this field");
+                errorProvider1.SetError(serviceName, "Please Input this field");
                 return;
             }
             else
             {
-                errorProvider1.SetError(servicename, string.Empty);
+                errorProvider1.SetError(serviceName, string.Empty);
             }
             if (petType.Text == "SELECT CATEGORY")
             {
@@ -106,14 +106,14 @@ namespace Petshop
             {
                 errorProvider3.SetError(petSize, string.Empty);
             }
-            if (string.IsNullOrEmpty(SPrice.Text.Trim()))
+            if (string.IsNullOrEmpty(servicePrice.Text.Trim()))
             {
-                errorProvider4.SetError(SPrice, "Please Input this field");
+                errorProvider4.SetError(servicePrice, "Please Input this field");
                 return;
             }
             else
             {
-                errorProvider4.SetError(SPrice, string.Empty);
+                errorProvider4.SetError(servicePrice, string.Empty);
             }
           
           
@@ -123,7 +123,7 @@ namespace Petshop
             cmd = new MySqlCommand("SELECT * FROM services WHERE service_name = @uname  AND pet_id = @uids AND pet_size = @pSe AND service_price = 0", dbConnect.myconnect);
             cmd.Parameters.AddWithValue("@uids", petID);
             cmd.Parameters.AddWithValue("@pSe", petSize.Text);
-            cmd.Parameters.AddWithValue("@uname", servicename.Text);
+            cmd.Parameters.AddWithValue("@uname", serviceName.Text);
             myReader = cmd.ExecuteReader();
             if (myReader.Read() == true)
             {
@@ -132,13 +132,13 @@ namespace Petshop
                 cmd = new MySqlCommand("UPDATE services SET service_price = @usprice WHERE service_name = @un AND pet_id = @uid AND pet_size = @pS  AND service_price = 0", dbConnect.myconnect);
                 cmd.Parameters.AddWithValue("@uid", petID);
                 cmd.Parameters.AddWithValue("@pS", petSize.Text);
-                cmd.Parameters.AddWithValue("@un", servicename.Text);
-                cmd.Parameters.AddWithValue("@usprice", SPrice.Text);
+                cmd.Parameters.AddWithValue("@un", serviceName.Text);
+                cmd.Parameters.AddWithValue("@usprice", servicePrice.Text);
                 cmd.ExecuteNonQuery();
                 MaterialMessageBox.Show("New Service Added Successfully", "Success");
                 populategv();
-                servicename.Clear();
-                SPrice.Clear();
+                serviceName.Clear();
+                servicePrice.Clear();
                 petType.SelectedIndex = 0;
                 petSize.SelectedIndex = 0;
                 serviceID = "";
@@ -150,29 +150,29 @@ namespace Petshop
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
                 cmd = new MySqlCommand("SELECT * FROM services WHERE service_name = @Sname", dbConnect.myconnect);
-                cmd.Parameters.AddWithValue("@Sname", servicename.Text);
+                cmd.Parameters.AddWithValue("@Sname", serviceName.Text);
                 myReader = cmd.ExecuteReader();
                 if (myReader.Read() == true)
                 {
                     MaterialMessageBox.Show("Service Already Exist", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    servicename.Clear();
-                    SPrice.Clear();
+                    serviceName.Clear();
+                    servicePrice.Clear();
                     serviceID = "";
                 }
                 else
                 {
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
-                    cmd = new MySqlCommand("INSERT INTO services (service_name, service_price, pet_id, pet_size, strCategory_id) VALUES (@Sname, @Sprice, @pID, @ptS, '2')", dbConnect.myconnect);
-                    cmd.Parameters.AddWithValue("@Sname", servicename.Text);
-                    cmd.Parameters.AddWithValue("@Sprice", SPrice.Text);
+                    cmd = new MySqlCommand("INSERT INTO services (service_name, service_price, pet_id, pet_size, strCategory_id) VALUES (@Sname, @servicePrice, @pID, @ptS, '2')", dbConnect.myconnect);
+                    cmd.Parameters.AddWithValue("@Sname", serviceName.Text);
+                    cmd.Parameters.AddWithValue("@servicePrice", servicePrice.Text);
                     cmd.Parameters.AddWithValue("@pID", petID);
                     cmd.Parameters.AddWithValue("@ptS", petSize.Text);
                     cmd.ExecuteNonQuery();
                     MaterialMessageBox.Show("New Service Added Successfully", "Success");
                     populategv();
-                    servicename.Clear();
-                    SPrice.Clear();
+                    serviceName.Clear();
+                    servicePrice.Clear();
                     petType.SelectedIndex = 0;
                     petSize.SelectedIndex = 0;
                     serviceID = "";
@@ -201,11 +201,11 @@ namespace Petshop
             }
             else
             {
-                servicename.Text = ServicesTable.Rows[e.RowIndex].Cells[1].Value.ToString();
-                SPrice.Text = ServicesTable.Rows[e.RowIndex].Cells[2].Value.ToString();
+                serviceName.Text = ServicesTable.Rows[e.RowIndex].Cells[1].Value.ToString();
+                servicePrice.Text = ServicesTable.Rows[e.RowIndex].Cells[2].Value.ToString();
                 petType.Text = ServicesTable.Rows[e.RowIndex].Cells[3].Value.ToString();
                 petSize.Text = ServicesTable.Rows[e.RowIndex].Cells[4].Value.ToString();
-                if (servicename.Text == "")
+                if (serviceName.Text == "")
                 {
                     serviceID = "";
                 }
@@ -227,15 +227,15 @@ namespace Petshop
                     dbConnect.OpenConnection();
                     cmd = new MySqlCommand("UPDATE services SET service_name = @n, service_price = @p, pet_id = @pid, pet_size = @psize  WHERE service_id = @ID", dbConnect.myconnect);
                     cmd.Parameters.AddWithValue("@ID", serviceID);
-                    cmd.Parameters.AddWithValue("@n", servicename.Text);
-                    cmd.Parameters.AddWithValue("@p", SPrice.Text);
+                    cmd.Parameters.AddWithValue("@n", serviceName.Text);
+                    cmd.Parameters.AddWithValue("@p", servicePrice.Text);
                     cmd.Parameters.AddWithValue("@pid", petID);
                     cmd.Parameters.AddWithValue("@psize", petSize.Text);
                     cmd.ExecuteNonQuery();
                     MaterialMessageBox.Show("Updated Successfully", "Success");
                     populategv();
-                    servicename.Clear();
-                    SPrice.Clear();
+                    serviceName.Clear();
+                    servicePrice.Clear();
                     petType.SelectedIndex = 0;
                     petSize.SelectedIndex = 0;
                     serviceID = "";
@@ -265,8 +265,8 @@ namespace Petshop
                 cmd.ExecuteNonQuery();
                 MaterialMessageBox.Show("Deleted Successfully", "Success");
                 populategv();
-                servicename.Clear();
-                SPrice.Clear();
+                serviceName.Clear();
+                servicePrice.Clear();
                 petType.SelectedIndex = 0;
                 petSize.SelectedIndex = 0;
                 serviceID = "";
@@ -287,8 +287,8 @@ namespace Petshop
 
         private void Reset_Click(object sender, EventArgs e)
         {
-            servicename.Clear();
-            SPrice.Clear();
+            serviceName.Clear();
+            servicePrice.Clear();
             serviceID = "";
             petType.SelectedIndex = 0;
             petSize.SelectedIndex = 0;
@@ -300,7 +300,7 @@ namespace Petshop
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             cmd = new MySqlCommand("SELECT service_id FROM services WHERE service_name = @UN", dbConnect.myconnect);
-            cmd.Parameters.AddWithValue("@UN", servicename.Text);
+            cmd.Parameters.AddWithValue("@UN", serviceName.Text);
             myReader = cmd.ExecuteReader();
             if (myReader.Read() == true)
             {

@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(empPosition));
+            this.label5 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.jobSalary = new System.Windows.Forms.TextBox();
-            this.jobTitle = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.jobDgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,106 +43,69 @@
             this.addJobBtn = new System.Windows.Forms.Button();
             this.updateJobBtn = new System.Windows.Forms.Button();
             this.deleteJobBtn = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.jSalary = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.label6 = new System.Windows.Forms.Label();
+            this.jTitle = new MaterialSkin.Controls.MaterialTextBox2();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.jobDgv)).BeginInit();
+            this.materialCard1.SuspendLayout();
+            this.materialCard2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.materialCard5.SuspendLayout();
+            this.materialCard6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // label5
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1805, 65);
-            this.panel1.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(217, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 21);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "New job?";
             // 
-            // label1
+            // linkLabel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Manage Position";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.jobSalary);
-            this.groupBox1.Controls.Add(this.jobTitle);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(965, 280);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(724, 166);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Position Information";
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(314, 70);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(92, 21);
+            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Click here";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(15, 36);
+            this.label9.Location = new System.Drawing.Point(23, 71);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(21, 24);
             this.label9.TabIndex = 2;
             this.label9.Text = "*";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(390, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Job Salary";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(37, 36);
+            this.label8.Location = new System.Drawing.Point(45, 71);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 24);
             this.label8.TabIndex = 3;
             this.label8.Text = "Required";
-            // 
-            // jobSalary
-            // 
-            this.jobSalary.Location = new System.Drawing.Point(394, 105);
-            this.jobSalary.Name = "jobSalary";
-            this.jobSalary.Size = new System.Drawing.Size(297, 40);
-            this.jobSalary.TabIndex = 2;
-            // 
-            // jobTitle
-            // 
-            this.jobTitle.Location = new System.Drawing.Point(41, 105);
-            this.jobTitle.Name = "jobTitle";
-            this.jobTitle.Size = new System.Drawing.Size(297, 40);
-            this.jobTitle.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Job Title";
             // 
             // jobDgv
             // 
@@ -158,12 +117,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.jobDgv.Location = new System.Drawing.Point(204, 168);
+            this.jobDgv.Location = new System.Drawing.Point(57, 154);
             this.jobDgv.Name = "jobDgv";
             this.jobDgv.ReadOnly = true;
             this.jobDgv.RowHeadersWidth = 51;
             this.jobDgv.RowTemplate.Height = 24;
-            this.jobDgv.Size = new System.Drawing.Size(620, 579);
+            this.jobDgv.Size = new System.Drawing.Size(631, 573);
             this.jobDgv.TabIndex = 2;
             this.jobDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.jobDgv_CellClick);
             // 
@@ -194,16 +153,16 @@
             // jobSearchBox
             // 
             this.jobSearchBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jobSearchBox.Location = new System.Drawing.Point(340, 130);
+            this.jobSearchBox.Location = new System.Drawing.Point(193, 116);
             this.jobSearchBox.Name = "jobSearchBox";
-            this.jobSearchBox.Size = new System.Drawing.Size(337, 32);
+            this.jobSearchBox.Size = new System.Drawing.Size(348, 32);
             this.jobSearchBox.TabIndex = 4;
             // 
             // searchBtn
             // 
             this.searchBtn.BackColor = System.Drawing.Color.RosyBrown;
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchBtn.Location = new System.Drawing.Point(683, 130);
+            this.searchBtn.Location = new System.Drawing.Point(547, 116);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(141, 32);
             this.searchBtn.TabIndex = 5;
@@ -215,7 +174,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(204, 127);
+            this.label4.Location = new System.Drawing.Point(57, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 32);
             this.label4.TabIndex = 3;
@@ -225,9 +184,9 @@
             // 
             this.addJobBtn.BackColor = System.Drawing.Color.RosyBrown;
             this.addJobBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addJobBtn.Location = new System.Drawing.Point(995, 463);
+            this.addJobBtn.Location = new System.Drawing.Point(720, 532);
             this.addJobBtn.Name = "addJobBtn";
-            this.addJobBtn.Size = new System.Drawing.Size(209, 53);
+            this.addJobBtn.Size = new System.Drawing.Size(141, 53);
             this.addJobBtn.TabIndex = 6;
             this.addJobBtn.Text = "Add Job";
             this.addJobBtn.UseVisualStyleBackColor = false;
@@ -237,9 +196,9 @@
             // 
             this.updateJobBtn.BackColor = System.Drawing.Color.RosyBrown;
             this.updateJobBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateJobBtn.Location = new System.Drawing.Point(1228, 463);
+            this.updateJobBtn.Location = new System.Drawing.Point(867, 532);
             this.updateJobBtn.Name = "updateJobBtn";
-            this.updateJobBtn.Size = new System.Drawing.Size(209, 53);
+            this.updateJobBtn.Size = new System.Drawing.Size(136, 53);
             this.updateJobBtn.TabIndex = 7;
             this.updateJobBtn.Text = "Update Job";
             this.updateJobBtn.UseVisualStyleBackColor = false;
@@ -249,42 +208,212 @@
             // 
             this.deleteJobBtn.BackColor = System.Drawing.Color.RosyBrown;
             this.deleteJobBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteJobBtn.Location = new System.Drawing.Point(1458, 463);
+            this.deleteJobBtn.Location = new System.Drawing.Point(1009, 532);
             this.deleteJobBtn.Name = "deleteJobBtn";
-            this.deleteJobBtn.Size = new System.Drawing.Size(209, 53);
+            this.deleteJobBtn.Size = new System.Drawing.Size(129, 53);
             this.deleteJobBtn.TabIndex = 8;
             this.deleteJobBtn.Text = "Delete Job";
             this.deleteJobBtn.UseVisualStyleBackColor = false;
             this.deleteJobBtn.Click += new System.EventHandler(this.deleteJobBtn_Click);
             // 
-            // linkLabel1
+            // materialCard1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(605, 38);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(86, 22);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Click here";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.label5);
+            this.materialCard1.Controls.Add(this.jSalary);
+            this.materialCard1.Controls.Add(this.linkLabel1);
+            this.materialCard1.Controls.Add(this.materialCard2);
+            this.materialCard1.Controls.Add(this.jTitle);
+            this.materialCard1.Controls.Add(this.label8);
+            this.materialCard1.Controls.Add(this.label3);
+            this.materialCard1.Controls.Add(this.label2);
+            this.materialCard1.Controls.Add(this.label9);
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(717, 230);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(418, 281);
+            this.materialCard1.TabIndex = 9;
             // 
-            // label5
+            // jSalary
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(516, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 22);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "New job?";
+            this.jSalary.AnimateReadOnly = false;
+            this.jSalary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.jSalary.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.jSalary.Depth = 0;
+            this.jSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.jSalary.HideSelection = true;
+            this.jSalary.Hint = "Job Salary";
+            this.jSalary.LeadingIcon = null;
+            this.jSalary.Location = new System.Drawing.Point(52, 177);
+            this.jSalary.MaxLength = 32767;
+            this.jSalary.MouseState = MaterialSkin.MouseState.OUT;
+            this.jSalary.Name = "jSalary";
+            this.jSalary.PasswordChar = '\0';
+            this.jSalary.PrefixSuffixText = null;
+            this.jSalary.ReadOnly = false;
+            this.jSalary.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.jSalary.SelectedText = "";
+            this.jSalary.SelectionLength = 0;
+            this.jSalary.SelectionStart = 0;
+            this.jSalary.ShortcutsEnabled = true;
+            this.jSalary.Size = new System.Drawing.Size(300, 48);
+            this.jSalary.TabIndex = 11;
+            this.jSalary.TabStop = false;
+            this.jSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.jSalary.TrailingIcon = null;
+            this.jSalary.UseSystemPasswordChar = false;
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.label6);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(14, 14);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(390, 45);
+            this.materialCard2.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(245, 29);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Position Information";
+            // 
+            // jTitle
+            // 
+            this.jTitle.AnimateReadOnly = false;
+            this.jTitle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.jTitle.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.jTitle.Depth = 0;
+            this.jTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.jTitle.HideSelection = true;
+            this.jTitle.Hint = "Job Title";
+            this.jTitle.LeadingIcon = null;
+            this.jTitle.Location = new System.Drawing.Point(52, 103);
+            this.jTitle.MaxLength = 32767;
+            this.jTitle.MouseState = MaterialSkin.MouseState.OUT;
+            this.jTitle.Name = "jTitle";
+            this.jTitle.PasswordChar = '\0';
+            this.jTitle.PrefixSuffixText = null;
+            this.jTitle.ReadOnly = false;
+            this.jTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.jTitle.SelectedText = "";
+            this.jTitle.SelectionLength = 0;
+            this.jTitle.SelectionStart = 0;
+            this.jTitle.ShortcutsEnabled = true;
+            this.jTitle.Size = new System.Drawing.Size(300, 48);
+            this.jTitle.TabIndex = 11;
+            this.jTitle.TabStop = false;
+            this.jTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.jTitle.TrailingIcon = null;
+            this.jTitle.UseSystemPasswordChar = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.materialCard5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1793, 63);
+            this.panel1.TabIndex = 11;
+            // 
+            // materialCard5
+            // 
+            this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard5.Controls.Add(this.materialCard6);
+            this.materialCard5.Depth = 0;
+            this.materialCard5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard5.Location = new System.Drawing.Point(0, 0);
+            this.materialCard5.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard5.Name = "materialCard5";
+            this.materialCard5.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard5.Size = new System.Drawing.Size(1791, 61);
+            this.materialCard5.TabIndex = 12;
+            // 
+            // materialCard6
+            // 
+            this.materialCard6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard6.Controls.Add(this.label1);
+            this.materialCard6.Depth = 0;
+            this.materialCard6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard6.Location = new System.Drawing.Point(14, 14);
+            this.materialCard6.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard6.Name = "materialCard6";
+            this.materialCard6.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard6.Size = new System.Drawing.Size(1763, 33);
+            this.materialCard6.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1758, 29);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "P        O        S        I        T        I        O        N                 " +
+    "   M        A        N        A        G        E        M        E        N    " +
+    "    T";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(348, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(351, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "*";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1086, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(809, 710);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // empPosition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1805, 858);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(1793, 766);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.deleteJobBtn);
             this.Controls.Add(this.updateJobBtn);
             this.Controls.Add(this.addJobBtn);
@@ -292,31 +421,26 @@
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.jobSearchBox);
             this.Controls.Add(this.jobDgv);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "empPosition";
             this.Text = "employeePosition";
             this.Load += new System.EventHandler(this.empPosition_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobDgv)).EndInit();
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.materialCard5.ResumeLayout(false);
+            this.materialCard6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox jobSalary;
-        private System.Windows.Forms.TextBox jobTitle;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView jobDgv;
@@ -331,5 +455,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label5;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private System.Windows.Forms.Label label6;
+        private MaterialSkin.Controls.MaterialTextBox2 jTitle;
+        private MaterialSkin.Controls.MaterialTextBox2 jSalary;
+        private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialCard materialCard5;
+        private MaterialSkin.Controls.MaterialCard materialCard6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

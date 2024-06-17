@@ -29,13 +29,13 @@ namespace Petshop
             currentchildForm1 = childForm;
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.None;
-            this.Controls.Add(childForm);
+            this.panel5.Controls.Add(childForm);
             this.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            childForm.Size = new Size(Convert.ToInt32(childForm.Width * 1.155), Convert.ToInt32(childForm.Height * 1.096));
+/*            childForm.Size = new Size(Convert.ToInt32(childForm.Width * 1.155), Convert.ToInt32(childForm.Height * 1.096));*/
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Location = new Point(xpos, ypos);
+/*            childForm.Location = new Point(xpos, ypos);*/
         }
 
       
@@ -57,6 +57,11 @@ namespace Petshop
         private void services_Click(object sender, EventArgs e)
         {
             OpenChildForm1(new Services(), 30, 135);
+        }
+
+        private void Product_Load(object sender, EventArgs e)
+        {
+            productCategory_Click(null, null);
         }
     }
 }

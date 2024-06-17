@@ -44,19 +44,19 @@ namespace Petshop
 
         private void AddProduct_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(pCategoryName.Text.Trim()))
+            if (string.IsNullOrEmpty(prodCategory.Text.Trim()))
             {
-                errorProvider1.SetError(pCategoryName, "Please Input this field");
+                errorProvider1.SetError(prodCategory, "Please Input this field");
                 return;
             }
             else
             {
-                errorProvider1.SetError(pCategoryName, string.Empty);
+                errorProvider1.SetError(prodCategory, string.Empty);
             }
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             cmd = new MySqlCommand("SELECT * FROM productcategory WHERE pCategory_name = @Cname", dbConnect.myconnect);
-            cmd.Parameters.AddWithValue("@Cname", pCategoryName.Text);
+            cmd.Parameters.AddWithValue("@Cname", prodCategory.Text);
             myReader = cmd.ExecuteReader();
             if(myReader.Read() == true)
             {
@@ -69,10 +69,10 @@ namespace Petshop
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
                 cmd = new MySqlCommand("INSERT INTO productcategory (pCategory_name) VAlUES (@pCname)", dbConnect.myconnect);
-                cmd.Parameters.AddWithValue("@pCname", pCategoryName.Text);
+                cmd.Parameters.AddWithValue("@pCname", prodCategory.Text);
                 cmd.ExecuteNonQuery();
                 MaterialMessageBox.Show("New Product Category Successfully Added", "Success");
-                pCategoryName.Clear();
+                prodCategory.Clear();
                 populategv();
                 dbConnect.CloseConnection();
             }
@@ -88,10 +88,10 @@ namespace Petshop
             dbConnect.OpenConnection();
             cmd = new MySqlCommand("UPDATE productcategory SET pCategory_name = @Cname WHERE pCategory_id = @uid", dbConnect.myconnect);
             cmd.Parameters.AddWithValue("@uid", CategoryID.Text);
-            cmd.Parameters.AddWithValue("@Cname", pCategoryName.Text);
+            cmd.Parameters.AddWithValue("@Cname", prodCategory.Text);
             cmd.ExecuteNonQuery();
             MaterialMessageBox.Show("Updated Successfully", "Success");
-            pCategoryName.Clear();
+            prodCategory.Clear();
             populategv();
             dbConnect.CloseConnection();
         }
@@ -111,7 +111,7 @@ namespace Petshop
                 cmd.Parameters.AddWithValue("@did", CategoryID.Text);
                 cmd.ExecuteNonQuery();
                 MaterialMessageBox.Show("Deleted Successfully", "Success");
-                pCategoryName.Clear();
+                prodCategory.Clear();
                 populategv();
                 dbConnect.CloseConnection();
             }
@@ -131,7 +131,7 @@ namespace Petshop
             else
             {
                 CategoryID.Text = pCategory.Rows[e.RowIndex].Cells[0].Value.ToString();
-                pCategoryName.Text = pCategory.Rows[e.RowIndex].Cells[1].Value.ToString();
+                prodCategory.Text = pCategory.Rows[e.RowIndex].Cells[1].Value.ToString();
             }
         }
     }
