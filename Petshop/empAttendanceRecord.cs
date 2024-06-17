@@ -38,12 +38,10 @@ namespace Petshop
         }
         private void retrieveRecord()
         {
-            DateTime tooday = DateTime.Now;
             records.ReadOnly = true;
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_fname, employee.employee_lname, attendance.attendance_date, attendance.attendance_status FROM employee RIGHT JOIN attendance ON employee.employee_id = attendance.employee_id WHERE attendance.attendance_date = @today ORDER BY attendance.attendance_date ASC", dbConnect.myconnect);
-            cmd.Parameters.AddWithValue("@today", tooday.ToString("MM-dd-yyyy"));
+            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_fname, employee.employee_lname, attendance.attendance_date, attendance.attendance_status FROM employee RIGHT JOIN attendance ON employee.employee_id = attendance.employee_id ORDER BY attendance.attendance_date ASC", dbConnect.myconnect);
             MySqlDataAdapter da = new MySqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();

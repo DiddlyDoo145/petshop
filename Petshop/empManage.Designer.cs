@@ -65,6 +65,7 @@
             this.cNum = new System.Windows.Forms.TextBox();
             this.sName = new System.Windows.Forms.TextBox();
             this.fName = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.updateEmp = new System.Windows.Forms.Button();
             this.deleteEmp = new System.Windows.Forms.Button();
@@ -77,16 +78,13 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empSearchBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.empSearch = new System.Windows.Forms.Button();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.empSearchBox = new MaterialSkin.Controls.MaterialTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employees)).BeginInit();
-            this.materialCard1.SuspendLayout();
-            this.materialCard2.SuspendLayout();
             this.SuspendLayout();
             // 
             // addEmp
@@ -95,7 +93,7 @@
             this.addEmp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addEmp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.addEmp.Location = new System.Drawing.Point(989, 616);
+            this.addEmp.Location = new System.Drawing.Point(941, 582);
             this.addEmp.Name = "addEmp";
             this.addEmp.Size = new System.Drawing.Size(230, 46);
             this.addEmp.TabIndex = 12;
@@ -132,8 +130,8 @@
             this.groupBox1.Controls.Add(this.sName);
             this.groupBox1.Controls.Add(this.fName);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(943, 262);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(927, 221);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(830, 331);
             this.groupBox1.TabIndex = 11;
@@ -289,7 +287,7 @@
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.Black;
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.groupBox3.Location = new System.Drawing.Point(129, 223);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(570, 109);
@@ -525,15 +523,25 @@
             this.fName.Size = new System.Drawing.Size(263, 35);
             this.fName.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1805, 65);
+            this.panel1.TabIndex = 10;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 14);
+            this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 32);
+            this.label1.Size = new System.Drawing.Size(266, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Employee Management";
+            this.label1.Text = "Manage Employee";
             // 
             // updateEmp
             // 
@@ -541,7 +549,7 @@
             this.updateEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateEmp.ForeColor = System.Drawing.Color.White;
-            this.updateEmp.Location = new System.Drawing.Point(1231, 616);
+            this.updateEmp.Location = new System.Drawing.Point(1183, 582);
             this.updateEmp.Name = "updateEmp";
             this.updateEmp.Size = new System.Drawing.Size(230, 46);
             this.updateEmp.TabIndex = 13;
@@ -555,7 +563,7 @@
             this.deleteEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteEmp.ForeColor = System.Drawing.Color.White;
-            this.deleteEmp.Location = new System.Drawing.Point(1478, 616);
+            this.deleteEmp.Location = new System.Drawing.Point(1430, 582);
             this.deleteEmp.Name = "deleteEmp";
             this.deleteEmp.Size = new System.Drawing.Size(230, 46);
             this.deleteEmp.TabIndex = 14;
@@ -570,7 +578,6 @@
             this.employees.AllowUserToResizeColumns = false;
             this.employees.AllowUserToResizeRows = false;
             this.employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.employees.BackgroundColor = System.Drawing.Color.CadetBlue;
             this.employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -581,12 +588,12 @@
             this.Column8,
             this.Column4,
             this.Column5});
-            this.employees.Location = new System.Drawing.Point(21, 169);
+            this.employees.Location = new System.Drawing.Point(16, 165);
             this.employees.Name = "employees";
             this.employees.ReadOnly = true;
             this.employees.RowHeadersWidth = 51;
             this.employees.RowTemplate.Height = 24;
-            this.employees.Size = new System.Drawing.Size(905, 604);
+            this.employees.Size = new System.Drawing.Size(905, 642);
             this.employees.TabIndex = 15;
             this.employees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employees_CellClick);
             // 
@@ -654,13 +661,21 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // empSearchBox
+            // 
+            this.empSearchBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empSearchBox.Location = new System.Drawing.Point(234, 127);
+            this.empSearchBox.Name = "empSearchBox";
+            this.empSearchBox.Size = new System.Drawing.Size(415, 32);
+            this.empSearchBox.TabIndex = 16;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 113);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 28);
+            this.label3.Size = new System.Drawing.Size(206, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Employee List";
             // 
@@ -670,78 +685,29 @@
             this.empSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.empSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empSearch.ForeColor = System.Drawing.Color.White;
-            this.empSearch.Location = new System.Drawing.Point(785, 104);
+            this.empSearch.Location = new System.Drawing.Point(660, 127);
             this.empSearch.Name = "empSearch";
-            this.empSearch.Size = new System.Drawing.Size(141, 52);
+            this.empSearch.Size = new System.Drawing.Size(128, 32);
             this.empSearch.TabIndex = 17;
             this.empSearch.Text = "Search";
             this.empSearch.UseVisualStyleBackColor = false;
             this.empSearch.Click += new System.EventHandler(this.empSearch_Click);
             // 
-            // materialCard1
-            // 
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialCard2);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(0, 0);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(1788, 87);
-            this.materialCard1.TabIndex = 18;
-            // 
-            // materialCard2
-            // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.label1);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(14, 14);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(1760, 57);
-            this.materialCard2.TabIndex = 18;
-            // 
-            // empSearchBox
-            // 
-            this.empSearchBox.AnimateReadOnly = false;
-            this.empSearchBox.BackColor = System.Drawing.Color.CadetBlue;
-            this.empSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.empSearchBox.Depth = 0;
-            this.empSearchBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.empSearchBox.Hint = "Search";
-            this.empSearchBox.LeadingIcon = null;
-            this.empSearchBox.Location = new System.Drawing.Point(229, 106);
-            this.empSearchBox.MaxLength = 50;
-            this.empSearchBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.empSearchBox.Multiline = false;
-            this.empSearchBox.Name = "empSearchBox";
-            this.empSearchBox.Size = new System.Drawing.Size(550, 50);
-            this.empSearchBox.TabIndex = 19;
-            this.empSearchBox.Text = "";
-            this.empSearchBox.TrailingIcon = null;
-            // 
             // empManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1788, 795);
-            this.Controls.Add(this.empSearchBox);
-            this.Controls.Add(this.materialCard1);
-            this.Controls.Add(this.label3);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(1805, 858);
             this.Controls.Add(this.empSearch);
-            this.Controls.Add(this.deleteEmp);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.empSearchBox);
             this.Controls.Add(this.employees);
-            this.Controls.Add(this.addEmp);
+            this.Controls.Add(this.deleteEmp);
             this.Controls.Add(this.updateEmp);
+            this.Controls.Add(this.addEmp);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "empManage";
             this.Text = "empManage";
@@ -750,10 +716,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employees)).EndInit();
-            this.materialCard1.ResumeLayout(false);
-            this.materialCard2.ResumeLayout(false);
-            this.materialCard2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,10 +754,12 @@
         private System.Windows.Forms.TextBox cNum;
         private System.Windows.Forms.TextBox sName;
         private System.Windows.Forms.TextBox fName;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button updateEmp;
         private System.Windows.Forms.Button deleteEmp;
         private System.Windows.Forms.DataGridView employees;
+        private System.Windows.Forms.TextBox empSearchBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button empSearch;
         private System.Windows.Forms.Label label5;
@@ -812,8 +779,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
-        private MaterialSkin.Controls.MaterialTextBox empSearchBox;
     }
 }

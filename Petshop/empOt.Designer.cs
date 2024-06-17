@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.otDgv = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.payBtn = new MaterialSkin.Controls.MaterialButton();
@@ -39,9 +39,6 @@
             this.otPay = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.otDgv)).BeginInit();
             this.materialCard1.SuspendLayout();
             this.materialCard3.SuspendLayout();
@@ -53,34 +50,58 @@
             this.otDgv.AllowUserToAddRows = false;
             this.otDgv.AllowUserToDeleteRows = false;
             this.otDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.otDgv.BackgroundColor = System.Drawing.Color.CadetBlue;
             this.otDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.otDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.Column1,
             this.Column3});
-            this.otDgv.Location = new System.Drawing.Point(95, 120);
+            this.otDgv.Location = new System.Drawing.Point(72, 106);
             this.otDgv.Name = "otDgv";
             this.otDgv.ReadOnly = true;
             this.otDgv.RowHeadersWidth = 51;
             this.otDgv.RowTemplate.Height = 24;
-            this.otDgv.Size = new System.Drawing.Size(952, 645);
+            this.otDgv.Size = new System.Drawing.Size(952, 674);
             this.otDgv.TabIndex = 3;
             this.otDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.otDgv_CellClick);
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "otRate_id";
+            this.Column2.HeaderText = "Overtime Pay ID";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "position_desc";
+            this.Column1.HeaderText = "Job Title";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "otRate_pay";
+            this.Column3.HeaderText = "OT Rate";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.materialCard3);
             this.materialCard1.Controls.Add(this.materialCard2);
+            this.materialCard1.Controls.Add(this.otDgv);
             this.materialCard1.Depth = 0;
-            this.materialCard1.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(0, 0);
+            this.materialCard1.Location = new System.Drawing.Point(3, 3);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(1788, 87);
+            this.materialCard1.Size = new System.Drawing.Size(1779, 822);
             this.materialCard1.TabIndex = 4;
             // 
             // materialCard3
@@ -92,7 +113,7 @@
             this.materialCard3.Controls.Add(this.otPay);
             this.materialCard3.Depth = 0;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(1207, 263);
+            this.materialCard3.Location = new System.Drawing.Point(1184, 249);
             this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard3.Name = "materialCard3";
@@ -192,7 +213,7 @@
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(1760, 57);
+            this.materialCard2.Size = new System.Drawing.Size(1751, 57);
             this.materialCard2.TabIndex = 5;
             // 
             // label2
@@ -205,45 +226,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Overtime Pay Management";
             // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "otRate_id";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column2.HeaderText = "Overtime Pay ID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "position_desc";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column1.HeaderText = "Job Title";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "otRate_pay";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column3.HeaderText = "OT Rate";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
             // empOt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1788, 795);
-            this.Controls.Add(this.materialCard3);
+            this.ClientSize = new System.Drawing.Size(1805, 858);
             this.Controls.Add(this.materialCard1);
-            this.Controls.Add(this.otDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "empOt";
             this.Text = "empOt";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.services = new MaterialSkin.Controls.MaterialButton();
             this.TransacBtn = new MaterialSkin.Controls.MaterialButton();
@@ -36,6 +37,15 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1867, 58);
+            this.panel4.TabIndex = 1;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.services);
@@ -43,7 +53,7 @@
             this.panel3.Controls.Add(this.pCategorybtn);
             this.panel3.Controls.Add(this.productCategory);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(0, 58);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1867, 75);
             this.panel3.TabIndex = 6;
@@ -134,9 +144,10 @@
             // 
             // Product
             // 
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1867, 965);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Product";
             this.panel3.ResumeLayout(false);
@@ -153,6 +164,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private MaterialSkin.Controls.MaterialButton services;
         private MaterialSkin.Controls.MaterialButton TransacBtn;
