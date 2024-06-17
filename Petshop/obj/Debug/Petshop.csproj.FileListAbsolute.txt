@@ -333,3 +333,5 @@ C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\ScottPlot.Analytics.res
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\ScottPlot.Analytics.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.BlurBg.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.EmpCODEPIN.resources
+C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.BlurBg.resources
+C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.EmpCODEPIN.resources
