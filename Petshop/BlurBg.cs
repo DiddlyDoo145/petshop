@@ -30,11 +30,39 @@ namespace Petshop
                 DllHelper.SetAero7(this.Handle, margins),
                 DllHelper.SetAero10(this.Handle));
             this.BackColor = Color.Black;
+            this.Location = new Point(175, 100);
+            this.Size = new Size(1355, 900);
         }
 
         private void BlurBg_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            bool pinlog_in = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "EmpCODEPIN")
+                {
+                    pinlog_in = true;
+                    f.StartPosition = FormStartPosition.CenterScreen;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (pinlog_in == false)
+            {
+                EmpCODEPIN ecp = new EmpCODEPIN();
+                ecp.StartPosition = FormStartPosition.CenterScreen;
+                ecp.Show();
+            }
+        }
+
+        private void BlurBg_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
     #region blurBackground

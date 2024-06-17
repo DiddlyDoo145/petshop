@@ -335,3 +335,4 @@ C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.BlurBg.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.EmpCODEPIN.resources
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.BlurBg.resources
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.EmpCODEPIN.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Cashier.resources
