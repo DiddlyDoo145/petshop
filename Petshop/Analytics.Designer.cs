@@ -28,25 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.aPanel1 = new System.Windows.Forms.Panel();
+            this.tPanel3 = new ScottPlot.TransparentPanel();
+            this.tPanel2 = new ScottPlot.TransparentPanel();
+            this.tPanel1 = new ScottPlot.TransparentPanel();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cPanel3 = new System.Windows.Forms.Panel();
@@ -80,10 +84,8 @@
             this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard8 = new MaterialSkin.Controls.MaterialCard();
             this.label18 = new System.Windows.Forms.Label();
-            this.tPanel3 = new ScottPlot.TransparentPanel();
-            this.tPanel2 = new ScottPlot.TransparentPanel();
-            this.tPanel1 = new ScottPlot.TransparentPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.materialCard9 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard10 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.aPanel1.SuspendLayout();
             this.materialCard3.SuspendLayout();
@@ -100,6 +102,7 @@
             this.materialCard6.SuspendLayout();
             this.materialCard7.SuspendLayout();
             this.materialCard8.SuspendLayout();
+            this.materialCard9.SuspendLayout();
             this.SuspendLayout();
             // 
             // chart1
@@ -109,39 +112,39 @@
             this.chart1.BorderlineWidth = 2;
             this.chart1.BorderSkin.BorderColor = System.Drawing.Color.CadetBlue;
             this.chart1.BorderSkin.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea5.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
-            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea5.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea5.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea5.BorderColor = System.Drawing.Color.White;
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Alignment = System.Drawing.StringAlignment.Center;
-            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(8, 11);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series5.Legend = "Legend1";
-            series5.MarkerColor = System.Drawing.Color.DodgerBlue;
-            series5.MarkerSize = 6;
-            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series5.Name = "Sales";
-            this.chart1.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.MarkerColor = System.Drawing.Color.DodgerBlue;
+            series1.MarkerSize = 6;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Sales";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(826, 332);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
-            title4.BackColor = System.Drawing.Color.White;
-            title4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            title4.Name = "Title1";
-            title4.Text = "Today\'s Sales vs Previous Sales";
-            this.chart1.Titles.Add(title4);
+            title1.BackColor = System.Drawing.Color.White;
+            title1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            title1.Name = "Title1";
+            title1.Text = "Today\'s Sales vs Previous Sales";
+            this.chart1.Titles.Add(title1);
             // 
             // aPanel1
             // 
@@ -153,11 +156,35 @@
             this.aPanel1.Controls.Add(this.cPanel3);
             this.aPanel1.Controls.Add(this.cPanel2);
             this.aPanel1.Controls.Add(this.cPanel1);
-            this.aPanel1.Location = new System.Drawing.Point(6, 7);
+            this.aPanel1.Location = new System.Drawing.Point(6, 56);
             this.aPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.aPanel1.Name = "aPanel1";
             this.aPanel1.Size = new System.Drawing.Size(866, 500);
             this.aPanel1.TabIndex = 3;
+            // 
+            // tPanel3
+            // 
+            this.tPanel3.Location = new System.Drawing.Point(580, 7);
+            this.tPanel3.Name = "tPanel3";
+            this.tPanel3.Size = new System.Drawing.Size(283, 110);
+            this.tPanel3.TabIndex = 13;
+            this.tPanel3.Click += new System.EventHandler(this.tPanel3_Click);
+            // 
+            // tPanel2
+            // 
+            this.tPanel2.Location = new System.Drawing.Point(294, 9);
+            this.tPanel2.Name = "tPanel2";
+            this.tPanel2.Size = new System.Drawing.Size(283, 110);
+            this.tPanel2.TabIndex = 12;
+            this.tPanel2.Click += new System.EventHandler(this.tPanel2_Click);
+            // 
+            // tPanel1
+            // 
+            this.tPanel1.Location = new System.Drawing.Point(6, 9);
+            this.tPanel1.Name = "tPanel1";
+            this.tPanel1.Size = new System.Drawing.Size(283, 110);
+            this.tPanel1.TabIndex = 11;
+            this.tPanel1.Click += new System.EventHandler(this.tPanel1_Click);
             // 
             // materialCard3
             // 
@@ -192,81 +219,95 @@
             this.materialCard4.Size = new System.Drawing.Size(846, 356);
             this.materialCard4.TabIndex = 0;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "7 days",
+            "10 days",
+            "14 days"});
+            this.comboBox1.Location = new System.Drawing.Point(743, 23);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(77, 21);
+            this.comboBox1.TabIndex = 12;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // chart4
             // 
             this.chart4.BorderlineColor = System.Drawing.Color.CadetBlue;
             this.chart4.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             this.chart4.BorderlineWidth = 2;
-            chartArea6.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
-            chartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea6.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea6.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea6.BorderColor = System.Drawing.Color.White;
-            chartArea6.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea6);
-            legend6.Alignment = System.Drawing.StringAlignment.Center;
-            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend6.Name = "Legend1";
-            this.chart4.Legends.Add(legend6);
+            chartArea2.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea2);
+            legend2.Alignment = System.Drawing.StringAlignment.Center;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.Name = "Legend1";
+            this.chart4.Legends.Add(legend2);
             this.chart4.Location = new System.Drawing.Point(8, 11);
             this.chart4.Margin = new System.Windows.Forms.Padding(2);
             this.chart4.Name = "chart4";
             this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series6.Legend = "Legend1";
-            series6.MarkerColor = System.Drawing.Color.DodgerBlue;
-            series6.MarkerSize = 6;
-            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series6.Name = "Sales";
-            this.chart4.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.MarkerColor = System.Drawing.Color.DodgerBlue;
+            series2.MarkerSize = 6;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "Sales";
+            this.chart4.Series.Add(series2);
             this.chart4.Size = new System.Drawing.Size(826, 332);
             this.chart4.TabIndex = 11;
             this.chart4.Text = "chart4";
-            title5.BackColor = System.Drawing.Color.White;
-            title5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            title5.Name = "Title1";
-            title5.Text = "Today\'s Sales vs Previous Sales";
-            this.chart4.Titles.Add(title5);
+            title2.BackColor = System.Drawing.Color.White;
+            title2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            title2.Name = "Title1";
+            title2.Text = "Today\'s Sales vs Previous Sales";
+            this.chart4.Titles.Add(title2);
             // 
             // chart3
             // 
             this.chart3.BorderlineColor = System.Drawing.Color.CadetBlue;
             this.chart3.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             this.chart3.BorderlineWidth = 2;
-            chartArea7.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
-            chartArea7.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea7.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea7.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea7.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea7.BorderColor = System.Drawing.Color.White;
-            chartArea7.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea7);
-            legend7.Alignment = System.Drawing.StringAlignment.Center;
-            legend7.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend7.Name = "Legend1";
-            this.chart3.Legends.Add(legend7);
+            chartArea3.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea3.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea3.BorderColor = System.Drawing.Color.White;
+            chartArea3.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea3);
+            legend3.Alignment = System.Drawing.StringAlignment.Center;
+            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend3.Name = "Legend1";
+            this.chart3.Legends.Add(legend3);
             this.chart3.Location = new System.Drawing.Point(8, 11);
             this.chart3.Margin = new System.Windows.Forms.Padding(2);
             this.chart3.Name = "chart3";
             this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series7.ChartArea = "ChartArea1";
-            series7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series7.Legend = "Legend1";
-            series7.MarkerColor = System.Drawing.Color.DodgerBlue;
-            series7.MarkerSize = 6;
-            series7.Name = "Customers";
-            this.chart3.Series.Add(series7);
+            series3.ChartArea = "ChartArea1";
+            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.Legend = "Legend1";
+            series3.MarkerColor = System.Drawing.Color.DodgerBlue;
+            series3.MarkerSize = 6;
+            series3.Name = "Customers";
+            this.chart3.Series.Add(series3);
             this.chart3.Size = new System.Drawing.Size(826, 332);
             this.chart3.TabIndex = 10;
             this.chart3.Text = "chart3";
-            title6.BackColor = System.Drawing.Color.White;
-            title6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            title6.Name = "Title1";
-            title6.Text = "Today\'s Customers vs Previous Customers";
-            this.chart3.Titles.Add(title6);
+            title3.BackColor = System.Drawing.Color.White;
+            title3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            title3.Name = "Title1";
+            title3.Text = "Today\'s Customers vs Previous Customers";
+            this.chart3.Titles.Add(title3);
             // 
             // cPanel3
             // 
@@ -512,32 +553,32 @@
             this.chart2.BorderlineColor = System.Drawing.Color.CadetBlue;
             this.chart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             this.chart2.BorderlineWidth = 2;
-            chartArea8.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
-            chartArea8.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea8.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea8.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea8.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea8.BorderColor = System.Drawing.Color.White;
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Alignment = System.Drawing.StringAlignment.Center;
-            legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
+            chartArea4.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea4.BorderColor = System.Drawing.Color.White;
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            legend4.Alignment = System.Drawing.StringAlignment.Center;
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
             this.chart2.Location = new System.Drawing.Point(39, 76);
             this.chart2.Margin = new System.Windows.Forms.Padding(2);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series8.IsValueShownAsLabel = true;
-            series8.Legend = "Legend1";
-            series8.MarkerColor = System.Drawing.Color.DodgerBlue;
-            series8.MarkerSize = 6;
-            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series8.Name = "Pie";
-            this.chart2.Series.Add(series8);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.IsValueShownAsLabel = true;
+            series4.Legend = "Legend1";
+            series4.MarkerColor = System.Drawing.Color.DodgerBlue;
+            series4.MarkerSize = 6;
+            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series4.Name = "Pie";
+            this.chart2.Series.Add(series4);
             this.chart2.Size = new System.Drawing.Size(397, 405);
             this.chart2.TabIndex = 12;
             this.chart2.Text = "chart2";
@@ -559,7 +600,7 @@
             this.materialCard1.Controls.Add(this.materialCard2);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(877, 7);
+            this.materialCard1.Location = new System.Drawing.Point(877, 56);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
@@ -588,12 +629,12 @@
             this.materialCard5.Controls.Add(this.materialCard6);
             this.materialCard5.Depth = 0;
             this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard5.Location = new System.Drawing.Point(675, 512);
+            this.materialCard5.Location = new System.Drawing.Point(675, 560);
             this.materialCard5.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard5.Name = "materialCard5";
             this.materialCard5.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard5.Size = new System.Drawing.Size(666, 242);
+            this.materialCard5.Size = new System.Drawing.Size(666, 194);
             this.materialCard5.TabIndex = 8;
             // 
             // materialCard6
@@ -617,12 +658,12 @@
             this.materialCard7.Controls.Add(this.materialCard8);
             this.materialCard7.Depth = 0;
             this.materialCard7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard7.Location = new System.Drawing.Point(6, 512);
+            this.materialCard7.Location = new System.Drawing.Point(6, 560);
             this.materialCard7.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
             this.materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard7.Name = "materialCard7";
             this.materialCard7.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard7.Size = new System.Drawing.Size(666, 242);
+            this.materialCard7.Size = new System.Drawing.Size(666, 194);
             this.materialCard7.TabIndex = 8;
             // 
             // materialCard8
@@ -650,43 +691,34 @@
             this.label18.TabIndex = 2;
             this.label18.Text = "Today\'s Top Categories";
             // 
-            // tPanel3
+            // materialCard9
             // 
-            this.tPanel3.Location = new System.Drawing.Point(580, 7);
-            this.tPanel3.Name = "tPanel3";
-            this.tPanel3.Size = new System.Drawing.Size(283, 110);
-            this.tPanel3.TabIndex = 13;
-            this.tPanel3.Click += new System.EventHandler(this.tPanel3_Click);
+            this.materialCard9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard9.Controls.Add(this.materialCard10);
+            this.materialCard9.Depth = 0;
+            this.materialCard9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialCard9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard9.Location = new System.Drawing.Point(0, 0);
+            this.materialCard9.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard9.Name = "materialCard9";
+            this.materialCard9.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard9.Size = new System.Drawing.Size(1352, 49);
+            this.materialCard9.TabIndex = 9;
             // 
-            // tPanel2
+            // materialCard10
             // 
-            this.tPanel2.Location = new System.Drawing.Point(294, 9);
-            this.tPanel2.Name = "tPanel2";
-            this.tPanel2.Size = new System.Drawing.Size(283, 110);
-            this.tPanel2.TabIndex = 12;
-            this.tPanel2.Click += new System.EventHandler(this.tPanel2_Click);
-            // 
-            // tPanel1
-            // 
-            this.tPanel1.Location = new System.Drawing.Point(6, 9);
-            this.tPanel1.Name = "tPanel1";
-            this.tPanel1.Size = new System.Drawing.Size(283, 110);
-            this.tPanel1.TabIndex = 11;
-            this.tPanel1.Click += new System.EventHandler(this.tPanel1_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "7 days",
-            "10 days",
-            "14 days"});
-            this.comboBox1.Location = new System.Drawing.Point(743, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(77, 21);
-            this.comboBox1.TabIndex = 12;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.materialCard10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard10.Depth = 0;
+            this.materialCard10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard10.Location = new System.Drawing.Point(14, 14);
+            this.materialCard10.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard10.Name = "materialCard10";
+            this.materialCard10.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard10.Size = new System.Drawing.Size(1324, 21);
+            this.materialCard10.TabIndex = 0;
             // 
             // Analytics
             // 
@@ -694,6 +726,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1352, 718);
+            this.Controls.Add(this.materialCard9);
             this.Controls.Add(this.materialCard7);
             this.Controls.Add(this.materialCard5);
             this.Controls.Add(this.materialCard1);
@@ -723,6 +756,7 @@
             this.materialCard7.ResumeLayout(false);
             this.materialCard8.ResumeLayout(false);
             this.materialCard8.PerformLayout();
+            this.materialCard9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -769,6 +803,8 @@
         private TransparentPanel tPanel3;
         private TransparentPanel tPanel2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private MaterialSkin.Controls.MaterialCard materialCard9;
+        private MaterialSkin.Controls.MaterialCard materialCard10;
     }
 }
 

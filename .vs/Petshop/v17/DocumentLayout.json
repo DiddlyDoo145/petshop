@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|c:\\users\\acer\\documents\\github\\petshop\\petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\analytics.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|C:\\Users\\ACER\\Documents\\GitHub\\petshop\\petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC904C4-52CC-4617-AF95-906C3B379F3E}|Petshop\\Petshop.csproj|solutionrelative:petshop\\analytics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Analytics.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.Designer.cs",
               "RelativeDocumentMoniker": "Petshop\\Analytics.Designer.cs",
@@ -68,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Analytics.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs",
               "RelativeDocumentMoniker": "Petshop\\Analytics.cs",
@@ -78,39 +74,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T11:28:01.857Z",
               "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "3b0bbd8c-10bf-41a0-8331-2aa3b91ba674",
-        "Display": 1,
-        "X": 26,
-        "Y": 116,
-        "Width": 1291,
-        "Height": 609,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Analytics.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs",
-              "RelativeDocumentMoniker": "Petshop\\Analytics.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\GitHub\\petshop\\Petshop\\Analytics.cs [Design]",
-              "RelativeToolTip": "Petshop\\Analytics.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T08:33:32.948Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
