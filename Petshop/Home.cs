@@ -1,4 +1,5 @@
-﻿using ScottPlot;
+﻿using MaterialSkin.Controls;
+using ScottPlot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +16,13 @@ namespace Petshop
     public partial class Home : Form
     {
         private Form currentchildForm;
+        private Form currentchildblur;
+        public static Home instance;
+
         public Home()
         {
             InitializeComponent();
+            instance = this;
         }
         public void OpenChildForm(Form childForm, int xpos, int ypos)
         {
@@ -36,9 +41,30 @@ namespace Petshop
             childForm.FormBorderStyle = FormBorderStyle.None;
             /*childForm.Location = new Point(xpos, ypos);*/
         }
+        public void OpenChildblur(Form childForm, int xpos, int ypos)
+        {
+            if (currentchildblur != null)
+            {
+                currentchildblur.Hide();
+            }
+            currentchildblur = childForm;
+            childForm.TopLevel = false;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            //childForm.BringToFront();
+            childForm.Show();
+            childForm.Size = new Size(/*Convert.ToInt32(childForm.Width * 1.155), Convert.ToInt32(childForm.Height * 1.096 - 5)*/1400, 782);
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Location = new Point(xpos, ypos);
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Employee(), 175, 100);
+            BlurBg bbg = new BlurBg();
+            bbg.Size = new Size(1400, 782);
+            bbg.Visible = true;
+            bbg.BringToFront();
         }
 
         private void product_Click(object sender, EventArgs e)
@@ -68,6 +94,19 @@ namespace Petshop
         private void analytics_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Analytics(), 175, 100);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Cashier(), 175, 100);
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            if (MaterialMessageBox.Show("Are you sure you want to Log-Out?", "Notice!", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

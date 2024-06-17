@@ -141,6 +141,12 @@
     <Compile Include="BlurBg.Designer.cs">
       <DependentUpon>BlurBg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conclass.cs" />
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BlurBg.resx">
       <DependentUpon>BlurBg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
