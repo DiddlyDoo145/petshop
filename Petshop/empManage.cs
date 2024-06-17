@@ -145,15 +145,22 @@ namespace Petshop
         #region Clicks
         private void employees_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            employeeId = employees.Rows[e.RowIndex].Cells[0].Value.ToString();
-            jobTitle.SelectedItem = employees.Rows[e.RowIndex].Cells[1].Value.ToString();
-            fName.Text = employees.Rows[e.RowIndex].Cells[2].Value.ToString();
-            sName.Text = employees.Rows[e.RowIndex].Cells[3].Value.ToString();
-            startShift.SelectedItem = employees.Rows[e.RowIndex].Cells[4].Value.ToString();
-            endShift.SelectedItem = employees.Rows[e.RowIndex].Cells[5].Value.ToString();
-            cNum.Text = employees.Rows[e.RowIndex].Cells[6].Value.ToString();
-            eCnum.Text = employees.Rows[e.RowIndex].Cells[7].Value.ToString();
-            retrieveAddress();
+            if(e.RowIndex < 0)
+            {
+
+            }
+            else
+            {
+                employeeId = employees.Rows[e.RowIndex].Cells[0].Value.ToString();
+                jobTitle.SelectedItem = employees.Rows[e.RowIndex].Cells[1].Value.ToString();
+                fName.Text = employees.Rows[e.RowIndex].Cells[2].Value.ToString();
+                sName.Text = employees.Rows[e.RowIndex].Cells[3].Value.ToString();
+                startShift.SelectedItem = employees.Rows[e.RowIndex].Cells[4].Value.ToString();
+                endShift.SelectedItem = employees.Rows[e.RowIndex].Cells[5].Value.ToString();
+                cNum.Text = employees.Rows[e.RowIndex].Cells[6].Value.ToString();
+                eCnum.Text = employees.Rows[e.RowIndex].Cells[7].Value.ToString();
+                retrieveAddress();
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -175,7 +182,7 @@ namespace Petshop
             employees.ReadOnly = true;
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, position.position_desc, employee.employee_fname, employee.employee_lname shift.shift_start, shift.shift_end, employee.employee_cNumber, employee.employee_ecNumber FROM employee RIGHT JOIN position ON employee.position_id = position.position_id RIGHT JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.employee_id > '0' AND CONCAT (employee.employee_fname, employee.employee_lname, position.position_desc) LIKE @item", dbConnect.myconnect);
+            MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, position.position_desc, employee.employee_fname, employee.employee_lname, shift.shift_start, shift.shift_end, employee.employee_cNumber, employee.employee_ecNumber FROM employee RIGHT JOIN position ON employee.position_id = position.position_id RIGHT JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.employee_id > '0' AND CONCAT (employee.employee_fname, employee.employee_lname, position.position_desc) LIKE @item", dbConnect.myconnect);
             cmd.Parameters.AddWithValue("@item", "%" + empSearchBox.Text + "%");
             MySqlDataAdapter da = new MySqlDataAdapter();
             da.SelectCommand = cmd;
@@ -183,6 +190,14 @@ namespace Petshop
             da.Fill(dt);
             employees.DataSource = dt;
             dbConnect.CloseConnection();
+        }
+
+        private void empSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (empSearchBox.TextLength == 0)
+            {
+                empSearch_Click(null, null);
+            }
         }
 
         private void addEmp_Click(object sender, EventArgs e)
