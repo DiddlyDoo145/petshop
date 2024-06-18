@@ -252,6 +252,12 @@
     <Compile Include="Services.Designer.cs">
       <DependentUpon>Services.cs</DependentUpon>
     </Compile>
+    <Compile Include="serviceTransac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serviceTransac.Designer.cs">
+      <DependentUpon>serviceTransac.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Analytics.resx">
       <DependentUpon>Analytics.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="serviceTransac.resx">
+      <DependentUpon>serviceTransac.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

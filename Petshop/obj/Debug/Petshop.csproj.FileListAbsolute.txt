@@ -337,3 +337,9 @@ C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.BlurBg.resource
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.EmpCODEPIN.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Cashier.resources
 C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Cashier.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\ScottPlot.Analytics.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.BlurBg.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.Cashier.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.EmpCODEPIN.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.empOt.resources
+C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.ServiceTransac.resources
