@@ -28,21 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(empOt));
             this.otDgv = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
+            this.label1 = new System.Windows.Forms.Label();
             this.payBtn = new MaterialSkin.Controls.MaterialButton();
             this.jobTitle = new MaterialSkin.Controls.MaterialTextBox2();
             this.otPay = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.otDgv)).BeginInit();
-            this.materialCard1.SuspendLayout();
             this.materialCard3.SuspendLayout();
-            this.materialCard2.SuspendLayout();
+            this.materialCard4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.materialCard5.SuspendLayout();
+            this.materialCard6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // otDgv
@@ -55,12 +63,12 @@
             this.Column2,
             this.Column1,
             this.Column3});
-            this.otDgv.Location = new System.Drawing.Point(72, 106);
+            this.otDgv.Location = new System.Drawing.Point(22, 102);
             this.otDgv.Name = "otDgv";
             this.otDgv.ReadOnly = true;
             this.otDgv.RowHeadersWidth = 51;
             this.otDgv.RowTemplate.Height = 24;
-            this.otDgv.Size = new System.Drawing.Size(952, 674);
+            this.otDgv.Size = new System.Drawing.Size(864, 632);
             this.otDgv.TabIndex = 3;
             this.otDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.otDgv_CellClick);
             // 
@@ -88,38 +96,48 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // materialCard1
-            // 
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialCard3);
-            this.materialCard1.Controls.Add(this.materialCard2);
-            this.materialCard1.Controls.Add(this.otDgv);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(3, 3);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(1779, 822);
-            this.materialCard1.TabIndex = 4;
-            // 
             // materialCard3
             // 
             this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.materialCard3.Controls.Add(this.materialCard4);
             this.materialCard3.Controls.Add(this.payBtn);
             this.materialCard3.Controls.Add(this.jobTitle);
             this.materialCard3.Controls.Add(this.otPay);
             this.materialCard3.Depth = 0;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(1184, 249);
+            this.materialCard3.Location = new System.Drawing.Point(903, 235);
             this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard3.Name = "materialCard3";
             this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard3.Size = new System.Drawing.Size(418, 321);
             this.materialCard3.TabIndex = 10;
+            // 
+            // materialCard4
+            // 
+            this.materialCard4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard4.Controls.Add(this.label1);
+            this.materialCard4.Depth = 0;
+            this.materialCard4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard4.Location = new System.Drawing.Point(14, 14);
+            this.materialCard4.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard4.Name = "materialCard4";
+            this.materialCard4.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard4.Size = new System.Drawing.Size(386, 45);
+            this.materialCard4.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 29);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Job Description";
             // 
             // payBtn
             // 
@@ -129,7 +147,7 @@
             this.payBtn.Depth = 0;
             this.payBtn.HighEmphasis = true;
             this.payBtn.Icon = null;
-            this.payBtn.Location = new System.Drawing.Point(133, 228);
+            this.payBtn.Location = new System.Drawing.Point(141, 245);
             this.payBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.payBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.payBtn.Name = "payBtn";
@@ -152,7 +170,7 @@
             this.jobTitle.HideSelection = true;
             this.jobTitle.Hint = "Job title";
             this.jobTitle.LeadingIcon = null;
-            this.jobTitle.Location = new System.Drawing.Point(38, 59);
+            this.jobTitle.Location = new System.Drawing.Point(46, 92);
             this.jobTitle.MaxLength = 32767;
             this.jobTitle.MouseState = MaterialSkin.MouseState.OUT;
             this.jobTitle.Name = "jobTitle";
@@ -182,7 +200,7 @@
             this.otPay.HideSelection = true;
             this.otPay.Hint = "Overtime pay per hour";
             this.otPay.LeadingIcon = null;
-            this.otPay.Location = new System.Drawing.Point(38, 140);
+            this.otPay.Location = new System.Drawing.Point(46, 165);
             this.otPay.MaxLength = 32767;
             this.otPay.MouseState = MaterialSkin.MouseState.OUT;
             this.otPay.Name = "otPay";
@@ -201,55 +219,96 @@
             this.otPay.TrailingIcon = null;
             this.otPay.UseSystemPasswordChar = false;
             // 
-            // materialCard2
+            // panel1
             // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.label2);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(14, 14);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(1751, 57);
-            this.materialCard2.TabIndex = 5;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.materialCard5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1793, 63);
+            this.panel1.TabIndex = 13;
+            // 
+            // materialCard5
+            // 
+            this.materialCard5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard5.Controls.Add(this.materialCard6);
+            this.materialCard5.Depth = 0;
+            this.materialCard5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard5.Location = new System.Drawing.Point(0, 0);
+            this.materialCard5.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard5.Name = "materialCard5";
+            this.materialCard5.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard5.Size = new System.Drawing.Size(1791, 61);
+            this.materialCard5.TabIndex = 12;
+            // 
+            // materialCard6
+            // 
+            this.materialCard6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard6.Controls.Add(this.label2);
+            this.materialCard6.Depth = 0;
+            this.materialCard6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard6.Location = new System.Drawing.Point(14, 14);
+            this.materialCard6.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard6.Name = "materialCard6";
+            this.materialCard6.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard6.Size = new System.Drawing.Size(1763, 33);
+            this.materialCard6.TabIndex = 11;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 14);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(2, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(381, 32);
+            this.label2.Size = new System.Drawing.Size(1758, 29);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Overtime Pay Management";
+            this.label2.Text = "O        T                    P        A        Y                    M        A  " +
+    "      N        A        G        E        M        E        N        T";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1221, 128);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(634, 674);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // empOt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1805, 858);
-            this.Controls.Add(this.materialCard1);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(1793, 766);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.materialCard3);
+            this.Controls.Add(this.otDgv);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "empOt";
             this.Text = "empOt";
             this.Load += new System.EventHandler(this.empOt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.otDgv)).EndInit();
-            this.materialCard1.ResumeLayout(false);
             this.materialCard3.ResumeLayout(false);
-            this.materialCard2.ResumeLayout(false);
-            this.materialCard2.PerformLayout();
+            this.materialCard4.ResumeLayout(false);
+            this.materialCard4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.materialCard5.ResumeLayout(false);
+            this.materialCard6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView otDgv;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
-        private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialTextBox2 otPay;
         private MaterialSkin.Controls.MaterialTextBox2 jobTitle;
         private MaterialSkin.Controls.MaterialButton payBtn;
@@ -257,5 +316,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private MaterialSkin.Controls.MaterialCard materialCard4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialCard materialCard5;
+        private MaterialSkin.Controls.MaterialCard materialCard6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -31,7 +31,7 @@ namespace Petshop
                 DllHelper.SetAero10(this.Handle));
             this.BackColor = Color.Black;
             this.Location = new Point(175, 100);
-            this.Size = new Size(1355, 900);
+            this.Size = new Size(1355, 820);
         }
 
         private void BlurBg_Load(object sender, EventArgs e)

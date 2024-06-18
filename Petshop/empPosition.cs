@@ -38,16 +38,16 @@ namespace Petshop
             else
             {
                 jobid = jobDgv.Rows[e.RowIndex].Cells[0].Value.ToString();
-                jobTitle.Text = jobDgv.Rows[e.RowIndex].Cells[1].Value.ToString();
-                jobSalary.Text = jobDgv.Rows[e.RowIndex].Cells[2].Value.ToString();
+                jTitle.Text = jobDgv.Rows[e.RowIndex].Cells[1].Value.ToString();
+                jSalary.Text = jobDgv.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             jobid = "";
-            jobTitle.Clear();
-            jobSalary.Clear();
+            jTitle.Clear();
+            jSalary.Clear();
         }
 
         private void jobList()
@@ -99,7 +99,7 @@ namespace Petshop
         #region CRUD
         private void addJobBtn_Click(object sender, EventArgs e)
         {
-            if(jobTitle.TextLength == 0 || jobSalary.TextLength == 0)
+            if(jTitle.TextLength == 0 || jSalary.TextLength == 0)
             {
                 MessageBox.Show("Please complete the form", "Notice!");
             }
@@ -110,7 +110,7 @@ namespace Petshop
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
                     MySqlCommand cmd = new MySqlCommand("SELECT position_id FROM position WHERE position_desc = @title", dbConnect.myconnect);
-                    cmd.Parameters.AddWithValue("@title", jobTitle.Text);
+                    cmd.Parameters.AddWithValue("@title", jTitle.Text);
                     myReader = cmd.ExecuteReader();
                     if (myReader.Read())
                     {
@@ -123,16 +123,16 @@ namespace Petshop
                         dbConnect = new Conclass();
                         dbConnect.OpenConnection();
                         MySqlCommand cmd1 = new MySqlCommand("INSERT INTO position VALUES('', @title, @salary)", dbConnect.myconnect);
-                        cmd1.Parameters.AddWithValue("@title", jobTitle.Text);
-                        cmd1.Parameters.AddWithValue("@salary", jobSalary.Text);
+                        cmd1.Parameters.AddWithValue("@title", jTitle.Text);
+                        cmd1.Parameters.AddWithValue("@salary", jSalary.Text);
                         int insert = cmd1.ExecuteNonQuery();
                         if (insert > 0)
                         {
                             MessageBox.Show("Job inserted successfully", "Success!");
                         }
                         dbConnect.CloseConnection();
-                        jobTitle.Clear();
-                        jobSalary.Clear();
+                        jTitle.Clear();
+                        jSalary.Clear();
                         jobList();
                     }
                 }
@@ -145,7 +145,7 @@ namespace Petshop
 
         private void updateJobBtn_Click(object sender, EventArgs e)
         {
-            if (jobTitle.TextLength == 0 || jobSalary.TextLength == 0)
+            if (jTitle.TextLength == 0 || jSalary.TextLength == 0)
             {
                 MessageBox.Show("Please complete the form", "Notice!");
             }
@@ -160,7 +160,7 @@ namespace Petshop
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
                     MySqlCommand cmd = new MySqlCommand("SELECT position_desc FROM position WHERE position_desc = @title AND position_id != @id", dbConnect.myconnect);
-                    cmd.Parameters.AddWithValue("@title", jobTitle.Text);
+                    cmd.Parameters.AddWithValue("@title", jTitle.Text);
                     cmd.Parameters.AddWithValue("@id", jobid);
                     myReader = cmd.ExecuteReader();
                     if (myReader.Read())
@@ -174,16 +174,16 @@ namespace Petshop
                         dbConnect.OpenConnection();
                         MySqlCommand cmd1 = new MySqlCommand("UPDATE position SET position_desc = @utitle, position_salary = @usalary WHERE position_id = @uid", dbConnect.myconnect);
                         cmd1.Parameters.AddWithValue("@uid", jobid);
-                        cmd1.Parameters.AddWithValue("@utitle", jobTitle.Text);
-                        cmd1.Parameters.AddWithValue("@usalary", jobSalary.Text);
+                        cmd1.Parameters.AddWithValue("@utitle", jTitle.Text);
+                        cmd1.Parameters.AddWithValue("@usalary", jSalary.Text);
                         int update = cmd1.ExecuteNonQuery();
                         if (update > 0)
                         {
                             MessageBox.Show("Position updated successfully", "Update Successful");
                             dbConnect.CloseConnection();
                             jobList();
-                            jobTitle.Clear();
-                            jobSalary.Clear();
+                            jTitle.Clear();
+                            jSalary.Clear();
                             jobid = "";
                         }
                     }
@@ -210,8 +210,8 @@ namespace Petshop
                         cmd.Parameters.AddWithValue("@id", jobid);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Job successfully deleted", "Delete successful");
-                        jobTitle.Clear();
-                        jobSalary.Clear();
+                        jTitle.Clear();
+                        jSalary.Clear();
                         dbConnect.CloseConnection();
                         jobList();
                     }
