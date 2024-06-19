@@ -21,10 +21,24 @@ namespace Petshop
         private MySqlDataReader myReader;
         private MySqlDataAdapter mySqlDataAdapter;
         string id;
+        string productprice;
         public ProductTransac()
         {
             InitializeComponent();
             populategv();
+            populategv2();
+        }
+
+        private void populategv2()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            cmd = new MySqlCommand("SELECT sum(pTransac_total) AS Total FROM producttransaction", dbConnect.myconnect);
+            myReader = cmd.ExecuteReader();
+            if (myReader.Read() == true)
+            {
+                Total.Text = myReader["Total"].ToString();
+            }
         }
 
         private void populategv()
@@ -55,12 +69,14 @@ namespace Petshop
 
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            cmd = new MySqlCommand("SELECT product_id FROM product WHERE product_name = @prName", dbConnect.myconnect);
+            cmd = new MySqlCommand("SELECT product_price, product_id FROM product WHERE product_name = @prName", dbConnect.myconnect);
             cmd.Parameters.AddWithValue("@prName", productName.Text);
             myReader = cmd.ExecuteReader();
             if (myReader.Read() == true)
             {
                 product_ID.Text = myReader["product_id"].ToString();
+                productprice = myReader["product_price"].ToString();
+                TransacTotal.Text = myReader["product_price"].ToString();
             }
         }
 
@@ -123,38 +139,39 @@ namespace Petshop
             }
             else
             {
-                /* dbConnect = new Conclass();
-                 dbConnect.CloseConnection();
-                 cmd = new MySqlCommand("SELECT * FROM producttransaction WHERE product_name = @uname AND Quantity = 0 AND pTransac_total = 0");
-                 cmd.Parameters.AddWithValue("@uname", productName.Text);
-                 myReader = cmd.ExecuteReader();
-                 if (myReader.Read() == true)
-                 {
-                     dbConnect = new Conclass();
-                     dbConnect.OpenConnection();
-                     cmd = new MySqlCommand("UPDATE producttransaction SET Quantity = @qty. pTransac_total = @ptotal WHERE product_name = @pname AND Quantity = 0 AND pTransac_total = 0", dbConnect.myconnect);
-                     cmd.Parameters.AddWithValue("@qty", qty.Text);
-                     cmd.Parameters.AddWithValue("@ptotal", TransacTotal.Text);
-                     cmd.Parameters.AddWithValue("@pname", productName.Text);
-                     cmd.ExecuteNonQuery();
+                dbConnect = new Conclass();
+                dbConnect.OpenConnection();
+                cmd = new MySqlCommand("SELECT * FROM producttransaction JOIN product ON producttransaction.product_id = product.product_id WHERE product_name = @uname AND pTransac_total != 0 AND Quantity !=0", dbConnect.myconnect);
+                cmd.Parameters.AddWithValue("@uname", productName.Text);
+                myReader = cmd.ExecuteReader();
+                if (myReader.Read() == true)
+                {
+                    MaterialMessageBox.Show("Product Is Already in the List", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                     dbConnect = new Conclass();
-                     dbConnect.OpenConnection();
-                     cmd = new MySqlCommand("UPDATE product SET product_stock = product_stock-@num WHERE product_id = @ID", dbConnect.myconnect);
-                     cmd.Parameters.AddWithValue("@num", num);
-                     cmd.Parameters.AddWithValue("@ID", product_ID.Text);
-                     cmd.ExecuteNonQuery();
-                     dbConnect.CloseConnection();
-                 }
- */
-                if (MaterialMessageBox.Show(TransacTotal.Text, "Checkout?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    /*  dbConnect = new Conclass();
+                      dbConnect.OpenConnection();
+                      cmd = new MySqlCommand("UPDATE producttransaction SET Quantity = @qty. pTransac_total = @ptotal WHERE product_name = @pname AND Quantity = 0 AND pTransac_total = 0", dbConnect.myconnect);
+                      cmd.Parameters.AddWithValue("@qty", qty.Text);
+                      cmd.Parameters.AddWithValue("@ptotal", TransacTotal.Text);
+                      cmd.Parameters.AddWithValue("@pname", productName.Text);
+                      cmd.ExecuteNonQuery();
+
+                      dbConnect = new Conclass();
+                      dbConnect.OpenConnection();
+                      cmd = new MySqlCommand("UPDATE product SET product_stock = product_stock-@num WHERE product_id = @ID", dbConnect.myconnect);
+                      cmd.Parameters.AddWithValue("@num", num);
+                      cmd.Parameters.AddWithValue("@ID", product_ID.Text);
+                      cmd.ExecuteNonQuery();
+                      dbConnect.CloseConnection();*/
+                }
+                else
                 {
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
                     cmd = new MySqlCommand("INSERT INTO producttransaction (product_id, Quantity, pTransac_total, employee_id) VALUES (@pname, @stk, @ptotal, @emp)", dbConnect.myconnect);
                     cmd.Parameters.AddWithValue("@pname", product_ID.Text);
                     cmd.Parameters.AddWithValue("@stk", qty.Text);
-                    cmd.Parameters.AddWithValue("@ptotal", TransacTotal.Text);
+                    cmd.Parameters.AddWithValue("@ptotal", productprice);
                     cmd.Parameters.AddWithValue("@emp", employee_ID.Text);
                     cmd.ExecuteNonQuery();
                     dbConnect.CloseConnection();
@@ -164,6 +181,7 @@ namespace Petshop
                     qty.Clear();
                     id = "";
                     populategv();
+                    populategv2();
 
 
 
@@ -174,11 +192,17 @@ namespace Petshop
                     cmd.Parameters.AddWithValue("@ID", product_ID.Text);
                     cmd.ExecuteNonQuery();
                     dbConnect.CloseConnection();
+
                 }
+
+
+
             }
 
 
         }
+
+       
 
         private void ProductTransac_Load(object sender, EventArgs e)
         {
@@ -238,13 +262,9 @@ namespace Petshop
             int num6;
             int num7;
 
-            if (qty.Text == "")
-            {
-                TransacTotal.Text = "";
-            }
+           
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-
             try
             {
 
@@ -254,17 +274,17 @@ namespace Petshop
                 {
                     if (myReader.Read())
                     {
-                        productPrice.Text = myReader["product_price"].ToString();
+                        productprice = myReader["product_price"].ToString();
                     }
                 }
 
 
-                num5 = Convert.ToInt32(productPrice.Text);
+                num5 = Convert.ToInt32(productprice);
                 num6 = Convert.ToInt32(qty.Text);
 
 
                 num7 = num5 * num6;
-                TransacTotal.Text = num7.ToString();
+                productprice = num7.ToString();
 
             }
             catch (Exception ex)
@@ -346,6 +366,7 @@ namespace Petshop
                     qty.Clear();
                     id = "";
                     populategv();
+                    populategv2();
 
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
@@ -365,7 +386,16 @@ namespace Petshop
 
 
         }
-
+        private void clear()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            cmd = new MySqlCommand("UPDATE producttransaction SET Quantity = 0, pTransac_total = 0", dbConnect.myconnect);
+            cmd.ExecuteNonQuery();
+            MaterialMessageBox.Show("Success", "Notice");
+            populategv();
+            populategv2();
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             if (id != "")
@@ -383,11 +413,74 @@ namespace Petshop
                 qty.Clear();
                 id = "";
                 populategv();
+                populategv2();
             }
             else
             {
                 MaterialMessageBox.Show("Please Select Data to Delete", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        string product_Name;
+        private void printbtn_Click(object sender, EventArgs e)
+        {
+            if (MaterialMessageBox.Show("Are you sure want to chekcout?", "Checkout?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                printPreviewDialog1.Document = printDocument1;
+                printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 400, 600);
+                printPreviewDialog1.ShowDialog();
+            }
+            clear();
+        }
+       
+        int prodTransacID , Quantity, pTransac_total;
+
+       
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+           
+           
+            int startX = 26;
+            int startY = 40;
+            int offset = 20;
+
+         
+            e.Graphics.DrawString("My Petshop", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(startX + 100, startY));
+            startY += offset;
+
+
+            e.Graphics.DrawString(" PRODUCT       QUANTITY   TOTAL", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(startX + 30, startY));
+            startY += offset;
+
+            foreach (DataGridViewRow row in TransacTable.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+     
+                string product_Name = row.Cells[1].Value.ToString();
+                int qty = Convert.ToInt32(row.Cells[2].Value);
+                int price = Convert.ToInt32(row.Cells[3].Value);
+               
+
+               
+                e.Graphics.DrawString(product_Name, new Font("Century Gothic", 12, FontStyle.Regular), Brushes.Black, new Point(startX + 30, startY));
+                e.Graphics.DrawString(qty.ToString(), new Font("Century Gothic", 12, FontStyle.Regular), Brushes.Black, new Point(startX + 160, startY));
+                e.Graphics.DrawString(price.ToString(), new Font("Century Gothic", 12, FontStyle.Regular), Brushes.Black, new Point(startX + 250, startY));
+               
+
+                startY += offset;
+            }
+
+ 
+            int grandTotal = 0;
+            foreach (DataGridViewRow row in TransacTable.Rows)
+            {
+                if (row.IsNewRow) continue;
+                int price = Convert.ToInt32(row.Cells[3].Value);
+                grandTotal += price;
+            }
+
+            
+            e.Graphics.DrawString("Grand Total: Rs " + grandTotal, new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(startX, startY));
         }
     }
 }
