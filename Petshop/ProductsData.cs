@@ -33,6 +33,21 @@ namespace Petshop
 
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
+            cmd = new MySqlCommand("SELECT unitName FROM productunit", dbConnect.myconnect);
+            myReader = cmd.ExecuteReader();
+            while (myReader.Read())
+            {
+                string itemName = myReader["unitName"].ToString();
+
+                if (!productUnit.Items.Contains(itemName))
+                {
+                    productUnit.Items.Add(itemName);
+
+                }
+            }
+
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
             cmd = new MySqlCommand("SELECT pCategory_name FROM productcategory WHERE pCategory_name != 'NULL'", dbConnect.myconnect);
             myReader = cmd.ExecuteReader();
             while (myReader.Read())
@@ -47,7 +62,7 @@ namespace Petshop
             }
             dbConnect.CloseConnection();
             pCategory.SelectedIndex = 0;
-           
+            productUnit.SelectedIndex = 0;
         }
 
        private void populategv()
@@ -55,7 +70,7 @@ namespace Petshop
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             DataTable dt = new DataTable();
-            mySqlDataAdapter = new MySqlDataAdapter("SELECT product_id, product_name, pCategory_name, product_price, product_stock, strCategory_desc FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE  product_price > 0 OR product_stock > 0", dbConnect.myconnect);
+            mySqlDataAdapter = new MySqlDataAdapter("SELECT product_id, product_name, pCategory_name, product_price, unitName, product_stock, strCategory_desc, dateAdded FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN productunit ON product.unitID = productunit.unitID JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE  product_price > 0 OR product_stock > 0", dbConnect.myconnect);
             mySqlDataAdapter.Fill(dt);
             ProductTable.DataSource = dt;
             ProductTable.Columns[0].Visible = false;
@@ -76,7 +91,8 @@ namespace Petshop
                 pName.Text = ProductTable.Rows[e.RowIndex].Cells[1].Value.ToString();
                 pCategory.Text = ProductTable.Rows[e.RowIndex].Cells[2].Value.ToString();
                 pPrice.Text = ProductTable.Rows[e.RowIndex].Cells[3].Value.ToString();
-                pStock.Text = ProductTable.Rows[e.RowIndex].Cells[4].Value.ToString();
+                productUnit.Text = ProductTable.Rows[e.RowIndex].Cells[4].Value.ToString();
+                pStock.Text = ProductTable.Rows[e.RowIndex].Cells[5].Value.ToString();
                 if (productID == "")
                 {
                     productID = "";
@@ -96,7 +112,7 @@ namespace Petshop
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             DataTable dt = new DataTable();
-            mySqlDataAdapter = new MySqlDataAdapter("SELECT product_id, product_name, pCategory_name, product_price, product_stock, strCategory_desc FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE  product_name LIKE '%" + search.Text + "%' AND product_price > 0 AND product_price > 0 OR pCategory_name LIKE '%" + search.Text + "%' AND product_price > 0 AND product_price > 0 OR strCategory_desc LIKE '%" + search.Text + "%' AND product_price > 0 AND product_price > 0", dbConnect.myconnect);
+            mySqlDataAdapter = new MySqlDataAdapter("SELECT product_id, product_name, pCategory_name, product_price, unitName, product_stock, strCategory_desc, dateAdded FROM product JOIN productcategory ON product.pCategory_id = productcategory.pCategory_id JOIN productunit ON productunitID = productunit.unitID JOIN storecategory ON product.strCategory_id = storecategory.strCategory_id WHERE  product_name LIKE '%" + search.Text + "%' AND product_price > 0 AND product_price > 0 OR pCategory_name LIKE '%" + search.Text + "%' AND product_price > 0 AND product_price > 0 OR strCategory_desc LIKE '%" + search.Text + "%' AND product_price > 0 AND product_price > 0", dbConnect.myconnect);
             mySqlDataAdapter.Fill(dt);
             ProductTable.DataSource = dt;
             ProductTable.Columns[0].Visible = false;
@@ -166,6 +182,7 @@ namespace Petshop
                 pStock.Clear();
                 pCategory.SelectedIndex = 0;
                 productID = "";
+                productUnit.SelectedIndex = 0;
                 dbConnect.CloseConnection();
                 return;
             }
@@ -187,11 +204,13 @@ namespace Petshop
                 {
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
-                    cmd = new MySqlCommand("INSERT INTO product (product_name, pCategory_id, product_price, product_stock, strCategory_id) VALUES (@pname, @cID, @price, @stock,'1')", dbConnect.myconnect);
+                    cmd = new MySqlCommand("INSERT INTO product (product_name, pCategory_id, product_price, unitID, product_stock, strCategory_id, dateAdded) VALUES (@pname, @cID, @price, @UID,@stock,'1', @date)", dbConnect.myconnect);
                     cmd.Parameters.AddWithValue("@pname", pName.Text);
                     cmd.Parameters.AddWithValue("@cID", pCategory_ID.Text);
                     cmd.Parameters.AddWithValue("@price", pPrice.Text);
+                    cmd.Parameters.AddWithValue("@UID", unitID);
                     cmd.Parameters.AddWithValue("@stock", pStock.Text);
+                    cmd.Parameters.AddWithValue("@date", DateTime.Now.ToShortDateString());
                     cmd.ExecuteNonQuery();
                     MaterialMessageBox.Show("New Product Successfully Added", "Success");
                     dbConnect.CloseConnection();
@@ -199,6 +218,7 @@ namespace Petshop
                     pPrice.Clear();
                     pStock.Clear();
                     pCategory.SelectedIndex = 0;
+                    productUnit.SelectedIndex = 0;
                     productID = "";
                     populategv();
                 }
@@ -221,11 +241,12 @@ namespace Petshop
                 {
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
-                    cmd = new MySqlCommand("UPDATE product SET product_name = @pName, pCategory_id = @pCategory_id, product_price = @pPrice, product_stock = @pStock WHERE product_id = @id", dbConnect.myconnect);
+                    cmd = new MySqlCommand("UPDATE product SET product_name = @pName, pCategory_id = @pCategory_id, product_price = @pPrice, unitID = @puID,product_stock = @pStock WHERE product_id = @id", dbConnect.myconnect);
                     cmd.Parameters.AddWithValue("@id", productID);
                     cmd.Parameters.AddWithValue("@pName", pName.Text);
                     cmd.Parameters.AddWithValue("@pCategory_id", pCategory_ID.Text);
                     cmd.Parameters.AddWithValue("@pPrice", pPrice.Text);
+                    cmd.Parameters.AddWithValue("@puID", unitID);
                     cmd.Parameters.AddWithValue("@pStock", pStock.Text);
                     cmd.ExecuteNonQuery();
                     MaterialMessageBox.Show("Updated Successfully", "Success");
@@ -235,6 +256,7 @@ namespace Petshop
                     pStock.Clear();
                     pCategory.SelectedIndex = 0;
                     productID = "";
+                    productUnit.SelectedIndex = 0;
                     populategv();
                     dbConnect.CloseConnection();
 
@@ -268,6 +290,7 @@ namespace Petshop
                 pPrice.Clear();
                 pStock.Clear();
                 pCategory.SelectedIndex = 0;
+                productUnit.SelectedIndex = 0;
                 productID = "";
                 populategv();
                 dbConnect.CloseConnection();
@@ -288,7 +311,7 @@ namespace Petshop
             pPrice.Clear();
             pStock.Clear();
             pCategory.SelectedIndex = 0;
-           
+            productUnit.SelectedIndex = 0;
         }
 
         private void pCategory_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -319,7 +342,20 @@ namespace Petshop
             dbConnect.CloseConnection();
         }
 
-     
+        string unitID;
+        private void productUnit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            cmd = new MySqlCommand("SELECT unitID FROM productunit WHERE unitName = @UName", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@UName", productUnit.Text);
+            myReader = cmd.ExecuteReader();
+            if (myReader.Read() == true)
+            {
+                unitID = myReader["unitID"].ToString();
+            }
+        }
+
         private void product_price_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -355,5 +391,7 @@ namespace Petshop
 
             }
         }
+
+       
     }
 }
