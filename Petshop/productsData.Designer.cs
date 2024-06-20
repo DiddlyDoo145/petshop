@@ -34,11 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsData));
             this.ProductTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pCategory_ID = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -63,6 +58,15 @@
             this.pName = new MaterialSkin.Controls.MaterialTextBox2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.productUnit = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ProductTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -98,8 +102,10 @@
             this.Column1,
             this.Column2,
             this.Column3,
+            this.Column6,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column7});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,46 +133,6 @@
             this.ProductTable.Size = new System.Drawing.Size(583, 480);
             this.ProductTable.TabIndex = 60;
             this.ProductTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductTable_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "product_name";
-            this.Column1.HeaderText = "Product";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "pCategory_name";
-            this.Column2.HeaderText = "Product Category";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "product_price";
-            this.Column3.HeaderText = "Price";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "product_stock";
-            this.Column4.HeaderText = "Stock";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "strCategory_desc";
-            this.Column5.HeaderText = "Store Category";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // pCategory_ID
             // 
@@ -236,7 +202,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(274, 156);
+            this.label2.Location = new System.Drawing.Point(274, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 17);
             this.label2.TabIndex = 40;
@@ -290,7 +256,7 @@
             this.pCategory.IntegralHeight = false;
             this.pCategory.Items.AddRange(new object[] {
             "SELECT CATEGORY"});
-            this.pCategory.Location = new System.Drawing.Point(274, 184);
+            this.pCategory.Location = new System.Drawing.Point(274, 210);
             this.pCategory.Name = "pCategory";
             this.pCategory.Size = new System.Drawing.Size(216, 30);
             this.pCategory.TabIndex = 34;
@@ -299,6 +265,8 @@
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.label4);
+            this.materialCard1.Controls.Add(this.productUnit);
             this.materialCard1.Controls.Add(this.linkLabel1);
             this.materialCard1.Controls.Add(this.materialCard2);
             this.materialCard1.Controls.Add(this.pPrice);
@@ -367,8 +335,8 @@
             this.pPrice.HideSelection = true;
             this.pPrice.Hint = "Product Price";
             this.pPrice.LeadingIcon = null;
-            this.pPrice.Location = new System.Drawing.Point(274, 95);
-            this.pPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pPrice.Location = new System.Drawing.Point(21, 192);
+            this.pPrice.Margin = new System.Windows.Forms.Padding(2);
             this.pPrice.MaxLength = 32767;
             this.pPrice.MouseState = MaterialSkin.MouseState.OUT;
             this.pPrice.Name = "pPrice";
@@ -380,7 +348,7 @@
             this.pPrice.SelectionLength = 0;
             this.pPrice.SelectionStart = 0;
             this.pPrice.ShortcutsEnabled = true;
-            this.pPrice.Size = new System.Drawing.Size(214, 48);
+            this.pPrice.Size = new System.Drawing.Size(220, 48);
             this.pPrice.TabIndex = 62;
             this.pPrice.TabStop = false;
             this.pPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -397,8 +365,8 @@
             this.pStock.HideSelection = true;
             this.pStock.Hint = "Product Stock";
             this.pStock.LeadingIcon = null;
-            this.pStock.Location = new System.Drawing.Point(25, 180);
-            this.pStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pStock.Location = new System.Drawing.Point(21, 129);
+            this.pStock.Margin = new System.Windows.Forms.Padding(2);
             this.pStock.MaxLength = 32767;
             this.pStock.MouseState = MaterialSkin.MouseState.OUT;
             this.pStock.Name = "pStock";
@@ -439,8 +407,8 @@
             this.pName.HideSelection = true;
             this.pName.Hint = "Product Name";
             this.pName.LeadingIcon = null;
-            this.pName.Location = new System.Drawing.Point(22, 95);
-            this.pName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pName.Location = new System.Drawing.Point(18, 65);
+            this.pName.Margin = new System.Windows.Forms.Padding(2);
             this.pName.MaxLength = 32767;
             this.pName.MouseState = MaterialSkin.MouseState.OUT;
             this.pName.Name = "pName";
@@ -463,7 +431,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(470, -21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(476, 466);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -474,12 +442,93 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(987, 346);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(350, 313);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 62;
             this.pictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(274, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 17);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "Product Unit";
+            // 
+            // productUnit
+            // 
+            this.productUnit.DropDownHeight = 150;
+            this.productUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.productUnit.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productUnit.FormattingEnabled = true;
+            this.productUnit.IntegralHeight = false;
+            this.productUnit.Items.AddRange(new object[] {
+            "SELECT CATEGORY"});
+            this.productUnit.Location = new System.Drawing.Point(274, 129);
+            this.productUnit.Name = "productUnit";
+            this.productUnit.Size = new System.Drawing.Size(216, 30);
+            this.productUnit.TabIndex = 64;
+            this.productUnit.SelectedIndexChanged += new System.EventHandler(this.productUnit_SelectedIndexChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "product_name";
+            this.Column1.HeaderText = "Product";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "pCategory_name";
+            this.Column2.HeaderText = "Product Category";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "product_price";
+            this.Column3.HeaderText = "Price";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "unitName";
+            this.Column6.HeaderText = "Product Unit";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "product_stock";
+            this.Column4.HeaderText = "Stock";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "strCategory_desc";
+            this.Column5.HeaderText = "Store Category";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "dateAdded";
+            this.Column7.HeaderText = "DateAdded";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // ProductsData
             // 
@@ -535,11 +584,6 @@
         private System.Windows.Forms.Button Edit;
         private System.Windows.Forms.Button AddProduct;
         private System.Windows.Forms.ComboBox pCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialTextBox2 pStock;
         private MaterialSkin.Controls.MaterialTextBox2 pPrice;
@@ -550,5 +594,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox productUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
