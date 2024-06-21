@@ -102,7 +102,7 @@ namespace Petshop
             {
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
-                cmd = new MySqlCommand("UPDATE product SET pCategory_id = 8 WHERE pCategory_id = @did", dbConnect.myconnect);
+                cmd = new MySqlCommand("UPDATE product SET pCategory_id = '8' WHERE pCategory_id = @did", dbConnect.myconnect);
                 cmd.Parameters.AddWithValue("@did", CategoryID.Text);
                 cmd.ExecuteNonQuery();
                 dbConnect = new Conclass();
