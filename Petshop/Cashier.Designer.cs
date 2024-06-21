@@ -65,8 +65,10 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column1.HeaderText = "Product Name";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
@@ -74,22 +76,28 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column2.HeaderText = "Quantity";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "pTransac_total";
             this.Column3.HeaderText = "Total";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "employee_fname";
             this.Column4.HeaderText = "Employee Name";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
             // 
             // errorProvider1
             // 
@@ -111,12 +119,12 @@
             this.productCategory.Depth = 0;
             this.productCategory.HighEmphasis = true;
             this.productCategory.Icon = null;
-            this.productCategory.Location = new System.Drawing.Point(5, 4);
-            this.productCategory.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.productCategory.Location = new System.Drawing.Point(7, 5);
+            this.productCategory.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.productCategory.MouseState = MaterialSkin.MouseState.HOVER;
             this.productCategory.Name = "productCategory";
             this.productCategory.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.productCategory.Size = new System.Drawing.Size(569, 54);
+            this.productCategory.Size = new System.Drawing.Size(890, 66);
             this.productCategory.TabIndex = 6;
             this.productCategory.Text = "Products";
             this.productCategory.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -132,12 +140,12 @@
             this.services.Depth = 0;
             this.services.HighEmphasis = true;
             this.services.Icon = null;
-            this.services.Location = new System.Drawing.Point(580, 4);
-            this.services.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.services.Location = new System.Drawing.Point(905, 5);
+            this.services.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.services.MouseState = MaterialSkin.MouseState.HOVER;
             this.services.Name = "services";
             this.services.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.services.Size = new System.Drawing.Size(457, 54);
+            this.services.Size = new System.Drawing.Size(890, 66);
             this.services.TabIndex = 9;
             this.services.Text = "Services";
             this.services.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -150,10 +158,10 @@
             this.panel3.Controls.Add(this.services);
             this.panel3.Controls.Add(this.productCategory);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 71);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(0, 87);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1040, 61);
+            this.panel3.Size = new System.Drawing.Size(1802, 75);
             this.panel3.TabIndex = 7;
             // 
             // materialCard2
@@ -163,22 +171,21 @@
             this.materialCard2.Depth = 0;
             this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(10, 11);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard2.Location = new System.Drawing.Point(13, 14);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard2.Size = new System.Drawing.Size(1020, 46);
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(13, 14, 13, 14);
+            this.materialCard2.Size = new System.Drawing.Size(1776, 57);
             this.materialCard2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(17, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 26);
+            this.label1.Size = new System.Drawing.Size(119, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Cashier";
             // 
@@ -190,32 +197,33 @@
             this.materialCard1.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(0, 0);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard1.Size = new System.Drawing.Size(1040, 71);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(13, 14, 13, 14);
+            this.materialCard1.Size = new System.Drawing.Size(1802, 87);
             this.materialCard1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 132);
+            this.panel1.Location = new System.Drawing.Point(0, 162);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 508);
+            this.panel1.Size = new System.Drawing.Size(1802, 776);
             this.panel1.TabIndex = 8;
             // 
             // Cashier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1040, 640);
+            this.ClientSize = new System.Drawing.Size(1802, 938);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.materialCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Cashier";
             this.Text = "Cashier";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();

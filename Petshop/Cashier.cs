@@ -26,7 +26,7 @@ namespace Petshop
             }
             currentchildForm1 = childForm;
             childForm.TopLevel = false;
-            childForm.Dock = DockStyle.None;
+            childForm.Dock = DockStyle.Fill;
             this.panel1.Controls.Add(childForm);
             this.Tag = childForm;
             childForm.BringToFront();
