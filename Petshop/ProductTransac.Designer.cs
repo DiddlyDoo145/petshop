@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductTransac));
             this.materialListBox1 = new MaterialSkin.Controls.MaterialListBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,12 +79,13 @@
             this.materialListBox1.BorderColor = System.Drawing.Color.LightGray;
             this.materialListBox1.Depth = 0;
             this.materialListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialListBox1.Location = new System.Drawing.Point(136, 38);
+            this.materialListBox1.Location = new System.Drawing.Point(181, 47);
+            this.materialListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.materialListBox1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialListBox1.Name = "materialListBox1";
             this.materialListBox1.SelectedIndex = -1;
             this.materialListBox1.SelectedItem = null;
-            this.materialListBox1.Size = new System.Drawing.Size(649, 154);
+            this.materialListBox1.Size = new System.Drawing.Size(865, 190);
             this.materialListBox1.TabIndex = 31;
             // 
             // label5
@@ -93,9 +94,10 @@
             this.label5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(616, 58);
+            this.label5.Location = new System.Drawing.Point(821, 71);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 17);
+            this.label5.Size = new System.Drawing.Size(146, 21);
             this.label5.TabIndex = 57;
             this.label5.Text = "Employee Name";
             // 
@@ -105,9 +107,10 @@
             this.label3.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(476, 56);
+            this.label3.Location = new System.Drawing.Point(635, 69);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 17);
+            this.label3.Size = new System.Drawing.Size(96, 21);
             this.label3.TabIndex = 55;
             this.label3.Text = "Total Price";
             // 
@@ -117,9 +120,10 @@
             this.label2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(153, 58);
+            this.label2.Location = new System.Drawing.Point(204, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 17);
+            this.label2.Size = new System.Drawing.Size(132, 21);
             this.label2.TabIndex = 54;
             this.label2.Text = "Product Name";
             // 
@@ -128,9 +132,10 @@
             this.button2.BackColor = System.Drawing.Color.Aqua;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(528, 134);
+            this.button2.Location = new System.Drawing.Point(704, 165);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 30);
+            this.button2.Size = new System.Drawing.Size(156, 37);
             this.button2.TabIndex = 52;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
@@ -141,9 +146,10 @@
             this.Edit.BackColor = System.Drawing.Color.Aqua;
             this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit.Location = new System.Drawing.Point(387, 134);
+            this.Edit.Location = new System.Drawing.Point(516, 165);
+            this.Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(117, 30);
+            this.Edit.Size = new System.Drawing.Size(156, 37);
             this.Edit.TabIndex = 51;
             this.Edit.Text = "Edit";
             this.Edit.UseVisualStyleBackColor = false;
@@ -154,9 +160,10 @@
             this.AddProduct.BackColor = System.Drawing.Color.Aqua;
             this.AddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddProduct.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddProduct.Location = new System.Drawing.Point(252, 134);
+            this.AddProduct.Location = new System.Drawing.Point(336, 165);
+            this.AddProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddProduct.Name = "AddProduct";
-            this.AddProduct.Size = new System.Drawing.Size(117, 30);
+            this.AddProduct.Size = new System.Drawing.Size(156, 37);
             this.AddProduct.TabIndex = 50;
             this.AddProduct.Text = "Add";
             this.AddProduct.UseVisualStyleBackColor = false;
@@ -169,9 +176,10 @@
             this.employee_Name.FormattingEnabled = true;
             this.employee_Name.Items.AddRange(new object[] {
             "SELECT CATEGORY"});
-            this.employee_Name.Location = new System.Drawing.Point(619, 77);
+            this.employee_Name.Location = new System.Drawing.Point(825, 95);
+            this.employee_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.employee_Name.Name = "employee_Name";
-            this.employee_Name.Size = new System.Drawing.Size(130, 25);
+            this.employee_Name.Size = new System.Drawing.Size(172, 29);
             this.employee_Name.TabIndex = 49;
             this.employee_Name.SelectedIndexChanged += new System.EventHandler(this.employee_Name_SelectedIndexChanged);
             // 
@@ -182,19 +190,21 @@
             this.productName.FormattingEnabled = true;
             this.productName.Items.AddRange(new object[] {
             "SELECT CATEGORY"});
-            this.productName.Location = new System.Drawing.Point(156, 77);
+            this.productName.Location = new System.Drawing.Point(208, 95);
+            this.productName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productName.Name = "productName";
-            this.productName.Size = new System.Drawing.Size(130, 25);
+            this.productName.Size = new System.Drawing.Size(172, 29);
             this.productName.TabIndex = 48;
             this.productName.SelectedIndexChanged += new System.EventHandler(this.productName_SelectedIndexChanged);
             // 
             // TransacTotal
             // 
             this.TransacTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransacTotal.Location = new System.Drawing.Point(479, 77);
+            this.TransacTotal.Location = new System.Drawing.Point(639, 95);
+            this.TransacTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TransacTotal.Multiline = true;
             this.TransacTotal.Name = "TransacTotal";
-            this.TransacTotal.Size = new System.Drawing.Size(100, 25);
+            this.TransacTotal.Size = new System.Drawing.Size(132, 30);
             this.TransacTotal.TabIndex = 46;
             // 
             // product_ID
@@ -202,8 +212,9 @@
             this.product_ID.AutoSize = true;
             this.product_ID.Dock = System.Windows.Forms.DockStyle.Left;
             this.product_ID.Location = new System.Drawing.Point(0, 0);
+            this.product_ID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.product_ID.Name = "product_ID";
-            this.product_ID.Size = new System.Drawing.Size(35, 13);
+            this.product_ID.Size = new System.Drawing.Size(44, 16);
             this.product_ID.TabIndex = 58;
             this.product_ID.Text = "label1";
             this.product_ID.Visible = false;
@@ -212,9 +223,10 @@
             // 
             this.employee_ID.AutoSize = true;
             this.employee_ID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.employee_ID.Location = new System.Drawing.Point(35, 0);
+            this.employee_ID.Location = new System.Drawing.Point(44, 0);
+            this.employee_ID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.employee_ID.Name = "employee_ID";
-            this.employee_ID.Size = new System.Drawing.Size(35, 13);
+            this.employee_ID.Size = new System.Drawing.Size(44, 16);
             this.employee_ID.TabIndex = 59;
             this.employee_ID.Text = "label1";
             this.employee_ID.Visible = false;
@@ -228,14 +240,14 @@
             this.TransacTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TransacTable.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.TransacTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TransacTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransacTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.TransacTable.ColumnHeadersHeight = 30;
             this.TransacTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.TransacTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -243,48 +255,52 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TransacTable.DefaultCellStyle = dataGridViewCellStyle14;
-            this.TransacTable.Location = new System.Drawing.Point(135, 252);
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TransacTable.DefaultCellStyle = dataGridViewCellStyle9;
+            this.TransacTable.Location = new System.Drawing.Point(180, 310);
+            this.TransacTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TransacTable.Name = "TransacTable";
             this.TransacTable.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TransacTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransacTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.TransacTable.RowHeadersVisible = false;
+            this.TransacTable.RowHeadersWidth = 51;
             this.TransacTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.TransacTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TransacTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TransacTable.Size = new System.Drawing.Size(650, 228);
+            this.TransacTable.Size = new System.Drawing.Size(867, 281);
             this.TransacTable.TabIndex = 60;
             this.TransacTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TransacTable_CellClick);
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "product_name";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column1.HeaderText = "Product Name";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "Quantity";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column2.HeaderText = "Quantity";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -292,6 +308,7 @@
             // 
             this.Column3.DataPropertyName = "pTransac_total";
             this.Column3.HeaderText = "Total";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
@@ -299,6 +316,7 @@
             // 
             this.Column4.DataPropertyName = "employee_fname";
             this.Column4.HeaderText = "Employee Name";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -306,9 +324,10 @@
             // 
             this.productStock.AutoSize = true;
             this.productStock.Dock = System.Windows.Forms.DockStyle.Left;
-            this.productStock.Location = new System.Drawing.Point(70, 0);
+            this.productStock.Location = new System.Drawing.Point(88, 0);
+            this.productStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.productStock.Name = "productStock";
-            this.productStock.Size = new System.Drawing.Size(35, 13);
+            this.productStock.Size = new System.Drawing.Size(44, 16);
             this.productStock.TabIndex = 61;
             this.productStock.Text = "label1";
             this.productStock.Visible = false;
@@ -316,10 +335,11 @@
             // qty
             // 
             this.qty.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty.Location = new System.Drawing.Point(309, 77);
+            this.qty.Location = new System.Drawing.Point(412, 95);
+            this.qty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.qty.Multiline = true;
             this.qty.Name = "qty";
-            this.qty.Size = new System.Drawing.Size(100, 25);
+            this.qty.Size = new System.Drawing.Size(132, 30);
             this.qty.TabIndex = 62;
             this.qty.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -327,9 +347,10 @@
             // 
             this.productPrice.AutoSize = true;
             this.productPrice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productPrice.Location = new System.Drawing.Point(105, 0);
+            this.productPrice.Location = new System.Drawing.Point(132, 0);
+            this.productPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.productPrice.Name = "productPrice";
-            this.productPrice.Size = new System.Drawing.Size(35, 13);
+            this.productPrice.Size = new System.Drawing.Size(44, 16);
             this.productPrice.TabIndex = 63;
             this.productPrice.Text = "label1";
             this.productPrice.Visible = false;
@@ -340,9 +361,10 @@
             this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(306, 58);
+            this.label1.Location = new System.Drawing.Point(408, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(82, 21);
             this.label1.TabIndex = 64;
             this.label1.Text = "Quantity";
             // 
@@ -391,9 +413,10 @@
             this.printbtn.BackColor = System.Drawing.Color.Aqua;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(668, 216);
+            this.printbtn.Location = new System.Drawing.Point(891, 266);
+            this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.printbtn.Name = "printbtn";
-            this.printbtn.Size = new System.Drawing.Size(117, 30);
+            this.printbtn.Size = new System.Drawing.Size(156, 37);
             this.printbtn.TabIndex = 66;
             this.printbtn.Text = "Bill";
             this.printbtn.UseVisualStyleBackColor = false;
@@ -405,9 +428,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(153, 226);
+            this.label4.Location = new System.Drawing.Point(204, 278);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 18);
+            this.label4.Size = new System.Drawing.Size(110, 23);
             this.label4.TabIndex = 67;
             this.label4.Text = "Total Price:";
             // 
@@ -417,17 +441,18 @@
             this.Total.BackColor = System.Drawing.Color.Transparent;
             this.Total.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Total.ForeColor = System.Drawing.SystemColors.Control;
-            this.Total.Location = new System.Drawing.Point(241, 226);
+            this.Total.Location = new System.Drawing.Point(321, 278);
+            this.Total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(0, 18);
+            this.Total.Size = new System.Drawing.Size(0, 23);
             this.Total.TabIndex = 68;
             // 
             // ProductTransac
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1040, 508);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(1802, 776);
             this.Controls.Add(this.Total);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.printbtn);
@@ -449,6 +474,7 @@
             this.Controls.Add(this.TransacTotal);
             this.Controls.Add(this.materialListBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductTransac";
             this.Text = "ProductTransac";
             this.Load += new System.EventHandler(this.ProductTransac_Load);

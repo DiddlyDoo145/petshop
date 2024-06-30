@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -51,6 +51,13 @@
             this.ServicesSelect = new System.Windows.Forms.ComboBox();
             this.petSize = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.services = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
             this.Edit = new System.Windows.Forms.Button();
             this.AddProduct = new System.Windows.Forms.Button();
@@ -59,13 +66,6 @@
             this.serviceType = new System.Windows.Forms.ComboBox();
             this.pettype = new System.Windows.Forms.ComboBox();
             this.owner = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.services = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
@@ -105,6 +105,7 @@
             // 
             this.Column7.DataPropertyName = "date";
             this.Column7.HeaderText = "Date";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
@@ -112,6 +113,7 @@
             // 
             this.Column6.DataPropertyName = "employee_fname";
             this.Column6.HeaderText = "Employee Assigned";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
@@ -119,6 +121,7 @@
             // 
             this.Column5.DataPropertyName = "sTransac_total";
             this.Column5.HeaderText = "Price";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
@@ -126,6 +129,7 @@
             // 
             this.Column4.DataPropertyName = "Service_name";
             this.Column4.HeaderText = "Services";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -133,6 +137,7 @@
             // 
             this.Column8.DataPropertyName = "servicetype";
             this.Column8.HeaderText = "Service Type";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
@@ -140,6 +145,7 @@
             // 
             this.Column3.DataPropertyName = "petSize";
             this.Column3.HeaderText = "Pet Size";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
@@ -151,6 +157,7 @@
             // 
             this.Column2.DataPropertyName = "pet_type";
             this.Column2.HeaderText = "Pet";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -163,14 +170,14 @@
             this.serviceTtble.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.serviceTtble.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.serviceTtble.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviceTtble.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviceTtble.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.serviceTtble.ColumnHeadersHeight = 30;
             this.serviceTtble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.serviceTtble.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -182,31 +189,32 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.serviceTtble.DefaultCellStyle = dataGridViewCellStyle2;
-            this.serviceTtble.Location = new System.Drawing.Point(34, 265);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.serviceTtble.DefaultCellStyle = dataGridViewCellStyle5;
+            this.serviceTtble.Location = new System.Drawing.Point(45, 326);
+            this.serviceTtble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.serviceTtble.Name = "serviceTtble";
             this.serviceTtble.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviceTtble.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviceTtble.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.serviceTtble.RowHeadersVisible = false;
             this.serviceTtble.RowHeadersWidth = 51;
             this.serviceTtble.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.serviceTtble.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.serviceTtble.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.serviceTtble.Size = new System.Drawing.Size(984, 247);
+            this.serviceTtble.Size = new System.Drawing.Size(1312, 304);
             this.serviceTtble.TabIndex = 19;
             this.serviceTtble.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.serviceTtble_CellClick);
             // 
@@ -214,6 +222,7 @@
             // 
             this.Column1.DataPropertyName = "Owner";
             this.Column1.HeaderText = "Pet Owner";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -226,9 +235,10 @@
             "SERVICE TYPE",
             "Full Groom",
             "Not Full Groom"});
-            this.ServicesSelect.Location = new System.Drawing.Point(338, 48);
+            this.ServicesSelect.Location = new System.Drawing.Point(451, 59);
+            this.ServicesSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ServicesSelect.Name = "ServicesSelect";
-            this.ServicesSelect.Size = new System.Drawing.Size(144, 25);
+            this.ServicesSelect.Size = new System.Drawing.Size(191, 29);
             this.ServicesSelect.TabIndex = 57;
             this.ServicesSelect.SelectedIndexChanged += new System.EventHandler(this.ServicesSelect_SelectedIndexChanged);
             // 
@@ -237,9 +247,10 @@
             this.petSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.petSize.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petSize.FormattingEnabled = true;
-            this.petSize.Location = new System.Drawing.Point(501, 49);
+            this.petSize.Location = new System.Drawing.Point(668, 60);
+            this.petSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.petSize.Name = "petSize";
-            this.petSize.Size = new System.Drawing.Size(144, 25);
+            this.petSize.Size = new System.Drawing.Size(191, 29);
             this.petSize.TabIndex = 56;
             this.petSize.SelectedIndexChanged += new System.EventHandler(this.petSize_SelectedIndexChanged_1);
             // 
@@ -263,19 +274,113 @@
             this.panel1.Controls.Add(this.serviceType);
             this.panel1.Controls.Add(this.pettype);
             this.panel1.Controls.Add(this.owner);
-            this.panel1.Location = new System.Drawing.Point(34, 15);
+            this.panel1.Location = new System.Drawing.Point(45, 18);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 167);
+            this.panel1.Size = new System.Drawing.Size(1312, 206);
             this.panel1.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(1075, 34);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 21);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Employee Assign";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(868, 36);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 21);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "Total Price";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(664, 36);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 21);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "Size";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(447, 36);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 21);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Service Type";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(239, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 21);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Pet";
+            // 
+            // services
+            // 
+            this.services.AutoSize = true;
+            this.services.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.services.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.services.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.services.Location = new System.Drawing.Point(367, 107);
+            this.services.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.services.Name = "services";
+            this.services.Size = new System.Drawing.Size(77, 21);
+            this.services.TabIndex = 59;
+            this.services.Text = "Services";
+            this.services.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(20, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 21);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Owner";
             // 
             // Delete
             // 
             this.Delete.BackColor = System.Drawing.Color.Aqua;
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(534, 120);
+            this.Delete.Location = new System.Drawing.Point(712, 148);
+            this.Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(117, 30);
+            this.Delete.Size = new System.Drawing.Size(156, 37);
             this.Delete.TabIndex = 55;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
@@ -286,9 +391,10 @@
             this.Edit.BackColor = System.Drawing.Color.Aqua;
             this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit.Location = new System.Drawing.Point(393, 120);
+            this.Edit.Location = new System.Drawing.Point(524, 148);
+            this.Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(117, 30);
+            this.Edit.Size = new System.Drawing.Size(156, 37);
             this.Edit.TabIndex = 54;
             this.Edit.Text = "Edit";
             this.Edit.UseVisualStyleBackColor = false;
@@ -299,9 +405,10 @@
             this.AddProduct.BackColor = System.Drawing.Color.Aqua;
             this.AddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddProduct.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddProduct.Location = new System.Drawing.Point(258, 120);
+            this.AddProduct.Location = new System.Drawing.Point(344, 148);
+            this.AddProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddProduct.Name = "AddProduct";
-            this.AddProduct.Size = new System.Drawing.Size(117, 30);
+            this.AddProduct.Size = new System.Drawing.Size(156, 37);
             this.AddProduct.TabIndex = 53;
             this.AddProduct.Text = "Add";
             this.AddProduct.UseVisualStyleBackColor = false;
@@ -314,20 +421,22 @@
             this.employee.FormattingEnabled = true;
             this.employee.Items.AddRange(new object[] {
             "SELECT EMPLOYEE"});
-            this.employee.Location = new System.Drawing.Point(809, 48);
+            this.employee.Location = new System.Drawing.Point(1079, 59);
+            this.employee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.employee.Name = "employee";
-            this.employee.Size = new System.Drawing.Size(144, 25);
+            this.employee.Size = new System.Drawing.Size(191, 29);
             this.employee.TabIndex = 52;
             this.employee.SelectedIndexChanged += new System.EventHandler(this.employee_SelectedIndexChanged);
             // 
             // cost
             // 
             this.cost.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cost.Location = new System.Drawing.Point(654, 48);
+            this.cost.Location = new System.Drawing.Point(872, 59);
+            this.cost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cost.Multiline = true;
             this.cost.Name = "cost";
             this.cost.ReadOnly = true;
-            this.cost.Size = new System.Drawing.Size(143, 26);
+            this.cost.Size = new System.Drawing.Size(189, 31);
             this.cost.TabIndex = 51;
             // 
             // serviceType
@@ -335,9 +444,10 @@
             this.serviceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.serviceType.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceType.FormattingEnabled = true;
-            this.serviceType.Location = new System.Drawing.Point(339, 84);
+            this.serviceType.Location = new System.Drawing.Point(452, 103);
+            this.serviceType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.serviceType.Name = "serviceType";
-            this.serviceType.Size = new System.Drawing.Size(144, 25);
+            this.serviceType.Size = new System.Drawing.Size(191, 29);
             this.serviceType.TabIndex = 50;
             this.serviceType.Visible = false;
             this.serviceType.SelectedIndexChanged += new System.EventHandler(this.serviceType_SelectedIndexChanged);
@@ -349,115 +459,33 @@
             this.pettype.FormattingEnabled = true;
             this.pettype.Items.AddRange(new object[] {
             "SELECT PET"});
-            this.pettype.Location = new System.Drawing.Point(180, 49);
+            this.pettype.Location = new System.Drawing.Point(240, 60);
+            this.pettype.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pettype.Name = "pettype";
-            this.pettype.Size = new System.Drawing.Size(144, 25);
+            this.pettype.Size = new System.Drawing.Size(191, 29);
             this.pettype.TabIndex = 49;
             this.pettype.SelectedIndexChanged += new System.EventHandler(this.pettype_SelectedIndexChanged);
             // 
             // owner
             // 
             this.owner.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.owner.Location = new System.Drawing.Point(18, 49);
+            this.owner.Location = new System.Drawing.Point(24, 60);
+            this.owner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.owner.Multiline = true;
             this.owner.Name = "owner";
-            this.owner.Size = new System.Drawing.Size(143, 26);
+            this.owner.Size = new System.Drawing.Size(189, 31);
             this.owner.TabIndex = 33;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(15, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 17);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "Owner";
-            // 
-            // services
-            // 
-            this.services.AutoSize = true;
-            this.services.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.services.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.services.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.services.Location = new System.Drawing.Point(275, 87);
-            this.services.Name = "services";
-            this.services.Size = new System.Drawing.Size(58, 17);
-            this.services.TabIndex = 59;
-            this.services.Text = "Services";
-            this.services.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(179, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 17);
-            this.label1.TabIndex = 60;
-            this.label1.Text = "Pet";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(335, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "Service Type";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(498, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 17);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "Size";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(651, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 17);
-            this.label5.TabIndex = 63;
-            this.label5.Text = "Total Price";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(806, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 17);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "Employee Assign";
             // 
             // ServiceTransac
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1040, 508);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(1802, 776);
             this.Controls.Add(this.serviceTtble);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ServiceTransac";
             this.Text = "ServiceTransac";
             this.Load += new System.EventHandler(this.ServiceTransac_Load);

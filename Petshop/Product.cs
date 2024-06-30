@@ -28,7 +28,7 @@ namespace Petshop
             }
             currentchildForm1 = childForm;
             childForm.TopLevel = false;
-            childForm.Dock = DockStyle.None;
+            childForm.Dock = DockStyle.Fill;
             this.panel5.Controls.Add(childForm);
             this.Tag = childForm;
             childForm.BringToFront();
@@ -62,6 +62,11 @@ namespace Petshop
         private void Product_Load(object sender, EventArgs e)
         {
             productCategory_Click(null, null);
+        }
+
+        private void petManage_Click(object sender, EventArgs e)
+        {
+            OpenChildForm1(new petManagement(), 30, 135);
         }
     }
 }

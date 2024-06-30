@@ -43,11 +43,15 @@ namespace Petshop
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            closeForm();
             OpenChildForm(new Employee(), 175, 100);
             BlurBg bbg = new BlurBg();
             bbg.Size = new Size(1400, 782);
             bbg.Visible = true;
             bbg.BringToFront();
+            BlurBg.instance.pickCashier = false;
+            BlurBg.instance.employeeManage = true;
+            BlurBg.instance.BlurBg_Load(null, null);
         }
 
         private void product_Click(object sender, EventArgs e)
@@ -58,7 +62,7 @@ namespace Petshop
 
         private void customer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Customer(), 175, 100);
+            OpenChildForm(new petManagement(), 175, 100);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -92,8 +96,15 @@ namespace Petshop
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Cashier(), 175, 100);
             closeForm();
+            OpenChildForm(new Cashier(), 175, 100);
+            BlurBg bbg = new BlurBg();
+            bbg.Size = new Size(1400, 782);
+            bbg.Visible = true;
+            bbg.BringToFront();
+            BlurBg.instance.pickCashier = true;
+            BlurBg.instance.employeeManage = false;
+            BlurBg.instance.BlurBg_Load(null, null);
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -123,8 +134,16 @@ namespace Petshop
             }
         }
 
-        private void closeForm()
+        public void closeForm()
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "assignCashier")
+                {
+                    f.Close();
+                    break;
+                }
+            }
             foreach (Form f in Application.OpenForms)
             {
                 if (f.Name == "EmpCODEPIN")

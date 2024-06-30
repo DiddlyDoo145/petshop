@@ -66,6 +66,7 @@
             this.payrollDgv.Location = new System.Drawing.Point(32, 169);
             this.payrollDgv.Name = "payrollDgv";
             this.payrollDgv.ReadOnly = true;
+            this.payrollDgv.RowHeadersVisible = false;
             this.payrollDgv.RowHeadersWidth = 51;
             this.payrollDgv.RowTemplate.Height = 24;
             this.payrollDgv.Size = new System.Drawing.Size(1728, 585);
