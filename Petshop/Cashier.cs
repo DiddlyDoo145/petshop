@@ -104,7 +104,7 @@ namespace Petshop
             availing = "Service";
             full = true;
             fullGroom_CheckedChanged(null, null);
-        }
+        } 
         private void qtyCategory_Click(object sender, EventArgs e)
         {
             if(qtyCategory.Text == "KILO")
