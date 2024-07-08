@@ -255,5 +255,12 @@ namespace Petshop
             sizeCb.SelectedItem = petDgv.Rows[e.RowIndex].Cells[1].Value.ToString();
             petPrice.Text = petDgv.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
+
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+            petType.ResetText();
+            petPrice.ResetText();
+            sizeCb.SelectedIndex = 0;
+        }
     }
 }

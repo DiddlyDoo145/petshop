@@ -41,6 +41,8 @@
             this.deletePrice = new System.Windows.Forms.Button();
             this.updatePrice = new System.Windows.Forms.Button();
             this.addPrice = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.petDgv)).BeginInit();
             this.materialCard1.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -101,21 +103,21 @@
             this.materialCard1.Controls.Add(this.materialCard2);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(783, 170);
+            this.materialCard1.Location = new System.Drawing.Point(783, 185);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(675, 306);
+            this.materialCard1.Size = new System.Drawing.Size(675, 276);
             this.materialCard1.TabIndex = 1;
             // 
             // sizeCb
             // 
             this.sizeCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sizeCb.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sizeCb.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sizeCb.FormattingEnabled = true;
             this.sizeCb.IntegralHeight = false;
-            this.sizeCb.ItemHeight = 23;
+            this.sizeCb.ItemHeight = 28;
             this.sizeCb.Items.AddRange(new object[] {
             "Select Size",
             "Small",
@@ -123,9 +125,9 @@
             "Large",
             "Extra Large",
             "2XL"});
-            this.sizeCb.Location = new System.Drawing.Point(258, 146);
+            this.sizeCb.Location = new System.Drawing.Point(367, 152);
             this.sizeCb.Name = "sizeCb";
-            this.sizeCb.Size = new System.Drawing.Size(166, 31);
+            this.sizeCb.Size = new System.Drawing.Size(217, 36);
             this.sizeCb.TabIndex = 4;
             // 
             // petPrice
@@ -138,7 +140,7 @@
             this.petPrice.HideSelection = true;
             this.petPrice.Hint = "Service Price";
             this.petPrice.LeadingIcon = null;
-            this.petPrice.Location = new System.Drawing.Point(449, 137);
+            this.petPrice.Location = new System.Drawing.Point(53, 189);
             this.petPrice.MaxLength = 32767;
             this.petPrice.MouseState = MaterialSkin.MouseState.OUT;
             this.petPrice.Name = "petPrice";
@@ -150,7 +152,7 @@
             this.petPrice.SelectionLength = 0;
             this.petPrice.SelectionStart = 0;
             this.petPrice.ShortcutsEnabled = true;
-            this.petPrice.Size = new System.Drawing.Size(181, 48);
+            this.petPrice.Size = new System.Drawing.Size(247, 48);
             this.petPrice.TabIndex = 3;
             this.petPrice.TabStop = false;
             this.petPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -167,7 +169,7 @@
             this.petType.HideSelection = true;
             this.petType.Hint = "Pet Type";
             this.petType.LeadingIcon = null;
-            this.petType.Location = new System.Drawing.Point(50, 137);
+            this.petType.Location = new System.Drawing.Point(53, 109);
             this.petType.MaxLength = 32767;
             this.petType.MouseState = MaterialSkin.MouseState.OUT;
             this.petType.Name = "petType";
@@ -179,7 +181,7 @@
             this.petType.SelectionLength = 0;
             this.petType.SelectionStart = 0;
             this.petType.ShortcutsEnabled = true;
-            this.petType.Size = new System.Drawing.Size(181, 48);
+            this.petType.Size = new System.Drawing.Size(247, 48);
             this.petType.TabIndex = 3;
             this.petType.TabStop = false;
             this.petType.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -189,6 +191,8 @@
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.label1);
+            this.materialCard2.Controls.Add(this.linkLabel1);
             this.materialCard2.Controls.Add(this.label3);
             this.materialCard2.Depth = 0;
             this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -256,6 +260,28 @@
             this.addPrice.UseVisualStyleBackColor = false;
             this.addPrice.Click += new System.EventHandler(this.addPrice_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(536, 13);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(95, 21);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Click Here";
+            this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(448, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 21);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "New Pet?";
+            // 
             // petManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,5 +322,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

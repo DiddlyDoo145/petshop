@@ -1,4 +1,5 @@
-﻿using MaterialSkin.Controls;
+﻿using Google.Protobuf.WellKnownTypes;
+using MaterialSkin.Controls;
 using MySql.Data.MySqlClient;
 using Practice1;
 using System;
@@ -21,18 +22,20 @@ namespace Petshop
         private MySqlCommand cmd;
         private MySqlDataReader myReader;
         private MySqlDataAdapter mySqlDataAdapter;
-        string soldPer, availing, productID, serviceID, transactTotal, qty;
-        int stock, price;
+        string soldPer, availing, productID, serviceID, transactTotal, qty, petID, pSizeID;
+        int stock = 0, price, multiplier;
         bool full, shouldhandle = true;
         public Cashier()
         {
             InitializeComponent();
             instance = this;
             petType.KeyPress += petType_KeyPress;
+/*            checkCashier();*/
         }
-        private void Cashier_Load(object sender, EventArgs e)
+        public void Cashier_Load(object sender, EventArgs e)
         {
             qtyCategory.Text = "KILO";
+            soldPer = "KILO";
             loadProduct();
             productPanel.BringToFront();
             availing = "Product";
@@ -60,6 +63,21 @@ namespace Petshop
         }
         #endregion
 
+        #region checkReceipt
+        private void checkCashier()
+        {
+            int total = receiptDgv.Rows.Count;
+            if (total > 0)
+            {
+                Home.instance.isEmpty = false;
+            }
+            else
+            {
+                Home.instance.isEmpty = true;
+            }
+        }
+        #endregion
+
         #region Clicks
         private void productCategory_Click(object sender, EventArgs e)
         {
@@ -84,6 +102,8 @@ namespace Petshop
             petType.Clear();
             petSize.SelectedIndex = 0;
             availing = "Service";
+            full = true;
+            fullGroom_CheckedChanged(null, null);
         }
         private void qtyCategory_Click(object sender, EventArgs e)
         {
@@ -91,11 +111,56 @@ namespace Petshop
             {
                 soldPer = "SACK";
                 qtyCategory.Text = "SACK";
+                multiplier = 20;
+                if(productQty.TextLength < 1)
+                {
+
+                }
+                else
+                {
+                    int current = Convert.ToInt32(productQty.Text) * multiplier;
+                    if (stock < current)
+                    {
+                        MaterialMessageBox.Show("Stock insufficient", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (stock.ToString().Length < 2)
+                        {
+                            productQty.Text = "0" + stock.ToString();
+                        }
+                        else
+                        {
+                            productQty.Text = stock.ToString();
+                        }
+                        soldPer = "KILO";
+                        qtyCategory.Text = "KILO";
+                        multiplier = 1;
+                    }
+                }
             }
             else
             {
                 soldPer = "KILO";
                 qtyCategory.Text = "KILO";
+                multiplier = 1;
+                if(productQty.TextLength < 1)
+                {
+
+                }
+                else
+                {
+                    int current = Convert.ToInt32(productQty.Text) * multiplier;
+                    if (stock < current)
+                    {
+                        MaterialMessageBox.Show("Stock insufficient", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (stock.ToString().Length < 2)
+                        {
+                            productQty.Text = "0" + stock.ToString();
+                        }
+                        else
+                        {
+                            productQty.Text = stock.ToString();
+                        }
+                    }
+                }
             }
         }
         #endregion
@@ -122,7 +187,7 @@ namespace Petshop
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             DataTable dt = new DataTable();
-            mySqlDataAdapter = new MySqlDataAdapter("SELECT services.service_name, services.service_price, pet.pet_type FROM services JOIN pet ON services.pet_id = pet.pet_id WHERE services.service_price > '0'", dbConnect.myconnect);
+            mySqlDataAdapter = new MySqlDataAdapter("SELECT services.service_name, services.service_price, pet.pet_type FROM services JOIN pet ON services.pet_id = pet.pet_id WHERE services.service_price > '0' AND service_name != 'Full Groom'", dbConnect.myconnect);
             mySqlDataAdapter.Fill(dt);
             cashierDgv.DataSource = dt;
             cashierDgv.Columns[0].Visible = true;
@@ -261,13 +326,45 @@ namespace Petshop
 
         #endregion
 
+        #region Get Pet ID
+        private void getPetID()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("SELECT pet_id FROM pet WHERE pet_type = @type", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@type", petType.Text);
+            myReader = cmd.ExecuteReader();
+            if (myReader.Read())
+            {
+                petID = myReader["pet_id"].ToString();
+            }
+        }
+        private void getPetSize()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("SELECT ptsize_id FROM petsize WHERE pet_size = @size AND pet_id = @id", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@size", petSize.Text);
+            cmd.Parameters.AddWithValue("@id", petID);
+            myReader = cmd.ExecuteReader();
+            if (myReader.Read())
+            {
+                pSizeID = myReader["ptsize_id"].ToString();
+            }
+        }
+        #endregion
+
         #region Cancel or Add Order
         private void cancelOrder_Click(object sender, EventArgs e)
         {
             stock = 0;
-            productName.Clear();
-            productPrice.Clear();
+            productName.ResetText();
+            productPrice.ResetText();
             productQty.Text = "00";
+            serviceName.ResetText();
+            servicePrice.ResetText();
+            petType.ResetText();
+            petSize.SelectedIndex = 0;
         }
 
         private void addOrder_Click(object sender, EventArgs e)
@@ -280,26 +377,42 @@ namespace Petshop
                 }
                 else
                 {
-                    int num1 = Convert.ToInt32(productPrice.Text);
-                    int num2 = Convert.ToInt32(productQty.Text);
-                    int total = num2 * num1;
-                    int rowId = receiptDgv.Rows.Add();
-                    transactTotal = total.ToString();
-                    qty = num2.ToString();
-                    // Grab the new row!
-                    DataGridViewRow row = receiptDgv.Rows[rowId];
-                    // Add the data
-                    row.Cells["Column5"].Value = productName.Text;
-                    row.Cells["Column6"].Value = productPrice.Text;
-                    row.Cells["Column7"].Value = productQty.Text;
-                    row.Cells["Column8"].Value = total;
-                    row.Cells["Column9"].Value = "Product";
-                    subtractProduct();
-                    productName.Clear();
-                    productPrice.Clear();
-                    productQty.Text = "00";
-                    newTransaction();
-                    loadProduct();
+                    if(productQty.Text == "00")
+                    {
+                        MaterialMessageBox.Show("Quantity can't be less than 1.", "Notice");
+                        productQty.Text = "01";
+                    }
+                    else
+                    {
+                        int num1 = Convert.ToInt32(productPrice.Text);
+                        int num2 = Convert.ToInt32(productQty.Text);
+/*                        if (soldPer == "SACK")
+                        {
+                            multiplier = 60;
+                        }
+                        else if (soldPer == "KILO")
+                        {
+                            multiplier = 1;
+                        }*/
+                        int total = num2 * (num1 * multiplier);
+                        int rowId = receiptDgv.Rows.Add();
+                        transactTotal = total.ToString();
+                        qty = (num2 * multiplier).ToString();
+                        // Grab the new row!
+                        DataGridViewRow row = receiptDgv.Rows[rowId];
+                        // Add the data
+                        row.Cells["Column5"].Value = productName.Text;
+                        row.Cells["Column6"].Value = productPrice.Text;
+                        row.Cells["Column7"].Value = productQty.Text;
+                        row.Cells["Column8"].Value = total;
+                        row.Cells["Column9"].Value = "Product";
+                        subtractProduct();
+                        productName.Clear();
+                        productPrice.Clear();
+                        productQty.Text = "00";
+                        newTransaction();
+                        loadProduct();
+                    }
                 }
             }
             else if (availing == "Service")
@@ -315,9 +428,13 @@ namespace Petshop
                         getPrice();
                         if (price > 0)
                         {
+                            getPetID();
+                            getPetSize();
+                            getServiceId();
                             int num1 = Convert.ToInt32(servicePrice.Text);
                             int num2 = price;
                             int total = num2 + num1;
+                            transactTotal = total.ToString();
                             int rowId = receiptDgv.Rows.Add();
                             // Grab the new row!
                             DataGridViewRow row = receiptDgv.Rows[rowId];
@@ -327,6 +444,7 @@ namespace Petshop
                             row.Cells["Column7"].Value = petType.Text + "-" + petSize.Text;
                             row.Cells["Column8"].Value = total;
                             row.Cells["Column9"].Value = "Service";
+                            addserviceTransaction();
                             price = 0;
                             serviceName.Clear();
                             servicePrice.Clear();
@@ -341,7 +459,42 @@ namespace Petshop
                 }
                 else
                 {
-
+                    string name = "Full Groom";
+                    getPetID();
+                    getPrice();
+                    dbConnect = new Conclass();
+                    dbConnect.OpenConnection();
+                    MySqlCommand cmd = new MySqlCommand("SELECT service_id, service_price FROM services WHERE service_name = @name AND pet_id = @pet", dbConnect.myconnect);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@pet", petID);
+                    myReader = cmd.ExecuteReader();
+                    if (myReader.Read())
+                    {
+                        serviceID = myReader["service_id"].ToString();
+                        transactTotal = myReader["service_price"].ToString();
+                        getPetSize();
+                        int num1 = Convert.ToInt32(transactTotal);
+                        int num2 = price;
+                        int total = num2 + num1;
+                        int rowId = receiptDgv.Rows.Add();
+                        // Grab the new row!
+                        DataGridViewRow row = receiptDgv.Rows[rowId];
+                        // Add the data
+                        row.Cells["Column5"].Value = "Full Groom";
+                        row.Cells["Column6"].Value = transactTotal;
+                        row.Cells["Column7"].Value = petType.Text + "-" + petSize.Text;
+                        row.Cells["Column8"].Value = total;
+                        row.Cells["Column9"].Value = "Service";
+                        transactTotal = total.ToString();
+                        addserviceTransaction();
+                        petType.ResetText();
+                        petSize.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        MaterialMessageBox.Show("Service doesn't exist in the system!", "Notice!");
+                    }
+                    dbConnect.CloseConnection();
                 }
             }
         }
@@ -365,6 +518,13 @@ namespace Petshop
                 MessageBox.Show("Inserted");
             }*/
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            checkCashier();
+            timer1.Stop();
+        }
+
         private void deleteTransaction()
         {
 /*            MessageBox.Show(" " + productID);*/
@@ -421,7 +581,7 @@ namespace Petshop
                 stock = Convert.ToInt32(myReader["product_stock"].ToString());
                 myReader.Close();
                 int subtract = Convert.ToInt32(productQty.Text);
-                int total = stock - subtract;
+                int total = stock - (subtract * multiplier);
                 MySqlCommand cmd1 = new MySqlCommand("UPDATE product SET product_stock = @total WHERE product_id = @ID", dbConnect.myconnect);
                 cmd1.Parameters.AddWithValue("@total", total);
                 cmd1.Parameters.AddWithValue("@ID", productID);
@@ -431,6 +591,42 @@ namespace Petshop
                     MessageBox.Show("Subtracted");
                 }*/
             }
+        }
+        private void addserviceTransaction()
+        {
+            DateTime today = DateTime.Now;
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO servicetransaction VALUES('', @pet, @size, @service, @total, @employee, @date)", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@pet", petID);
+            cmd.Parameters.AddWithValue("@size", pSizeID);
+            cmd.Parameters.AddWithValue("@service", serviceID);
+            cmd.Parameters.AddWithValue("@total", transactTotal);
+            cmd.Parameters.AddWithValue("@employee", ID.Text);
+            cmd.Parameters.AddWithValue("@date", today.ToString("MM-dd-yyyy"));
+            int insert = cmd.ExecuteNonQuery();
+/*            if(insert > 0)
+            {
+                MessageBox.Show("Success");
+            }*/
+        }
+        private void deleteserviceTransaction()
+        {
+            DateTime today = DateTime.Now;
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM servicetransaction WHERE pet_id = @pet AND ptsize_id = @size AND service_id = @service AND sTransact_total = @total AND employee_id = @employee AND date = @date ORDER BY sTransact_id DESC LIMIT 1", dbConnect.myconnect);
+            cmd.Parameters.AddWithValue("@pet", petID);
+            cmd.Parameters.AddWithValue("@size", pSizeID);
+            cmd.Parameters.AddWithValue("@service", serviceID);
+            cmd.Parameters.AddWithValue("@total", transactTotal);
+            cmd.Parameters.AddWithValue("@employee", ID.Text);
+            cmd.Parameters.AddWithValue("@date", today.ToString("MM-dd-yyyy"));
+            int delete = cmd.ExecuteNonQuery();
+/*            if(delete > 0)
+            {
+                MessageBox.Show("Deleted");
+            }*/
         }
         #endregion
 
@@ -471,6 +667,9 @@ namespace Petshop
                 DataGridViewRow row = receiptDgv.Rows[e.RowIndex];
                 if (row.Cells["Column9"].Value.ToString() == "Product")
                 {
+                    productCategory_Click(null, null);
+                    productPanel.BringToFront();
+                    servicePanel.SendToBack();
                     productName.Text = row.Cells["Column5"].Value.ToString();
                     productPrice.Text = row.Cells["Column6"].Value.ToString();
                     productQty.Text = row.Cells["Column7"].Value.ToString();
@@ -483,7 +682,50 @@ namespace Petshop
                 }
                 else if (row.Cells["Column9"].Value.ToString() == "Service")
                 {
+                    services_Click(null, null);
+                    if(row.Cells["Column5"].Value.ToString() == "Full Groom")
+                    {
+                        full = false;
+                        fullGroom_CheckedChanged(null, null);
+                    }
+                    else
+                    {
 
+                    }
+                    string input = row.Cells["Column7"].Value.ToString();
+                    string[] part = input.Split(new[] { "-" }, StringSplitOptions.None);
+                    productPanel.SendToBack();
+                    servicePanel.BringToFront();
+                    serviceName.Text = row.Cells["Column5"].Value.ToString();
+                    servicePrice.Text = row.Cells["Column6"].Value.ToString();
+                    transactTotal = row.Cells["Column8"].Value.ToString();
+                    petType.Text = part[0].Trim();
+                    switch (part[1].Trim())
+                    {
+                        case "Small":
+                            petSize.SelectedIndex = 1;
+                            break;
+                        case "Medium":
+                            petSize.SelectedIndex = 2;
+                            break;
+                        case "Large":
+                            petSize.SelectedIndex = 3;
+                            break;
+                        case "Extra Large":
+                            petSize.SelectedIndex = 4;
+                            break;
+                        case "2XL":
+                            petSize.SelectedIndex = 5;
+                            break;
+                        default:
+                            petSize.SelectedIndex = 0;
+                            break;
+                    }
+                    receiptDgv.Rows.RemoveAt(e.RowIndex);
+                    getPetID();
+                    getPetSize();
+                    getServiceId();
+                    deleteserviceTransaction();
                 }
             }
         }
@@ -494,57 +736,66 @@ namespace Petshop
             {
                 fullGroom.Checked = true;
                 full = true;
-                petType.Location = new Point(petType.Location.X, petType.Location.Y-80);
-                petSize.Location = new Point(petSize.Location.X, petSize.Location.Y-80);
+                petType.Location = new Point(40, 98);
+                petSize.Location = new Point(174, 107);
+/*                MessageBox.Show(petType.Location.ToString() + " " + petSize.Location.ToString());*/
                 serviceName.Visible = false;
                 servicePrice.Visible = false;
-                serviceName.Clear();
-                servicePrice.Clear();
+                serviceName.ResetText();
+                servicePrice.ResetText();
                 shouldhandle = false;
             }
             else
             {
                 fullGroom.Checked = false;
                 full = false;
-                petType.Location = new Point(petType.Location.X, petType.Location.Y + 80);
-                petSize.Location = new Point(petSize.Location.X, petSize.Location.Y + 80);
-                petType.Clear();
+                petType.Location = new Point(40, 178);
+                petSize.Location = new Point(174, 187);
+/*                MessageBox.Show(petType.Location.ToString() + " " + petSize.Location.ToString());*/
+                petType.ResetText();
                 serviceName.Visible = true;
                 servicePrice.Visible = true;
+                servicePrice.ResetText();
+                serviceName.ResetText();
                 shouldhandle = true;
             }
         }
 
         private void productQty_TextChanged(object sender, EventArgs e)
         {
-            if(productQty.Text.Length < 1)
+            if(productName.TextLength == 0)
             {
+                if (productQty.Text.Length < 1)
+                {
 
+                }
             }
             else
             {
-                int current = Convert.ToInt32(productQty.Text);
-                if (stock < current)
+                if(productQty.Text.Length < 1)
                 {
-                    MaterialMessageBox.Show("Stock insuffiecient", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if (stock.ToString().Length < 2)
-                    {
-                        productQty.Text = "0" + stock.ToString();
-                    }
-                    else
-                    {
-                        productQty.Text = stock.ToString();
-                    }
+
                 }
                 else
                 {
-                    if (productQty.TextLength > 2)
+                    int current = Convert.ToInt32(productQty.Text) * multiplier;
+                    if (stock < current)
                     {
-                        productQty.Font = new Font(productQty.Font.FontFamily, 22);
-                    }
-                    else if (productQty.TextLength < 3)
-                    {
-                        productQty.Font = new Font(productQty.Font.FontFamily, 26);
+                        MaterialMessageBox.Show("Stock insuffiecient", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (stock.ToString().Length < 2)
+                        {
+                            productQty.Text = "0" + stock.ToString();
+                            soldPer = "KILO";
+                            qtyCategory.Text = "KILO";
+                            multiplier = 1;
+                        }
+                        else
+                        {
+                            productQty.Text = stock.ToString();
+                            soldPer = "KILO";
+                            qtyCategory.Text = "KILO";
+                            multiplier = 1;
+                        }
                     }
                 }
             }
