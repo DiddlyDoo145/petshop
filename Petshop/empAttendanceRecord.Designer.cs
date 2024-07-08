@@ -61,6 +61,7 @@
             this.records.Location = new System.Drawing.Point(55, 152);
             this.records.Name = "records";
             this.records.ReadOnly = true;
+            this.records.RowHeadersVisible = false;
             this.records.RowHeadersWidth = 51;
             this.records.RowTemplate.Height = 24;
             this.records.Size = new System.Drawing.Size(1674, 592);

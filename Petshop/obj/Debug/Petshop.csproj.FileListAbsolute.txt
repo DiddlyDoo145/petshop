@@ -79,7 +79,6 @@ C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.csproj.AssemblyReference.cache
-C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Customer.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Employee.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Login.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Home.resources
@@ -343,4 +342,6 @@ C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop
 C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.EmpCODEPIN.resources
 C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.empOt.resources
 C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.ServiceTransac.resources
-C:\Users\ACER\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop.ServiceTransac.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.ServiceTransac.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.petManagement.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.assignCashier.resources

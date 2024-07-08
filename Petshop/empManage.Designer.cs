@@ -57,18 +57,18 @@
             this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
             this.label1 = new System.Windows.Forms.Label();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.emergencyNumber = new MaterialSkin.Controls.MaterialTextBox2();
+            this.contactNumber = new MaterialSkin.Controls.MaterialTextBox2();
+            this.lastName = new MaterialSkin.Controls.MaterialTextBox2();
+            this.firstName = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.label19 = new System.Windows.Forms.Label();
-            this.firstName = new MaterialSkin.Controls.MaterialTextBox2();
-            this.lastName = new MaterialSkin.Controls.MaterialTextBox2();
-            this.contactNumber = new MaterialSkin.Controls.MaterialTextBox2();
-            this.emergencyNumber = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.label2 = new System.Windows.Forms.Label();
-            this.newCity = new MaterialSkin.Controls.MaterialTextBox2();
-            this.newMunicipality = new MaterialSkin.Controls.MaterialTextBox2();
             this.newBarangay = new MaterialSkin.Controls.MaterialTextBox2();
+            this.newMunicipality = new MaterialSkin.Controls.MaterialTextBox2();
+            this.newCity = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)(this.employees)).BeginInit();
             this.panel1.SuspendLayout();
@@ -258,6 +258,7 @@
             this.employees.Location = new System.Drawing.Point(16, 154);
             this.employees.Name = "employees";
             this.employees.ReadOnly = true;
+            this.employees.RowHeadersVisible = false;
             this.employees.RowHeadersWidth = 51;
             this.employees.RowTemplate.Height = 24;
             this.employees.Size = new System.Drawing.Size(905, 600);
@@ -443,88 +444,34 @@
             this.materialCard1.Size = new System.Drawing.Size(830, 261);
             this.materialCard1.TabIndex = 19;
             // 
-            // materialCard2
+            // emergencyNumber
             // 
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.label19);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(14, 14);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(802, 51);
-            this.materialCard2.TabIndex = 0;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(12, 11);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(222, 28);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Personal Information";
-            // 
-            // firstName
-            // 
-            this.firstName.AnimateReadOnly = false;
-            this.firstName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.firstName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.firstName.Depth = 0;
-            this.firstName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.firstName.HideSelection = true;
-            this.firstName.Hint = "First Name";
-            this.firstName.LeadingIcon = null;
-            this.firstName.Location = new System.Drawing.Point(16, 102);
-            this.firstName.MaxLength = 32767;
-            this.firstName.MouseState = MaterialSkin.MouseState.OUT;
-            this.firstName.Name = "firstName";
-            this.firstName.PasswordChar = '\0';
-            this.firstName.PrefixSuffixText = null;
-            this.firstName.ReadOnly = false;
-            this.firstName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.firstName.SelectedText = "";
-            this.firstName.SelectionLength = 0;
-            this.firstName.SelectionStart = 0;
-            this.firstName.ShortcutsEnabled = true;
-            this.firstName.Size = new System.Drawing.Size(250, 48);
-            this.firstName.TabIndex = 1;
-            this.firstName.TabStop = false;
-            this.firstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.firstName.TrailingIcon = null;
-            this.firstName.UseSystemPasswordChar = false;
-            // 
-            // lastName
-            // 
-            this.lastName.AnimateReadOnly = false;
-            this.lastName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.lastName.Depth = 0;
-            this.lastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lastName.HideSelection = true;
-            this.lastName.Hint = "Last Name";
-            this.lastName.LeadingIcon = null;
-            this.lastName.Location = new System.Drawing.Point(289, 102);
-            this.lastName.MaxLength = 32767;
-            this.lastName.MouseState = MaterialSkin.MouseState.OUT;
-            this.lastName.Name = "lastName";
-            this.lastName.PasswordChar = '\0';
-            this.lastName.PrefixSuffixText = null;
-            this.lastName.ReadOnly = false;
-            this.lastName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lastName.SelectedText = "";
-            this.lastName.SelectionLength = 0;
-            this.lastName.SelectionStart = 0;
-            this.lastName.ShortcutsEnabled = true;
-            this.lastName.Size = new System.Drawing.Size(250, 48);
-            this.lastName.TabIndex = 1;
-            this.lastName.TabStop = false;
-            this.lastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.lastName.TrailingIcon = null;
-            this.lastName.UseSystemPasswordChar = false;
+            this.emergencyNumber.AnimateReadOnly = false;
+            this.emergencyNumber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.emergencyNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.emergencyNumber.Depth = 0;
+            this.emergencyNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.emergencyNumber.HideSelection = true;
+            this.emergencyNumber.Hint = "Emergency Number";
+            this.emergencyNumber.LeadingIcon = null;
+            this.emergencyNumber.Location = new System.Drawing.Point(16, 183);
+            this.emergencyNumber.MaxLength = 32767;
+            this.emergencyNumber.MouseState = MaterialSkin.MouseState.OUT;
+            this.emergencyNumber.Name = "emergencyNumber";
+            this.emergencyNumber.PasswordChar = '\0';
+            this.emergencyNumber.PrefixSuffixText = null;
+            this.emergencyNumber.ReadOnly = false;
+            this.emergencyNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.emergencyNumber.SelectedText = "";
+            this.emergencyNumber.SelectionLength = 0;
+            this.emergencyNumber.SelectionStart = 0;
+            this.emergencyNumber.ShortcutsEnabled = true;
+            this.emergencyNumber.Size = new System.Drawing.Size(250, 48);
+            this.emergencyNumber.TabIndex = 1;
+            this.emergencyNumber.TabStop = false;
+            this.emergencyNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.emergencyNumber.TrailingIcon = null;
+            this.emergencyNumber.UseSystemPasswordChar = false;
             // 
             // contactNumber
             // 
@@ -555,34 +502,88 @@
             this.contactNumber.TrailingIcon = null;
             this.contactNumber.UseSystemPasswordChar = false;
             // 
-            // emergencyNumber
+            // lastName
             // 
-            this.emergencyNumber.AnimateReadOnly = false;
-            this.emergencyNumber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.emergencyNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.emergencyNumber.Depth = 0;
-            this.emergencyNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.emergencyNumber.HideSelection = true;
-            this.emergencyNumber.Hint = "Emergency Number";
-            this.emergencyNumber.LeadingIcon = null;
-            this.emergencyNumber.Location = new System.Drawing.Point(16, 183);
-            this.emergencyNumber.MaxLength = 32767;
-            this.emergencyNumber.MouseState = MaterialSkin.MouseState.OUT;
-            this.emergencyNumber.Name = "emergencyNumber";
-            this.emergencyNumber.PasswordChar = '\0';
-            this.emergencyNumber.PrefixSuffixText = null;
-            this.emergencyNumber.ReadOnly = false;
-            this.emergencyNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.emergencyNumber.SelectedText = "";
-            this.emergencyNumber.SelectionLength = 0;
-            this.emergencyNumber.SelectionStart = 0;
-            this.emergencyNumber.ShortcutsEnabled = true;
-            this.emergencyNumber.Size = new System.Drawing.Size(250, 48);
-            this.emergencyNumber.TabIndex = 1;
-            this.emergencyNumber.TabStop = false;
-            this.emergencyNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.emergencyNumber.TrailingIcon = null;
-            this.emergencyNumber.UseSystemPasswordChar = false;
+            this.lastName.AnimateReadOnly = false;
+            this.lastName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.lastName.Depth = 0;
+            this.lastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lastName.HideSelection = true;
+            this.lastName.Hint = "Last Name";
+            this.lastName.LeadingIcon = null;
+            this.lastName.Location = new System.Drawing.Point(289, 102);
+            this.lastName.MaxLength = 32767;
+            this.lastName.MouseState = MaterialSkin.MouseState.OUT;
+            this.lastName.Name = "lastName";
+            this.lastName.PasswordChar = '\0';
+            this.lastName.PrefixSuffixText = null;
+            this.lastName.ReadOnly = false;
+            this.lastName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lastName.SelectedText = "";
+            this.lastName.SelectionLength = 0;
+            this.lastName.SelectionStart = 0;
+            this.lastName.ShortcutsEnabled = true;
+            this.lastName.Size = new System.Drawing.Size(250, 48);
+            this.lastName.TabIndex = 1;
+            this.lastName.TabStop = false;
+            this.lastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lastName.TrailingIcon = null;
+            this.lastName.UseSystemPasswordChar = false;
+            // 
+            // firstName
+            // 
+            this.firstName.AnimateReadOnly = false;
+            this.firstName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.firstName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.firstName.Depth = 0;
+            this.firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.firstName.HideSelection = true;
+            this.firstName.Hint = "First Name";
+            this.firstName.LeadingIcon = null;
+            this.firstName.Location = new System.Drawing.Point(16, 102);
+            this.firstName.MaxLength = 32767;
+            this.firstName.MouseState = MaterialSkin.MouseState.OUT;
+            this.firstName.Name = "firstName";
+            this.firstName.PasswordChar = '\0';
+            this.firstName.PrefixSuffixText = null;
+            this.firstName.ReadOnly = false;
+            this.firstName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.firstName.SelectedText = "";
+            this.firstName.SelectionLength = 0;
+            this.firstName.SelectionStart = 0;
+            this.firstName.ShortcutsEnabled = true;
+            this.firstName.Size = new System.Drawing.Size(250, 48);
+            this.firstName.TabIndex = 1;
+            this.firstName.TabStop = false;
+            this.firstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.firstName.TrailingIcon = null;
+            this.firstName.UseSystemPasswordChar = false;
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.label19);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(14, 14);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(802, 51);
+            this.materialCard2.TabIndex = 0;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(12, 11);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(222, 28);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Personal Information";
             // 
             // materialCard3
             // 
@@ -626,34 +627,34 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Address Information";
             // 
-            // newCity
+            // newBarangay
             // 
-            this.newCity.AnimateReadOnly = false;
-            this.newCity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.newCity.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.newCity.Depth = 0;
-            this.newCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.newCity.HideSelection = true;
-            this.newCity.Hint = "City Address";
-            this.newCity.LeadingIcon = null;
-            this.newCity.Location = new System.Drawing.Point(16, 92);
-            this.newCity.MaxLength = 32767;
-            this.newCity.MouseState = MaterialSkin.MouseState.OUT;
-            this.newCity.Name = "newCity";
-            this.newCity.PasswordChar = '\0';
-            this.newCity.PrefixSuffixText = null;
-            this.newCity.ReadOnly = false;
-            this.newCity.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.newCity.SelectedText = "";
-            this.newCity.SelectionLength = 0;
-            this.newCity.SelectionStart = 0;
-            this.newCity.ShortcutsEnabled = true;
-            this.newCity.Size = new System.Drawing.Size(250, 48);
-            this.newCity.TabIndex = 1;
-            this.newCity.TabStop = false;
-            this.newCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.newCity.TrailingIcon = null;
-            this.newCity.UseSystemPasswordChar = false;
+            this.newBarangay.AnimateReadOnly = false;
+            this.newBarangay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.newBarangay.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.newBarangay.Depth = 0;
+            this.newBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.newBarangay.HideSelection = true;
+            this.newBarangay.Hint = "Barangay Address";
+            this.newBarangay.LeadingIcon = null;
+            this.newBarangay.Location = new System.Drawing.Point(567, 92);
+            this.newBarangay.MaxLength = 32767;
+            this.newBarangay.MouseState = MaterialSkin.MouseState.OUT;
+            this.newBarangay.Name = "newBarangay";
+            this.newBarangay.PasswordChar = '\0';
+            this.newBarangay.PrefixSuffixText = null;
+            this.newBarangay.ReadOnly = false;
+            this.newBarangay.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.newBarangay.SelectedText = "";
+            this.newBarangay.SelectionLength = 0;
+            this.newBarangay.SelectionStart = 0;
+            this.newBarangay.ShortcutsEnabled = true;
+            this.newBarangay.Size = new System.Drawing.Size(250, 48);
+            this.newBarangay.TabIndex = 1;
+            this.newBarangay.TabStop = false;
+            this.newBarangay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.newBarangay.TrailingIcon = null;
+            this.newBarangay.UseSystemPasswordChar = false;
             // 
             // newMunicipality
             // 
@@ -684,34 +685,34 @@
             this.newMunicipality.TrailingIcon = null;
             this.newMunicipality.UseSystemPasswordChar = false;
             // 
-            // newBarangay
+            // newCity
             // 
-            this.newBarangay.AnimateReadOnly = false;
-            this.newBarangay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.newBarangay.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.newBarangay.Depth = 0;
-            this.newBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.newBarangay.HideSelection = true;
-            this.newBarangay.Hint = "Barangay Address";
-            this.newBarangay.LeadingIcon = null;
-            this.newBarangay.Location = new System.Drawing.Point(567, 92);
-            this.newBarangay.MaxLength = 32767;
-            this.newBarangay.MouseState = MaterialSkin.MouseState.OUT;
-            this.newBarangay.Name = "newBarangay";
-            this.newBarangay.PasswordChar = '\0';
-            this.newBarangay.PrefixSuffixText = null;
-            this.newBarangay.ReadOnly = false;
-            this.newBarangay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.newBarangay.SelectedText = "";
-            this.newBarangay.SelectionLength = 0;
-            this.newBarangay.SelectionStart = 0;
-            this.newBarangay.ShortcutsEnabled = true;
-            this.newBarangay.Size = new System.Drawing.Size(250, 48);
-            this.newBarangay.TabIndex = 1;
-            this.newBarangay.TabStop = false;
-            this.newBarangay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.newBarangay.TrailingIcon = null;
-            this.newBarangay.UseSystemPasswordChar = false;
+            this.newCity.AnimateReadOnly = false;
+            this.newCity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.newCity.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.newCity.Depth = 0;
+            this.newCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.newCity.HideSelection = true;
+            this.newCity.Hint = "City Address";
+            this.newCity.LeadingIcon = null;
+            this.newCity.Location = new System.Drawing.Point(16, 92);
+            this.newCity.MaxLength = 32767;
+            this.newCity.MouseState = MaterialSkin.MouseState.OUT;
+            this.newCity.Name = "newCity";
+            this.newCity.PasswordChar = '\0';
+            this.newCity.PrefixSuffixText = null;
+            this.newCity.ReadOnly = false;
+            this.newCity.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.newCity.SelectedText = "";
+            this.newCity.SelectionLength = 0;
+            this.newCity.SelectionStart = 0;
+            this.newCity.ShortcutsEnabled = true;
+            this.newCity.Size = new System.Drawing.Size(250, 48);
+            this.newCity.TabIndex = 1;
+            this.newCity.TabStop = false;
+            this.newCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.newCity.TrailingIcon = null;
+            this.newCity.UseSystemPasswordChar = false;
             // 
             // materialCard7
             // 

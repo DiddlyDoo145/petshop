@@ -129,6 +129,12 @@
     <Compile Include="Analytics.Designer.cs">
       <DependentUpon>Analytics.cs</DependentUpon>
     </Compile>
+    <Compile Include="assignCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assignCashier.Designer.cs">
+      <DependentUpon>assignCashier.cs</DependentUpon>
+    </Compile>
     <Compile Include="attendance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,11 +154,11 @@
       <DependentUpon>Cashier.cs</DependentUpon>
     </Compile>
     <Compile Include="Conclass.cs" />
-    <Compile Include="Customer.cs">
+    <Compile Include="petManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="petManagement.Designer.cs">
+      <DependentUpon>petManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="empAttendanceRecord.cs">
       <SubType>Form</SubType>
@@ -261,6 +267,9 @@
     <EmbeddedResource Include="Analytics.resx">
       <DependentUpon>Analytics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="assignCashier.resx">
+      <DependentUpon>assignCashier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="attendance.resx">
       <DependentUpon>attendance.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,8 +279,8 @@
     <EmbeddedResource Include="Cashier.resx">
       <DependentUpon>Cashier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="petManagement.resx">
+      <DependentUpon>petManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="empAttendanceRecord.resx">
       <DependentUpon>empAttendanceRecord.cs</DependentUpon>

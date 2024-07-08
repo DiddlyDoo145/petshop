@@ -21,6 +21,7 @@ namespace Petshop
         private MySqlDataReader myReader;
         private MySqlDataAdapter mySqlDataAdapter;
         string productID;
+        int multiplier;
         public ProductsData()
         {
             InitializeComponent();
@@ -30,10 +31,9 @@ namespace Petshop
         private void ProductsData_Load(object sender, EventArgs e)
         {
             productID = "";
-
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            cmd = new MySqlCommand("SELECT unitName FROM productunit", dbConnect.myconnect);
+            cmd = new MySqlCommand("SELECT unitName FROM productunit ORDER BY unitID ASC", dbConnect.myconnect);
             myReader = cmd.ExecuteReader();
             while (myReader.Read())
             {
@@ -121,8 +121,6 @@ namespace Petshop
 
         private void AddProduct_Click(object sender, EventArgs e)
         {
-
-
             if (string.IsNullOrEmpty(pName.Text.Trim()))
             {
                 errorProvider1.SetError(pName, "Please Input this field");
@@ -168,13 +166,15 @@ namespace Petshop
             myReader = cmd.ExecuteReader();
             if(myReader.Read() == true)
             {
+                int current = Convert.ToInt32(pStock.Text);
+                int added = Convert.ToInt32(newStocks.Text);
                 dbConnect = new Conclass();
                 dbConnect.OpenConnection();
                 cmd = new MySqlCommand("UPDATE product SET product_stock = @Ustock, product_price = @Uprice WHERE product_name = @uname AND pCategory_id = @uID AND product_stock = 0 AND product_price = 0", dbConnect.myconnect);
                 cmd.Parameters.AddWithValue("@uname", pName.Text);
                 cmd.Parameters.AddWithValue("@uID", pCategory_ID.Text);
                 cmd.Parameters.AddWithValue("@Uprice", pPrice.Text);
-                cmd.Parameters.AddWithValue("@Ustock", pStock.Text);
+                cmd.Parameters.AddWithValue("@Ustock", current + (added * multiplier));
                 cmd.ExecuteNonQuery();
                 MaterialMessageBox.Show("Added Successfully", "Notice!!");
                 pName.Clear();
@@ -202,6 +202,7 @@ namespace Petshop
                 }
                 else
                 {
+                    int tobeAdded = Convert.ToInt32(newStocks.Text);
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
                     cmd = new MySqlCommand("INSERT INTO product (product_name, pCategory_id, product_price, unitID, product_stock, strCategory_id, dateAdded) VALUES (@pname, @cID, @price, @UID,@stock,'1', @date)", dbConnect.myconnect);
@@ -209,7 +210,7 @@ namespace Petshop
                     cmd.Parameters.AddWithValue("@cID", pCategory_ID.Text);
                     cmd.Parameters.AddWithValue("@price", pPrice.Text);
                     cmd.Parameters.AddWithValue("@UID", unitID);
-                    cmd.Parameters.AddWithValue("@stock", pStock.Text);
+                    cmd.Parameters.AddWithValue("@stock", tobeAdded * multiplier);
                     cmd.Parameters.AddWithValue("@date", DateTime.Now.ToShortDateString());
                     cmd.ExecuteNonQuery();
                     MaterialMessageBox.Show("New Product Successfully Added", "Success");
@@ -239,6 +240,8 @@ namespace Petshop
 
                 if (MaterialMessageBox.Show("Are you sure you want to update this product?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    int current = Convert.ToInt32(pStock.Text);
+                    int tobeAdded = Convert.ToInt32(newStocks.Text);
                     dbConnect = new Conclass();
                     dbConnect.OpenConnection();
                     cmd = new MySqlCommand("UPDATE product SET product_name = @pName, pCategory_id = @pCategory_id, product_price = @pPrice, unitID = @puID,product_stock = @pStock WHERE product_id = @id", dbConnect.myconnect);
@@ -247,20 +250,19 @@ namespace Petshop
                     cmd.Parameters.AddWithValue("@pCategory_id", pCategory_ID.Text);
                     cmd.Parameters.AddWithValue("@pPrice", pPrice.Text);
                     cmd.Parameters.AddWithValue("@puID", unitID);
-                    cmd.Parameters.AddWithValue("@pStock", pStock.Text);
+                    cmd.Parameters.AddWithValue("@pStock", current + (tobeAdded * multiplier));
                     cmd.ExecuteNonQuery();
                     MaterialMessageBox.Show("Updated Successfully", "Success");
                     dbConnect.CloseConnection();
                     pName.Clear();
-                    pPrice.Clear();
-                    pStock.Clear();
+                    pPrice.ResetText();
+                    pStock.Text = "0";
+                    newStocks.Text = "0";
                     pCategory.SelectedIndex = 0;
                     productID = "";
                     productUnit.SelectedIndex = 0;
                     populategv();
                     dbConnect.CloseConnection();
-
-
                 }
             }
             else
@@ -307,9 +309,10 @@ namespace Petshop
         {
             pCategory_ID.ResetText();
             productID = "";
-            pName.Clear();
-            pPrice.Clear();
-            pStock.Clear();
+            pName.ResetText();
+            pPrice.ResetText();
+            pStock.Text = "0";
+            newStocks.Text = "0";
             pCategory.SelectedIndex = 0;
             productUnit.SelectedIndex = 0;
         }
@@ -352,7 +355,15 @@ namespace Petshop
             myReader = cmd.ExecuteReader();
             if (myReader.Read() == true)
             {
-                unitID = myReader["unitID"].ToString();
+                unitID = "1";
+            }
+            if(productUnit.SelectedIndex == 1)
+            {
+                multiplier = 1;
+            }
+            else if(productUnit.SelectedIndex == 2)
+            {
+                multiplier = 20;
             }
         }
 
@@ -392,6 +403,9 @@ namespace Petshop
             }
         }
 
-       
+        private void pStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

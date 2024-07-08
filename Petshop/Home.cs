@@ -18,6 +18,7 @@ namespace Petshop
         private Form currentchildForm;
         private Form currentchildblur;
         public static Home instance;
+        public bool isEmpty = false, isActive = false;
 
         public Home()
         {
@@ -43,72 +44,199 @@ namespace Petshop
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Employee(), 175, 100);
-            BlurBg bbg = new BlurBg();
-            bbg.Size = new Size(1400, 782);
-            bbg.Visible = true;
-            bbg.BringToFront();
+            if (isActive == true)
+            {
+                checkCashier();
+                if (isEmpty == true)
+                {
+                    closeForm();
+                    OpenChildForm(new Employee(), 175, 100);
+                    BlurBg bbg = new BlurBg();
+                    bbg.Size = new Size(1400, 782);
+                    bbg.Visible = true;
+                    bbg.BringToFront();
+                    BlurBg.instance.pickCashier = false;
+                    BlurBg.instance.employeeManage = true;
+                    BlurBg.instance.BlurBg_Load(null, null);
+                }
+                else
+                {
+                    MaterialMessageBox.Show("Please complete the transaction before leaving", "Notice");
+                }
+            }
+            else
+            {
+                closeForm();
+                OpenChildForm(new Employee(), 175, 100);
+                BlurBg bbg = new BlurBg();
+                bbg.Size = new Size(1400, 782);
+                bbg.Visible = true;
+                bbg.BringToFront();
+                BlurBg.instance.pickCashier = false;
+                BlurBg.instance.employeeManage = true;
+                BlurBg.instance.BlurBg_Load(null, null);
+            }
         }
 
         private void product_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Product(), 175, 100);
-            closeForm();
+            if (isActive == true)
+            {
+                checkCashier();
+                if (isEmpty == true)
+                {
+                    OpenChildForm(new Product(), 175, 100);
+                    closeForm();
+                }
+                else
+                {
+                    MaterialMessageBox.Show("Please complete the transaction before leaving", "Notice");
+                }
+            }
+            else
+            {
+                OpenChildForm(new Product(), 175, 100);
+                closeForm();
+            }
         }
-
-        private void customer_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Customer(), 175, 100);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Analytics(), 175, 100);
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Home(), 175, 100);
-        }
-
         private void Home_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new Analytics(), 175, 100);
-            closeForm();
-            foreach (Form f in Application.OpenForms)
+            if(isActive == true)
             {
-                if (f.Name == "Login")
+                if(isEmpty == true)
                 {
-                    f.Close();
-                    break;
+                    OpenChildForm(new Analytics(), 175, 100);
+                    closeForm();
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (f.Name == "Login")
+                        {
+                            f.Close();
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                OpenChildForm(new Analytics(), 175, 100);
+                closeForm();
+                foreach (Form f in Application.OpenForms)
+                {
+                    if (f.Name == "Login")
+                    {
+                        f.Close();
+                        break;
+                    }
                 }
             }
         }
         private void analytics_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Analytics(), 175, 100);
-            closeForm();
+            if(isActive == true)
+            {
+                checkCashier();
+                if (isEmpty == true)
+                {
+                    OpenChildForm(new Analytics(), 175, 100);
+                    closeForm();
+                }
+                else
+                {
+                    MaterialMessageBox.Show("Please complete the transaction before leaving", "Notice");
+                }
+            }
+            else
+            {
+                OpenChildForm(new Analytics(), 175, 100);
+                closeForm();
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Cashier(), 175, 100);
-            closeForm();
+            isActive = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "Cashier")
+                {
+                    isActive = true;
+                    checkCashier();
+                    if (isEmpty == true)
+                    {
+                        Cashier.instance.Cashier_Load(null, null);
+                    }
+                    else
+                    {
+                        MaterialMessageBox.Show("Please complete the transaction before refreshing", "Notice");
+                        break;
+                    }
+                }
+                isActive = false;
+                /*                else
+                                {
+                                    isActive = true;
+                                    closeForm();
+                                    OpenChildForm(new Cashier(), 175, 100);
+                                    BlurBg bbg = new BlurBg();
+                                    bbg.Size = new Size(1400, 782);
+                                    bbg.Visible = true;
+                                    bbg.BringToFront();
+                                    BlurBg.instance.pickCashier = true;
+                                    BlurBg.instance.employeeManage = false;
+                                    BlurBg.instance.BlurBg_Load(null, null);
+                                }*/
+            }
+            if (!isActive)
+            {
+                isActive = true;
+                closeForm();
+                OpenChildForm(new Cashier(), 175, 100);
+                BlurBg bbg = new BlurBg();
+                bbg.Size = new Size(1400, 782);
+                bbg.Visible = true;
+                bbg.BringToFront();
+                BlurBg.instance.pickCashier = true;
+                BlurBg.instance.employeeManage = false;
+                BlurBg.instance.BlurBg_Load(null, null);
+            }
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            foreach (Form f in Application.OpenForms)
+            if(isActive == true)
             {
-                if (f.Name == "BlurBg")
+                checkCashier();
+                if (isEmpty == true)
                 {
-                    f.BringToFront();
-                    break;
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (f.Name == "BlurBg")
+                        {
+                            f.BringToFront();
+                            break;
+                        }
+                    }
+                    if (MaterialMessageBox.Show("Are you sure you want to Log-Out?", "Notice!", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        foreach (Form f in Application.OpenForms)
+                        {
+                            if (f.Name == "BlurBg")
+                            {
+                                f.BringToFront();
+                                break;
+                            }
+                        }
+                    }
                 }
-            }
-            if (MaterialMessageBox.Show("Are you sure you want to Log-Out?", "Notice!", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
-            {
-                Application.Exit();
+                else
+                {
+                    MaterialMessageBox.Show("Please complete the transaction before leaving", "Notice");
+                }
             }
             else
             {
@@ -120,11 +248,34 @@ namespace Petshop
                         break;
                     }
                 }
+                if (MaterialMessageBox.Show("Are you sure you want to Log-Out?", "Notice!", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    foreach (Form f in Application.OpenForms)
+                    {
+                        if (f.Name == "BlurBg")
+                        {
+                            f.BringToFront();
+                            break;
+                        }
+                    }
+                }
             }
         }
 
-        private void closeForm()
+        public void closeForm()
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "assignCashier")
+                {
+                    f.Close();
+                    break;
+                }
+            }
             foreach (Form f in Application.OpenForms)
             {
                 if (f.Name == "EmpCODEPIN")
@@ -142,5 +293,25 @@ namespace Petshop
                 }
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            checkCashier();
+            timer1.Stop();
+        }
+
+        private void checkCashier()
+        {
+            int total = Cashier.instance.receiptDgv.Rows.Count;
+            if(total > 0)
+            {
+                isEmpty = false;
+            }
+            else
+            {
+                isEmpty = true;
+            }
+        }
     }
 }
+  

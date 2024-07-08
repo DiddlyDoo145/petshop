@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductTransac));
             this.materialListBox1 = new MaterialSkin.Controls.MaterialListBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.materialListBox1.BorderColor = System.Drawing.Color.LightGray;
             this.materialListBox1.Depth = 0;
             this.materialListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialListBox1.Location = new System.Drawing.Point(493, 113);
+            this.materialListBox1.Location = new System.Drawing.Point(181, 47);
             this.materialListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.materialListBox1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialListBox1.Name = "materialListBox1";
@@ -94,7 +94,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(1133, 137);
+            this.label5.Location = new System.Drawing.Point(821, 71);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 21);
@@ -107,7 +107,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(947, 135);
+            this.label3.Location = new System.Drawing.Point(635, 69);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 21);
@@ -120,7 +120,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(516, 137);
+            this.label2.Location = new System.Drawing.Point(204, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 21);
@@ -132,7 +132,7 @@
             this.button2.BackColor = System.Drawing.Color.Aqua;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1016, 231);
+            this.button2.Location = new System.Drawing.Point(704, 165);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 37);
@@ -146,7 +146,7 @@
             this.Edit.BackColor = System.Drawing.Color.Aqua;
             this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit.Location = new System.Drawing.Point(828, 231);
+            this.Edit.Location = new System.Drawing.Point(516, 165);
             this.Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(156, 37);
@@ -160,7 +160,7 @@
             this.AddProduct.BackColor = System.Drawing.Color.Aqua;
             this.AddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddProduct.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddProduct.Location = new System.Drawing.Point(648, 231);
+            this.AddProduct.Location = new System.Drawing.Point(336, 165);
             this.AddProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddProduct.Name = "AddProduct";
             this.AddProduct.Size = new System.Drawing.Size(156, 37);
@@ -176,7 +176,7 @@
             this.employee_Name.FormattingEnabled = true;
             this.employee_Name.Items.AddRange(new object[] {
             "SELECT CATEGORY"});
-            this.employee_Name.Location = new System.Drawing.Point(1137, 161);
+            this.employee_Name.Location = new System.Drawing.Point(825, 95);
             this.employee_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.employee_Name.Name = "employee_Name";
             this.employee_Name.Size = new System.Drawing.Size(172, 29);
@@ -190,7 +190,7 @@
             this.productName.FormattingEnabled = true;
             this.productName.Items.AddRange(new object[] {
             "SELECT CATEGORY"});
-            this.productName.Location = new System.Drawing.Point(520, 161);
+            this.productName.Location = new System.Drawing.Point(208, 95);
             this.productName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productName.Name = "productName";
             this.productName.Size = new System.Drawing.Size(172, 29);
@@ -200,7 +200,7 @@
             // TransacTotal
             // 
             this.TransacTotal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransacTotal.Location = new System.Drawing.Point(951, 161);
+            this.TransacTotal.Location = new System.Drawing.Point(639, 95);
             this.TransacTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TransacTotal.Multiline = true;
             this.TransacTotal.Name = "TransacTotal";
@@ -240,14 +240,14 @@
             this.TransacTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TransacTable.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.TransacTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TransacTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransacTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.TransacTable.ColumnHeadersHeight = 30;
             this.TransacTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.TransacTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -255,26 +255,26 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TransacTable.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TransacTable.Location = new System.Drawing.Point(492, 376);
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TransacTable.DefaultCellStyle = dataGridViewCellStyle9;
+            this.TransacTable.Location = new System.Drawing.Point(180, 310);
             this.TransacTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TransacTable.Name = "TransacTable";
             this.TransacTable.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TransacTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransacTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.TransacTable.RowHeadersVisible = false;
             this.TransacTable.RowHeadersWidth = 51;
             this.TransacTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -287,8 +287,8 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "product_name";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column1.HeaderText = "Product Name";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -297,8 +297,8 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "Quantity";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column2.HeaderText = "Quantity";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
@@ -335,7 +335,7 @@
             // qty
             // 
             this.qty.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty.Location = new System.Drawing.Point(724, 161);
+            this.qty.Location = new System.Drawing.Point(412, 95);
             this.qty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.qty.Multiline = true;
             this.qty.Name = "qty";
@@ -361,7 +361,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(720, 137);
+            this.label1.Location = new System.Drawing.Point(408, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 21);
@@ -413,7 +413,7 @@
             this.printbtn.BackColor = System.Drawing.Color.Aqua;
             this.printbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printbtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printbtn.Location = new System.Drawing.Point(1203, 332);
+            this.printbtn.Location = new System.Drawing.Point(891, 266);
             this.printbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.printbtn.Name = "printbtn";
             this.printbtn.Size = new System.Drawing.Size(156, 37);
@@ -428,7 +428,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(516, 344);
+            this.label4.Location = new System.Drawing.Point(204, 278);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 23);
@@ -441,7 +441,7 @@
             this.Total.BackColor = System.Drawing.Color.Transparent;
             this.Total.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Total.ForeColor = System.Drawing.SystemColors.Control;
-            this.Total.Location = new System.Drawing.Point(633, 344);
+            this.Total.Location = new System.Drawing.Point(321, 278);
             this.Total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Total.Name = "Total";
             this.Total.Size = new System.Drawing.Size(0, 23);
@@ -451,7 +451,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1802, 776);
             this.Controls.Add(this.Total);
             this.Controls.Add(this.label4);

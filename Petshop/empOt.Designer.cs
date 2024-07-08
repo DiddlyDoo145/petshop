@@ -66,6 +66,7 @@
             this.otDgv.Location = new System.Drawing.Point(22, 102);
             this.otDgv.Name = "otDgv";
             this.otDgv.ReadOnly = true;
+            this.otDgv.RowHeadersVisible = false;
             this.otDgv.RowHeadersWidth = 51;
             this.otDgv.RowTemplate.Height = 24;
             this.otDgv.Size = new System.Drawing.Size(864, 632);

@@ -48,12 +48,12 @@
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.label6 = new System.Windows.Forms.Label();
             this.jTitle = new MaterialSkin.Controls.MaterialTextBox2();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.jobDgv)).BeginInit();
             this.materialCard1.SuspendLayout();
@@ -120,6 +120,7 @@
             this.jobDgv.Location = new System.Drawing.Point(57, 154);
             this.jobDgv.Name = "jobDgv";
             this.jobDgv.ReadOnly = true;
+            this.jobDgv.RowHeadersVisible = false;
             this.jobDgv.RowHeadersWidth = 51;
             this.jobDgv.RowTemplate.Height = 24;
             this.jobDgv.Size = new System.Drawing.Size(631, 573);
@@ -321,6 +322,28 @@
             this.jTitle.TrailingIcon = null;
             this.jTitle.UseSystemPasswordChar = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(351, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(348, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "*";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
@@ -373,28 +396,6 @@
     "   M        A        N        A        G        E        M        E        N    " +
     "    T";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(348, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "*";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(351, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "*";
             // 
             // pictureBox1
             // 

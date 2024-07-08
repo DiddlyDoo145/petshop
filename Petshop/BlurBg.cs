@@ -13,9 +13,12 @@ namespace Petshop
 {
     public partial class BlurBg : Form
     {
+        public static BlurBg instance;
+        public bool pickCashier, employeeManage;
         public BlurBg()
         {
             InitializeComponent();
+            instance = this;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Load += BlurBg_Load;
         }
@@ -34,9 +37,16 @@ namespace Petshop
             this.Size = new Size(1355, 820);
         }
 
-        private void BlurBg_Load(object sender, EventArgs e)
+        public void BlurBg_Load(object sender, EventArgs e)
         {
-            timer1.Start();
+            if(pickCashier == true)
+            {
+                timer2.Start();
+            }
+            else if(employeeManage == true)
+            {
+                timer1.Start();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -62,7 +72,35 @@ namespace Petshop
 
         private void BlurBg_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            if(pickCashier == true)
+            {
+                timer2.Start();
+            }
+            else if(employeeManage == true)
+            {
+                timer1.Start();
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            bool cashierPick = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "assignCashier")
+                {
+                    cashierPick = true;
+                    f.StartPosition = FormStartPosition.CenterScreen;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (cashierPick == false)
+            {
+                assignCashier aC = new assignCashier();
+                aC.StartPosition = FormStartPosition.CenterScreen;
+                aC.Show();
+            }
         }
     }
     #region blurBackground

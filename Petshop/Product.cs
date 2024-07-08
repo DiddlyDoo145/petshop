@@ -63,5 +63,10 @@ namespace Petshop
         {
             productCategory_Click(null, null);
         }
+
+        private void petManage_Click(object sender, EventArgs e)
+        {
+            OpenChildForm1(new petManagement(), 30, 135);
+        }
     }
 }

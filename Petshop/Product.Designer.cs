@@ -39,6 +39,7 @@
             this.productCategory = new MaterialSkin.Controls.MaterialButton();
             this.pCategorybtn = new MaterialSkin.Controls.MaterialButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.petManage = new MaterialSkin.Controls.MaterialButton();
             this.panel4.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -52,9 +53,9 @@
             this.panel4.Controls.Add(this.materialCard1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1345, 71);
+            this.panel4.Size = new System.Drawing.Size(1793, 87);
             this.panel4.TabIndex = 1;
             // 
             // materialCard1
@@ -65,11 +66,11 @@
             this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(0, 0);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard1.Size = new System.Drawing.Size(1345, 71);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(13, 14, 13, 14);
+            this.materialCard1.Size = new System.Drawing.Size(1793, 87);
             this.materialCard1.TabIndex = 4;
             // 
             // materialCard2
@@ -80,12 +81,12 @@
             this.materialCard2.Depth = 0;
             this.materialCard2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(10, 11);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.materialCard2.Location = new System.Drawing.Point(13, 14);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
-            this.materialCard2.Size = new System.Drawing.Size(1325, 49);
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(13, 14, 13, 14);
+            this.materialCard2.Size = new System.Drawing.Size(1767, 59);
             this.materialCard2.TabIndex = 0;
             // 
             // label26
@@ -93,34 +94,34 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(80, 8);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(107, 10);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(268, 33);
+            this.label26.Size = new System.Drawing.Size(323, 40);
             this.label26.TabIndex = 3;
             this.label26.Text = "Product Management";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(27, -4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(76, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.petManage);
             this.panel3.Controls.Add(this.services);
             this.panel3.Controls.Add(this.productCategory);
             this.panel3.Controls.Add(this.pCategorybtn);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 71);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(0, 87);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1345, 61);
+            this.panel3.Size = new System.Drawing.Size(1793, 75);
             this.panel3.TabIndex = 6;
             // 
             // services
@@ -131,12 +132,12 @@
             this.services.Depth = 0;
             this.services.HighEmphasis = true;
             this.services.Icon = null;
-            this.services.Location = new System.Drawing.Point(902, 4);
-            this.services.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.services.Location = new System.Drawing.Point(903, 5);
+            this.services.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.services.MouseState = MaterialSkin.MouseState.HOVER;
             this.services.Name = "services";
             this.services.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.services.Size = new System.Drawing.Size(442, 54);
+            this.services.Size = new System.Drawing.Size(440, 66);
             this.services.TabIndex = 9;
             this.services.Text = "Services";
             this.services.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -152,12 +153,12 @@
             this.productCategory.Depth = 0;
             this.productCategory.HighEmphasis = true;
             this.productCategory.Icon = null;
-            this.productCategory.Location = new System.Drawing.Point(5, 4);
-            this.productCategory.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.productCategory.Location = new System.Drawing.Point(7, 5);
+            this.productCategory.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.productCategory.MouseState = MaterialSkin.MouseState.HOVER;
             this.productCategory.Name = "productCategory";
             this.productCategory.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.productCategory.Size = new System.Drawing.Size(442, 54);
+            this.productCategory.Size = new System.Drawing.Size(440, 66);
             this.productCategory.TabIndex = 6;
             this.productCategory.Text = "Products";
             this.productCategory.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -173,12 +174,12 @@
             this.pCategorybtn.Depth = 0;
             this.pCategorybtn.HighEmphasis = true;
             this.pCategorybtn.Icon = null;
-            this.pCategorybtn.Location = new System.Drawing.Point(454, 4);
-            this.pCategorybtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pCategorybtn.Location = new System.Drawing.Point(455, 5);
+            this.pCategorybtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.pCategorybtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.pCategorybtn.Name = "pCategorybtn";
             this.pCategorybtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.pCategorybtn.Size = new System.Drawing.Size(442, 54);
+            this.pCategorybtn.Size = new System.Drawing.Size(440, 66);
             this.pCategorybtn.TabIndex = 7;
             this.pCategorybtn.Text = "Product Category";
             this.pCategorybtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -189,23 +190,44 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel5.Location = new System.Drawing.Point(3, 136);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(4, 167);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1345, 622);
+            this.panel5.Size = new System.Drawing.Size(1793, 766);
             this.panel5.TabIndex = 7;
+            // 
+            // petManage
+            // 
+            this.petManage.AutoSize = false;
+            this.petManage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.petManage.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.petManage.Depth = 0;
+            this.petManage.HighEmphasis = true;
+            this.petManage.Icon = null;
+            this.petManage.Location = new System.Drawing.Point(1349, 5);
+            this.petManage.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.petManage.MouseState = MaterialSkin.MouseState.HOVER;
+            this.petManage.Name = "petManage";
+            this.petManage.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.petManage.Size = new System.Drawing.Size(440, 66);
+            this.petManage.TabIndex = 0;
+            this.petManage.Text = "Pet management";
+            this.petManage.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.petManage.UseAccentColor = false;
+            this.petManage.UseVisualStyleBackColor = true;
+            this.petManage.Click += new System.EventHandler(this.petManage_Click);
             // 
             // Product
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1345, 622);
+            this.ClientSize = new System.Drawing.Size(1793, 766);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Product_Load);
@@ -237,5 +259,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialButton petManage;
     }
 }

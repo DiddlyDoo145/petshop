@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Services));
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -40,11 +40,6 @@
             this.search = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ServicesTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -55,13 +50,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.petSize = new System.Windows.Forms.ComboBox();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.servicePrice = new MaterialSkin.Controls.MaterialTextBox2();
+            this.label8 = new System.Windows.Forms.Label();
+            this.serviceName = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.label7 = new System.Windows.Forms.Label();
-            this.serviceName = new MaterialSkin.Controls.MaterialTextBox2();
-            this.servicePrice = new MaterialSkin.Controls.MaterialTextBox2();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ServicesTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -79,12 +78,12 @@
             this.label2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(27, 205);
+            this.label2.Location = new System.Drawing.Point(354, 125);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 21);
+            this.label2.Size = new System.Drawing.Size(82, 21);
             this.label2.TabIndex = 55;
-            this.label2.Text = "Price";
+            this.label2.Text = "Pet Type";
             // 
             // button2
             // 
@@ -160,42 +159,41 @@
             this.ServicesTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ServicesTable.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.ServicesTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ServicesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ServicesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ServicesTable.ColumnHeadersHeight = 30;
             this.ServicesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ServicesTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ServicesTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ServicesTable.DefaultCellStyle = dataGridViewCellStyle5;
             this.ServicesTable.Location = new System.Drawing.Point(24, 153);
             this.ServicesTable.Margin = new System.Windows.Forms.Padding(4);
             this.ServicesTable.Name = "ServicesTable";
             this.ServicesTable.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ServicesTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ServicesTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ServicesTable.RowHeadersVisible = false;
             this.ServicesTable.RowHeadersWidth = 51;
             this.ServicesTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -204,46 +202,6 @@
             this.ServicesTable.Size = new System.Drawing.Size(702, 483);
             this.ServicesTable.TabIndex = 60;
             this.ServicesTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ServicesTable_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "service_name";
-            this.Column1.HeaderText = "Service Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "pet_type";
-            this.Column2.HeaderText = "Pet Type";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "pet_size";
-            this.Column3.HeaderText = "Pet Size";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "service_price";
-            this.Column4.HeaderText = "Service Price";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "strCategory_desc";
-            this.Column5.HeaderText = "Store Category";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // errorProvider1
             // 
@@ -284,7 +242,7 @@
             this.petType.FormattingEnabled = true;
             this.petType.Items.AddRange(new object[] {
             "SELECT CATEGORY"});
-            this.petType.Location = new System.Drawing.Point(30, 230);
+            this.petType.Location = new System.Drawing.Point(357, 150);
             this.petType.Margin = new System.Windows.Forms.Padding(4);
             this.petType.Name = "petType";
             this.petType.Size = new System.Drawing.Size(287, 36);
@@ -297,12 +255,13 @@
             this.label5.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(355, 205);
+            this.label5.Location = new System.Drawing.Point(22, 681);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 21);
             this.label5.TabIndex = 68;
             this.label5.Text = "Pet Size";
+            this.label5.Visible = false;
             // 
             // petSize
             // 
@@ -316,11 +275,12 @@
             "Large",
             "Extra Large",
             "All Sizes"});
-            this.petSize.Location = new System.Drawing.Point(358, 230);
+            this.petSize.Location = new System.Drawing.Point(25, 706);
             this.petSize.Margin = new System.Windows.Forms.Padding(4);
             this.petSize.Name = "petSize";
             this.petSize.Size = new System.Drawing.Size(287, 36);
             this.petSize.TabIndex = 67;
+            this.petSize.Visible = false;
             // 
             // materialCard1
             // 
@@ -328,9 +288,7 @@
             this.materialCard1.Controls.Add(this.linkLabel1);
             this.materialCard1.Controls.Add(this.servicePrice);
             this.materialCard1.Controls.Add(this.label8);
-            this.materialCard1.Controls.Add(this.label5);
             this.materialCard1.Controls.Add(this.serviceName);
-            this.materialCard1.Controls.Add(this.petSize);
             this.materialCard1.Controls.Add(this.materialCard2);
             this.materialCard1.Controls.Add(this.petType);
             this.materialCard1.Controls.Add(this.label2);
@@ -341,8 +299,91 @@
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(690, 294);
+            this.materialCard1.Size = new System.Drawing.Size(690, 262);
             this.materialCard1.TabIndex = 69;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(571, 79);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(92, 21);
+            this.linkLabel1.TabIndex = 71;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Click here";
+            this.linkLabel1.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // servicePrice
+            // 
+            this.servicePrice.AnimateReadOnly = false;
+            this.servicePrice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.servicePrice.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.servicePrice.Depth = 0;
+            this.servicePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.servicePrice.HideSelection = true;
+            this.servicePrice.Hint = "Service Price";
+            this.servicePrice.LeadingIcon = null;
+            this.servicePrice.Location = new System.Drawing.Point(34, 181);
+            this.servicePrice.MaxLength = 32767;
+            this.servicePrice.MouseState = MaterialSkin.MouseState.OUT;
+            this.servicePrice.Name = "servicePrice";
+            this.servicePrice.PasswordChar = '\0';
+            this.servicePrice.PrefixSuffixText = null;
+            this.servicePrice.ReadOnly = false;
+            this.servicePrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.servicePrice.SelectedText = "";
+            this.servicePrice.SelectionLength = 0;
+            this.servicePrice.SelectionStart = 0;
+            this.servicePrice.ShortcutsEnabled = true;
+            this.servicePrice.Size = new System.Drawing.Size(287, 48);
+            this.servicePrice.TabIndex = 70;
+            this.servicePrice.TabStop = false;
+            this.servicePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.servicePrice.TrailingIcon = null;
+            this.servicePrice.UseSystemPasswordChar = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(441, 79);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 21);
+            this.label8.TabIndex = 68;
+            this.label8.Text = "New Service?";
+            // 
+            // serviceName
+            // 
+            this.serviceName.AnimateReadOnly = false;
+            this.serviceName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.serviceName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.serviceName.Depth = 0;
+            this.serviceName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.serviceName.HideSelection = true;
+            this.serviceName.Hint = "Service Name";
+            this.serviceName.LeadingIcon = null;
+            this.serviceName.Location = new System.Drawing.Point(34, 105);
+            this.serviceName.MaxLength = 32767;
+            this.serviceName.MouseState = MaterialSkin.MouseState.OUT;
+            this.serviceName.Name = "serviceName";
+            this.serviceName.PasswordChar = '\0';
+            this.serviceName.PrefixSuffixText = null;
+            this.serviceName.ReadOnly = false;
+            this.serviceName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.serviceName.SelectedText = "";
+            this.serviceName.SelectionLength = 0;
+            this.serviceName.SelectionStart = 0;
+            this.serviceName.ShortcutsEnabled = true;
+            this.serviceName.Size = new System.Drawing.Size(287, 48);
+            this.serviceName.TabIndex = 70;
+            this.serviceName.TabStop = false;
+            this.serviceName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.serviceName.TrailingIcon = null;
+            this.serviceName.UseSystemPasswordChar = false;
             // 
             // materialCard2
             // 
@@ -372,89 +413,6 @@
             this.label7.TabIndex = 70;
             this.label7.Text = "Service Information";
             // 
-            // serviceName
-            // 
-            this.serviceName.AnimateReadOnly = false;
-            this.serviceName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.serviceName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.serviceName.Depth = 0;
-            this.serviceName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.serviceName.HideSelection = true;
-            this.serviceName.Hint = "Service Name";
-            this.serviceName.LeadingIcon = null;
-            this.serviceName.Location = new System.Drawing.Point(30, 120);
-            this.serviceName.MaxLength = 32767;
-            this.serviceName.MouseState = MaterialSkin.MouseState.OUT;
-            this.serviceName.Name = "serviceName";
-            this.serviceName.PasswordChar = '\0';
-            this.serviceName.PrefixSuffixText = null;
-            this.serviceName.ReadOnly = false;
-            this.serviceName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.serviceName.SelectedText = "";
-            this.serviceName.SelectionLength = 0;
-            this.serviceName.SelectionStart = 0;
-            this.serviceName.ShortcutsEnabled = true;
-            this.serviceName.Size = new System.Drawing.Size(287, 48);
-            this.serviceName.TabIndex = 70;
-            this.serviceName.TabStop = false;
-            this.serviceName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.serviceName.TrailingIcon = null;
-            this.serviceName.UseSystemPasswordChar = false;
-            // 
-            // servicePrice
-            // 
-            this.servicePrice.AnimateReadOnly = false;
-            this.servicePrice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.servicePrice.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.servicePrice.Depth = 0;
-            this.servicePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.servicePrice.HideSelection = true;
-            this.servicePrice.Hint = "Service Price";
-            this.servicePrice.LeadingIcon = null;
-            this.servicePrice.Location = new System.Drawing.Point(358, 120);
-            this.servicePrice.MaxLength = 32767;
-            this.servicePrice.MouseState = MaterialSkin.MouseState.OUT;
-            this.servicePrice.Name = "servicePrice";
-            this.servicePrice.PasswordChar = '\0';
-            this.servicePrice.PrefixSuffixText = null;
-            this.servicePrice.ReadOnly = false;
-            this.servicePrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.servicePrice.SelectedText = "";
-            this.servicePrice.SelectionLength = 0;
-            this.servicePrice.SelectionStart = 0;
-            this.servicePrice.ShortcutsEnabled = true;
-            this.servicePrice.Size = new System.Drawing.Size(287, 48);
-            this.servicePrice.TabIndex = 70;
-            this.servicePrice.TabStop = false;
-            this.servicePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.servicePrice.TrailingIcon = null;
-            this.servicePrice.UseSystemPasswordChar = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(571, 79);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(92, 21);
-            this.linkLabel1.TabIndex = 71;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Click here";
-            this.linkLabel1.Click += new System.EventHandler(this.Reset_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(441, 79);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 21);
-            this.label8.TabIndex = 68;
-            this.label8.Text = "New Service?";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -465,6 +423,38 @@
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "service_name";
+            this.Column1.HeaderText = "Service Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "pet_type";
+            this.Column2.HeaderText = "Pet Type";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "service_price";
+            this.Column4.HeaderText = "Service Price";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "strCategory_desc";
+            this.Column5.HeaderText = "Store Category";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // Services
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -474,8 +464,10 @@
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.search);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ServicesTable);
+            this.Controls.Add(this.petSize);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.AddProduct);
@@ -518,11 +510,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox petSize;
         private System.Windows.Forms.ComboBox petType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private MaterialSkin.Controls.MaterialTextBox2 servicePrice;
@@ -531,5 +518,9 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
