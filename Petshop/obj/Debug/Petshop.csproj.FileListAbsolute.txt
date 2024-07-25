@@ -248,7 +248,6 @@ C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.CodeDom.xml
 C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.Text.Json.xml
 C:\Users\patri\Github\petshop\Petshop\bin\Debug\System.ValueTuple.xml
-C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.ProductTransac.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Purchase.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.Services.resources
 C:\Users\ACER\OneDrive\Documents\GitHub\petshop\Petshop\bin\Debug\Petshop.exe.config
@@ -345,3 +344,4 @@ C:\Users\Bellie Rose\OneDrive\Documents\GitHub\petshop\Petshop\obj\Debug\Petshop
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.ServiceTransac.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.petManagement.resources
 C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.assignCashier.resources
+C:\Users\patri\Github\petshop\Petshop\obj\Debug\Petshop.checkoutTotal.resources

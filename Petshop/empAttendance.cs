@@ -18,6 +18,7 @@ namespace Petshop
     {
         private Conclass dbConnect;
         private MySqlDataReader myReader, myReader1, myReader2;
+        string day;
         public empAttendance()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace Petshop
         {
             attendanceFl.Controls.Clear();
             loadFL();
+            loadEmp();
         }
         private void loadFL()
         {
@@ -54,6 +56,54 @@ namespace Petshop
                     attendanceFl.Controls.Add(employeeAttendance[i]);
                 }
                 rowcount++;
+            }
+        }
+        private void loadEmp()
+        {
+            dbConnect = new Conclass();
+            dbConnect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("SELECT position_desc, employee_fname, employee_lname, shift_start, shift_end, employee_cNumber FROM employee INNER JOIN position ON employee.position_id = position.position_id INNER JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.position_id != '6'", dbConnect.myconnect);
+            myReader = cmd.ExecuteReader();
+            while (myReader.Read())
+            {
+                int start = Convert.ToInt32(myReader["shift_start"]);
+                int end = Convert.ToInt32(myReader["shift_end"]);
+                string position = myReader["position_desc"].ToString();
+                string firstname = myReader["employee_fname"].ToString();
+                string lastname = myReader["employee_lname"].ToString();
+                string number = myReader["employee_cNumber"].ToString();
+                getDay(start);
+                string begin = day;
+                getDay(end);
+                string finish = day;
+                employeeComplete.Rows.Add(position, firstname, lastname, begin, finish, number);
+            }
+        }
+        private void getDay( int number)
+        {
+            switch (number)
+            {
+                case 1:
+                    day = "Sunday";
+                    break;
+                case 2:
+                    day = "Monday";
+                    break;
+                case 3:
+                    day = "Tuesday";
+                    break;
+                case 4:
+                    day = "Wednesday";
+                    break;
+                case 5:
+                    day = "Thursday";
+                    break;
+                case 6:
+                    day = "Friday";
+                    break;
+                case 7:
+                    day = "Saturday";
+                    break;
             }
         }
     }

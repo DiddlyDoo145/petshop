@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.addEmp = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.endShift = new System.Windows.Forms.ComboBox();
@@ -87,7 +86,7 @@
             this.addEmp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addEmp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.addEmp.Location = new System.Drawing.Point(928, 671);
+            this.addEmp.Location = new System.Drawing.Point(928, 681);
             this.addEmp.Name = "addEmp";
             this.addEmp.Size = new System.Drawing.Size(275, 56);
             this.addEmp.TabIndex = 12;
@@ -95,21 +94,11 @@
             this.addEmp.UseVisualStyleBackColor = false;
             this.addEmp.Click += new System.EventHandler(this.addEmp_Click);
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(679, 198);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(17, 24);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "-";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(714, 165);
+            this.label13.Location = new System.Drawing.Point(415, 242);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 24);
             this.label13.TabIndex = 11;
@@ -119,7 +108,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(566, 165);
+            this.label11.Location = new System.Drawing.Point(17, 242);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(99, 24);
             this.label11.TabIndex = 10;
@@ -139,10 +128,10 @@
             "Thursday",
             "Friday",
             "Saturday"});
-            this.endShift.Location = new System.Drawing.Point(705, 194);
+            this.endShift.Location = new System.Drawing.Point(520, 236);
             this.endShift.MaxDropDownItems = 20;
             this.endShift.Name = "endShift";
-            this.endShift.Size = new System.Drawing.Size(111, 36);
+            this.endShift.Size = new System.Drawing.Size(293, 36);
             this.endShift.TabIndex = 9;
             // 
             // startShift
@@ -159,17 +148,17 @@
             "Thursday",
             "Friday",
             "Saturday"});
-            this.startShift.Location = new System.Drawing.Point(567, 194);
+            this.startShift.Location = new System.Drawing.Point(122, 236);
             this.startShift.MaxDropDownItems = 20;
             this.startShift.Name = "startShift";
-            this.startShift.Size = new System.Drawing.Size(102, 36);
+            this.startShift.Size = new System.Drawing.Size(291, 36);
             this.startShift.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(562, 71);
+            this.label5.Location = new System.Drawing.Point(534, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 21);
             this.label5.TabIndex = 7;
@@ -179,7 +168,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(723, 71);
+            this.linkLabel1.Location = new System.Drawing.Point(693, 14);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(92, 21);
             this.linkLabel1.TabIndex = 6;
@@ -194,17 +183,17 @@
             this.jobTitle.FormattingEnabled = true;
             this.jobTitle.Items.AddRange(new object[] {
             "Select Option"});
-            this.jobTitle.Location = new System.Drawing.Point(286, 194);
+            this.jobTitle.Location = new System.Drawing.Point(564, 106);
             this.jobTitle.MaxDropDownItems = 20;
             this.jobTitle.Name = "jobTitle";
-            this.jobTitle.Size = new System.Drawing.Size(254, 36);
+            this.jobTitle.Size = new System.Drawing.Size(249, 36);
             this.jobTitle.TabIndex = 3;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(285, 165);
+            this.label20.Location = new System.Drawing.Point(561, 79);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(86, 24);
             this.label20.TabIndex = 1;
@@ -216,7 +205,7 @@
             this.updateEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateEmp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateEmp.ForeColor = System.Drawing.Color.White;
-            this.updateEmp.Location = new System.Drawing.Point(1218, 671);
+            this.updateEmp.Location = new System.Drawing.Point(1216, 681);
             this.updateEmp.Name = "updateEmp";
             this.updateEmp.Size = new System.Drawing.Size(275, 56);
             this.updateEmp.TabIndex = 13;
@@ -230,7 +219,7 @@
             this.deleteEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteEmp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteEmp.ForeColor = System.Drawing.Color.White;
-            this.deleteEmp.Location = new System.Drawing.Point(1508, 671);
+            this.deleteEmp.Location = new System.Drawing.Point(1508, 681);
             this.deleteEmp.Name = "deleteEmp";
             this.deleteEmp.Size = new System.Drawing.Size(275, 56);
             this.deleteEmp.TabIndex = 14;
@@ -420,10 +409,7 @@
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.label18);
             this.materialCard1.Controls.Add(this.emergencyNumber);
-            this.materialCard1.Controls.Add(this.label5);
-            this.materialCard1.Controls.Add(this.linkLabel1);
             this.materialCard1.Controls.Add(this.label13);
             this.materialCard1.Controls.Add(this.contactNumber);
             this.materialCard1.Controls.Add(this.label11);
@@ -441,7 +427,7 @@
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(830, 261);
+            this.materialCard1.Size = new System.Drawing.Size(830, 301);
             this.materialCard1.TabIndex = 19;
             // 
             // emergencyNumber
@@ -454,7 +440,7 @@
             this.emergencyNumber.HideSelection = true;
             this.emergencyNumber.Hint = "Emergency Number";
             this.emergencyNumber.LeadingIcon = null;
-            this.emergencyNumber.Location = new System.Drawing.Point(16, 183);
+            this.emergencyNumber.Location = new System.Drawing.Point(419, 164);
             this.emergencyNumber.MaxLength = 32767;
             this.emergencyNumber.MouseState = MaterialSkin.MouseState.OUT;
             this.emergencyNumber.Name = "emergencyNumber";
@@ -466,7 +452,7 @@
             this.emergencyNumber.SelectionLength = 0;
             this.emergencyNumber.SelectionStart = 0;
             this.emergencyNumber.ShortcutsEnabled = true;
-            this.emergencyNumber.Size = new System.Drawing.Size(250, 48);
+            this.emergencyNumber.Size = new System.Drawing.Size(396, 48);
             this.emergencyNumber.TabIndex = 1;
             this.emergencyNumber.TabStop = false;
             this.emergencyNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -483,7 +469,7 @@
             this.contactNumber.HideSelection = true;
             this.contactNumber.Hint = "Contact Number";
             this.contactNumber.LeadingIcon = null;
-            this.contactNumber.Location = new System.Drawing.Point(567, 102);
+            this.contactNumber.Location = new System.Drawing.Point(17, 164);
             this.contactNumber.MaxLength = 32767;
             this.contactNumber.MouseState = MaterialSkin.MouseState.OUT;
             this.contactNumber.Name = "contactNumber";
@@ -495,7 +481,7 @@
             this.contactNumber.SelectionLength = 0;
             this.contactNumber.SelectionStart = 0;
             this.contactNumber.ShortcutsEnabled = true;
-            this.contactNumber.Size = new System.Drawing.Size(250, 48);
+            this.contactNumber.Size = new System.Drawing.Size(396, 48);
             this.contactNumber.TabIndex = 1;
             this.contactNumber.TabStop = false;
             this.contactNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -512,7 +498,7 @@
             this.lastName.HideSelection = true;
             this.lastName.Hint = "Last Name";
             this.lastName.LeadingIcon = null;
-            this.lastName.Location = new System.Drawing.Point(289, 102);
+            this.lastName.Location = new System.Drawing.Point(282, 94);
             this.lastName.MaxLength = 32767;
             this.lastName.MouseState = MaterialSkin.MouseState.OUT;
             this.lastName.Name = "lastName";
@@ -524,7 +510,7 @@
             this.lastName.SelectionLength = 0;
             this.lastName.SelectionStart = 0;
             this.lastName.ShortcutsEnabled = true;
-            this.lastName.Size = new System.Drawing.Size(250, 48);
+            this.lastName.Size = new System.Drawing.Size(267, 48);
             this.lastName.TabIndex = 1;
             this.lastName.TabStop = false;
             this.lastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -541,7 +527,7 @@
             this.firstName.HideSelection = true;
             this.firstName.Hint = "First Name";
             this.firstName.LeadingIcon = null;
-            this.firstName.Location = new System.Drawing.Point(16, 102);
+            this.firstName.Location = new System.Drawing.Point(17, 94);
             this.firstName.MaxLength = 32767;
             this.firstName.MouseState = MaterialSkin.MouseState.OUT;
             this.firstName.Name = "firstName";
@@ -564,6 +550,8 @@
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard2.Controls.Add(this.label19);
+            this.materialCard2.Controls.Add(this.label5);
+            this.materialCard2.Controls.Add(this.linkLabel1);
             this.materialCard2.Depth = 0;
             this.materialCard2.Dock = System.Windows.Forms.DockStyle.Top;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -594,7 +582,7 @@
             this.materialCard3.Controls.Add(this.newCity);
             this.materialCard3.Depth = 0;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(13, 295);
+            this.materialCard3.Location = new System.Drawing.Point(13, 331);
             this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard3.Name = "materialCard3";
@@ -721,12 +709,12 @@
             this.materialCard7.Controls.Add(this.materialCard3);
             this.materialCard7.Depth = 0;
             this.materialCard7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard7.Location = new System.Drawing.Point(929, 181);
+            this.materialCard7.Location = new System.Drawing.Point(929, 165);
             this.materialCard7.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard7.Name = "materialCard7";
             this.materialCard7.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard7.Size = new System.Drawing.Size(856, 479);
+            this.materialCard7.Size = new System.Drawing.Size(856, 511);
             this.materialCard7.TabIndex = 21;
             // 
             // empManage
@@ -778,7 +766,6 @@
         private System.Windows.Forms.Button empSearch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox endShift;

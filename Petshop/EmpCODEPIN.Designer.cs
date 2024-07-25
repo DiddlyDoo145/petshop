@@ -62,6 +62,7 @@
             this.secondPin.TabIndex = 1;
             this.secondPin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.secondPin.TextChanged += new System.EventHandler(this.secondPin_TextChanged);
+            this.secondPin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.secondPin_KeyPress);
             // 
             // thirdPin
             // 
@@ -76,6 +77,7 @@
             this.thirdPin.TabIndex = 2;
             this.thirdPin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.thirdPin.TextChanged += new System.EventHandler(this.thirdPin_TextChanged);
+            this.thirdPin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.thirdPin_KeyPress);
             // 
             // fourthPin
             // 
@@ -90,6 +92,7 @@
             this.fourthPin.TabIndex = 3;
             this.fourthPin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.fourthPin.TextChanged += new System.EventHandler(this.fourthPin_TextChanged);
+            this.fourthPin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fourthPin_KeyPress);
             // 
             // label1
             // 

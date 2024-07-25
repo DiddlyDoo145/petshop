@@ -111,5 +111,38 @@ namespace Petshop
                 this.TabIndex = 2;
             }
         }
+
+        private void fourthPin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Back)
+            {
+                fourthPin.Clear();
+                thirdPin.Enabled = true;
+                fourthPin.Enabled = false;
+                this.TabIndex = 2;
+            }
+        }
+
+        private void thirdPin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+            {
+                thirdPin.Clear();
+                secondPin.Enabled = true;
+                thirdPin.Enabled = false;
+                this.TabIndex = 1;
+            }
+        }
+
+        private void secondPin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+            {
+                secondPin.Clear();
+                firstPin.Enabled = true;
+                secondPin.Enabled = false;
+                this.TabIndex = 0;
+            }
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace Petshop
         {
             qtyCategory.Text = "KILO";
             soldPer = "KILO";
+            multiplier = 1;
             loadProduct();
             productPanel.BringToFront();
             availing = "Product";
@@ -216,6 +217,17 @@ namespace Petshop
             {
                 e.Handled = true; // Ignore the key press
             }
+            if(e.KeyChar == 13)
+            {
+                if(productName.TextLength == 0)
+                {
+                    productQty.Text = "00";
+                }
+                else
+                {
+                    productQty.Text = "01";
+                }
+            }
         }
         private void petType_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -384,6 +396,7 @@ namespace Petshop
                     }
                     else
                     {
+                        int num3 = Convert.ToInt32(totalPrice.Text);
                         int num1 = Convert.ToInt32(productPrice.Text);
                         int num2 = Convert.ToInt32(productQty.Text);
 /*                        if (soldPer == "SACK")
@@ -397,6 +410,7 @@ namespace Petshop
                         int total = num2 * (num1 * multiplier);
                         int rowId = receiptDgv.Rows.Add();
                         transactTotal = total.ToString();
+                        int newnum3 = total + num3;
                         qty = (num2 * multiplier).ToString();
                         // Grab the new row!
                         DataGridViewRow row = receiptDgv.Rows[rowId];
@@ -406,6 +420,7 @@ namespace Petshop
                         row.Cells["Column7"].Value = productQty.Text;
                         row.Cells["Column8"].Value = total;
                         row.Cells["Column9"].Value = "Product";
+                        totalPrice.Text = newnum3.ToString();
                         subtractProduct();
                         productName.Clear();
                         productPrice.Clear();
@@ -433,7 +448,9 @@ namespace Petshop
                             getServiceId();
                             int num1 = Convert.ToInt32(servicePrice.Text);
                             int num2 = price;
+                            int num3 = Convert.ToInt32(totalPrice.Text);
                             int total = num2 + num1;
+                            int newnum3 = total + num3;
                             transactTotal = total.ToString();
                             int rowId = receiptDgv.Rows.Add();
                             // Grab the new row!
@@ -444,6 +461,7 @@ namespace Petshop
                             row.Cells["Column7"].Value = petType.Text + "-" + petSize.Text;
                             row.Cells["Column8"].Value = total;
                             row.Cells["Column9"].Value = "Service";
+                            totalPrice.Text = newnum3.ToString();
                             addserviceTransaction();
                             price = 0;
                             serviceName.Clear();
@@ -517,6 +535,30 @@ namespace Petshop
             {
                 MessageBox.Show("Inserted");
             }*/
+        }
+
+        private void completeOrder_Click(object sender, EventArgs e)
+        {
+            int count = receiptDgv.RowCount;
+            if(count == 0)
+            {
+                MaterialMessageBox.Show("Please select a product to checkout", "Notice",MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else
+            {
+                if (MaterialMessageBox.Show("Are you sure you want to proceed to checkout?", "Notice", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
+                {
+                    BlurBg bbg = new BlurBg();
+                    bbg.Size = new Size(1400, 782);
+                    bbg.Visible = true;
+                    bbg.BringToFront();
+                    BlurBg.instance.price = totalPrice.Text;
+                    BlurBg.instance.checkout = true;
+                    BlurBg.instance.pickCashier = false;
+                    BlurBg.instance.employeeManage = false;
+                    BlurBg.instance.BlurBg_Load(null, null);
+                }
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -667,12 +709,16 @@ namespace Petshop
                 DataGridViewRow row = receiptDgv.Rows[e.RowIndex];
                 if (row.Cells["Column9"].Value.ToString() == "Product")
                 {
+                    int num3 = Convert.ToInt32(totalPrice.Text);
                     productCategory_Click(null, null);
                     productPanel.BringToFront();
                     servicePanel.SendToBack();
                     productName.Text = row.Cells["Column5"].Value.ToString();
                     productPrice.Text = row.Cells["Column6"].Value.ToString();
                     productQty.Text = row.Cells["Column7"].Value.ToString();
+                    int deduct = Convert.ToInt32(row.Cells["Column8"].Value);
+                    int newnum3 = num3 - deduct;
+                    totalPrice.Text = newnum3.ToString();
                     receiptDgv.Rows.RemoveAt(e.RowIndex);
                     qty = Convert.ToString(Convert.ToInt32(productQty.Text));
                     getProductId();
@@ -682,6 +728,7 @@ namespace Petshop
                 }
                 else if (row.Cells["Column9"].Value.ToString() == "Service")
                 {
+                    int num3 = Convert.ToInt32(totalPrice.Text);
                     services_Click(null, null);
                     if(row.Cells["Column5"].Value.ToString() == "Full Groom")
                     {
@@ -711,16 +758,16 @@ namespace Petshop
                         case "Large":
                             petSize.SelectedIndex = 3;
                             break;
-                        case "Extra Large":
+                        case "Giant":
                             petSize.SelectedIndex = 4;
-                            break;
-                        case "2XL":
-                            petSize.SelectedIndex = 5;
                             break;
                         default:
                             petSize.SelectedIndex = 0;
                             break;
                     }
+                    int deduct = Convert.ToInt32(row.Cells["Column8"].Value);
+                    int newnum3 = num3 - deduct;
+                    totalPrice.Text = newnum3.ToString();
                     receiptDgv.Rows.RemoveAt(e.RowIndex);
                     getPetID();
                     getPetSize();
@@ -772,7 +819,7 @@ namespace Petshop
             }
             else
             {
-                if(productQty.Text.Length < 1)
+                if(productQty.Text.Length == 0)
                 {
 
                 }
