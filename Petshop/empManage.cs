@@ -19,7 +19,7 @@ namespace Petshop
         private Conclass dbConnect;
         private MySqlCommand cmd;
         private MySqlDataReader myReader, myReader1, myReader2;
-        private string employeeId;
+        private string employeeId, day;
         private void empManage_Load(object sender, EventArgs e)
         {
             jobList();
@@ -54,11 +54,29 @@ namespace Petshop
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("SELECT employee.employee_id, position.position_desc, employee.employee_fname, employee.employee_lname, shift.shift_start, shift.shift_end, employee.employee_cNumber, employee.employee_ecNumber FROM employee RIGHT JOIN position ON employee.position_id = position.position_id RIGHT JOIN shift ON employee.shift_id = shift.shift_id WHERE employee.employee_id > '0' && position.position_desc != 'N/A'", dbConnect.myconnect);
-            MySqlDataAdapter da = new MySqlDataAdapter();
+/*            MySqlDataAdapter da = new MySqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();
             da.Fill(dt);
             employees.DataSource = dt;
+            dbConnect.CloseConnection();*/
+            myReader = cmd.ExecuteReader();
+            while (myReader.Read())
+            {
+                int start = Convert.ToInt32(myReader["shift_start"]);
+                int end = Convert.ToInt32(myReader["shift_end"]);
+                string id = myReader["employee_id"].ToString();
+                string position = myReader["position_desc"].ToString();
+                string firstname = myReader["employee_fname"].ToString();
+                string lastname = myReader["employee_lname"].ToString();
+                string number = myReader["employee_cNumber"].ToString();
+                string enumber = myReader["employee_ecNumber"].ToString();
+                getDay(start);
+                string begin = day;
+                getDay(end);
+                string finish = day;
+                employees.Rows.Add(id, position, firstname, lastname, begin, finish, number, enumber);
+            }
             dbConnect.CloseConnection();
         }
         private void loadAddress()
@@ -165,6 +183,8 @@ namespace Petshop
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            startShift.SelectedIndex = 0;
+            endShift.SelectedIndex = 0;
             firstName.Clear();
             lastName.Clear();
             contactNumber.Clear();
@@ -214,7 +234,7 @@ namespace Petshop
         {
             if (firstName.TextLength == 0 || lastName.TextLength == 0 || contactNumber.TextLength == 0 || emergencyNumber.TextLength == 0 || newCity.TextLength == 0 || newMunicipality.TextLength == 0 || newBarangay.TextLength == 0 || jobTitle.SelectedIndex == 0 || startShift.SelectedIndex < 1 || endShift.SelectedIndex < 1 /*|| fbProfile.TextLength == 0*/)
             {
-                MessageBox.Show("Fields with " + "'*'" + " are Required. Please Complete the Form.", "Notice!");
+                MessageBox.Show("Please Complete the Form.", "Notice!");
             }
             else if (employeeId != "")
             {
@@ -446,5 +466,32 @@ namespace Petshop
             }
         }
         #endregion
+        private void getDay(int number)
+        {
+            switch (number)
+            {
+                case 1:
+                    day = "Sunday";
+                    break;
+                case 2:
+                    day = "Monday";
+                    break;
+                case 3:
+                    day = "Tuesday";
+                    break;
+                case 4:
+                    day = "Wednesday";
+                    break;
+                case 5:
+                    day = "Thursday";
+                    break;
+                case 6:
+                    day = "Friday";
+                    break;
+                case 7:
+                    day = "Saturday";
+                    break;
+            }
+        }
     }
 }

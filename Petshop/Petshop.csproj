@@ -238,11 +238,11 @@
     <Compile Include="ProductsData.Designer.cs">
       <DependentUpon>ProductsData.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductTransac.cs">
+    <Compile Include="checkoutTotal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductTransac.Designer.cs">
-      <DependentUpon>ProductTransac.cs</DependentUpon>
+    <Compile Include="checkoutTotal.Designer.cs">
+      <DependentUpon>checkoutTotal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -321,8 +321,8 @@
     <EmbeddedResource Include="productsData.resx">
       <DependentUpon>productsData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductTransac.resx">
-      <DependentUpon>ProductTransac.cs</DependentUpon>
+    <EmbeddedResource Include="checkoutTotal.resx">
+      <DependentUpon>checkoutTotal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

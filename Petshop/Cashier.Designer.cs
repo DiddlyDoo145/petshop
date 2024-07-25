@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cashier));
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,14 +53,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cancelOrder = new MaterialSkin.Controls.MaterialButton();
             this.addOrder = new MaterialSkin.Controls.MaterialButton();
-            this.servicePanel = new MaterialSkin.Controls.MaterialCard();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.fullGroom = new System.Windows.Forms.CheckBox();
-            this.petSize = new System.Windows.Forms.ComboBox();
-            this.petType = new MaterialSkin.Controls.MaterialTextBox2();
-            this.servicePrice = new MaterialSkin.Controls.MaterialTextBox2();
-            this.serviceName = new MaterialSkin.Controls.MaterialTextBox2();
-            this.label5 = new System.Windows.Forms.Label();
             this.productPanel = new MaterialSkin.Controls.MaterialCard();
             this.panel5 = new System.Windows.Forms.Panel();
             this.productQty = new System.Windows.Forms.TextBox();
@@ -70,10 +62,18 @@
             this.addQty = new System.Windows.Forms.Button();
             this.productName = new MaterialSkin.Controls.MaterialTextBox2();
             this.label4 = new System.Windows.Forms.Label();
+            this.servicePanel = new MaterialSkin.Controls.MaterialCard();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.fullGroom = new System.Windows.Forms.CheckBox();
+            this.petSize = new System.Windows.Forms.ComboBox();
+            this.petType = new MaterialSkin.Controls.MaterialTextBox2();
+            this.servicePrice = new MaterialSkin.Controls.MaterialTextBox2();
+            this.serviceName = new MaterialSkin.Controls.MaterialTextBox2();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.totalPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.completeOrder = new MaterialSkin.Controls.MaterialButton();
             this.receiptDgv = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,10 +91,10 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cashierDgv)).BeginInit();
             this.panel2.SuspendLayout();
-            this.servicePanel.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.productPanel.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.servicePanel.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.receiptDgv)).BeginInit();
             this.SuspendLayout();
@@ -106,8 +106,8 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "product_name";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column1.HeaderText = "Product Name";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -117,8 +117,8 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "Quantity";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column2.HeaderText = "Quantity";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
@@ -304,8 +304,8 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.cancelOrder);
             this.panel2.Controls.Add(this.addOrder);
-            this.panel2.Controls.Add(this.servicePanel);
             this.panel2.Controls.Add(this.productPanel);
+            this.panel2.Controls.Add(this.servicePanel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(693, 162);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -355,165 +355,6 @@
             this.addOrder.UseAccentColor = false;
             this.addOrder.UseVisualStyleBackColor = true;
             this.addOrder.Click += new System.EventHandler(this.addOrder_Click);
-            // 
-            // servicePanel
-            // 
-            this.servicePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.servicePanel.Controls.Add(this.panel6);
-            this.servicePanel.Depth = 0;
-            this.servicePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.servicePanel.Location = new System.Drawing.Point(23, 192);
-            this.servicePanel.Margin = new System.Windows.Forms.Padding(14);
-            this.servicePanel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.servicePanel.Name = "servicePanel";
-            this.servicePanel.Padding = new System.Windows.Forms.Padding(14);
-            this.servicePanel.Size = new System.Drawing.Size(494, 349);
-            this.servicePanel.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel6.Controls.Add(this.fullGroom);
-            this.panel6.Controls.Add(this.petSize);
-            this.panel6.Controls.Add(this.petType);
-            this.panel6.Controls.Add(this.servicePrice);
-            this.panel6.Controls.Add(this.serviceName);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(14, 14);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(466, 321);
-            this.panel6.TabIndex = 0;
-            // 
-            // fullGroom
-            // 
-            this.fullGroom.AutoSize = true;
-            this.fullGroom.Font = new System.Drawing.Font("Copperplate Gothic Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullGroom.Location = new System.Drawing.Point(299, 20);
-            this.fullGroom.Name = "fullGroom";
-            this.fullGroom.Size = new System.Drawing.Size(149, 24);
-            this.fullGroom.TabIndex = 5;
-            this.fullGroom.Text = "Full Groom";
-            this.fullGroom.UseVisualStyleBackColor = true;
-            this.fullGroom.CheckedChanged += new System.EventHandler(this.fullGroom_CheckedChanged);
-            // 
-            // petSize
-            // 
-            this.petSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.petSize.Font = new System.Drawing.Font("Century", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.petSize.FormattingEnabled = true;
-            this.petSize.Items.AddRange(new object[] {
-            "Select Size",
-            "Small ",
-            "Medium",
-            "Large",
-            "Extra Large",
-            "2XL"});
-            this.petSize.Location = new System.Drawing.Point(232, 230);
-            this.petSize.Name = "petSize";
-            this.petSize.Size = new System.Drawing.Size(179, 35);
-            this.petSize.TabIndex = 4;
-            // 
-            // petType
-            // 
-            this.petType.AnimateReadOnly = false;
-            this.petType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.petType.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.petType.Depth = 0;
-            this.petType.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.petType.HideSelection = true;
-            this.petType.Hint = "Pet Type";
-            this.petType.LeadingIcon = null;
-            this.petType.Location = new System.Drawing.Point(53, 219);
-            this.petType.MaxLength = 32767;
-            this.petType.MouseState = MaterialSkin.MouseState.OUT;
-            this.petType.Name = "petType";
-            this.petType.PasswordChar = '\0';
-            this.petType.PrefixSuffixText = null;
-            this.petType.ReadOnly = false;
-            this.petType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.petType.SelectedText = "";
-            this.petType.SelectionLength = 0;
-            this.petType.SelectionStart = 0;
-            this.petType.ShortcutsEnabled = true;
-            this.petType.Size = new System.Drawing.Size(154, 48);
-            this.petType.TabIndex = 1;
-            this.petType.TabStop = false;
-            this.petType.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.petType.TrailingIcon = null;
-            this.petType.UseSystemPasswordChar = false;
-            this.petType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.petType_KeyPress);
-            // 
-            // servicePrice
-            // 
-            this.servicePrice.AnimateReadOnly = false;
-            this.servicePrice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.servicePrice.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.servicePrice.Depth = 0;
-            this.servicePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.servicePrice.HideSelection = true;
-            this.servicePrice.Hint = "Service Price";
-            this.servicePrice.LeadingIcon = null;
-            this.servicePrice.Location = new System.Drawing.Point(53, 140);
-            this.servicePrice.MaxLength = 32767;
-            this.servicePrice.MouseState = MaterialSkin.MouseState.OUT;
-            this.servicePrice.Name = "servicePrice";
-            this.servicePrice.PasswordChar = '\0';
-            this.servicePrice.PrefixSuffixText = null;
-            this.servicePrice.ReadOnly = false;
-            this.servicePrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.servicePrice.SelectedText = "";
-            this.servicePrice.SelectionLength = 0;
-            this.servicePrice.SelectionStart = 0;
-            this.servicePrice.ShortcutsEnabled = true;
-            this.servicePrice.Size = new System.Drawing.Size(358, 48);
-            this.servicePrice.TabIndex = 1;
-            this.servicePrice.TabStop = false;
-            this.servicePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.servicePrice.TrailingIcon = null;
-            this.servicePrice.UseSystemPasswordChar = false;
-            this.servicePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.petType_KeyPress);
-            // 
-            // serviceName
-            // 
-            this.serviceName.AnimateReadOnly = false;
-            this.serviceName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.serviceName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.serviceName.Depth = 0;
-            this.serviceName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.serviceName.HideSelection = true;
-            this.serviceName.Hint = "Service Name";
-            this.serviceName.LeadingIcon = null;
-            this.serviceName.Location = new System.Drawing.Point(53, 74);
-            this.serviceName.MaxLength = 32767;
-            this.serviceName.MouseState = MaterialSkin.MouseState.OUT;
-            this.serviceName.Name = "serviceName";
-            this.serviceName.PasswordChar = '\0';
-            this.serviceName.PrefixSuffixText = null;
-            this.serviceName.ReadOnly = false;
-            this.serviceName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.serviceName.SelectedText = "";
-            this.serviceName.SelectionLength = 0;
-            this.serviceName.SelectionStart = 0;
-            this.serviceName.ShortcutsEnabled = true;
-            this.serviceName.Size = new System.Drawing.Size(358, 48);
-            this.serviceName.TabIndex = 1;
-            this.serviceName.TabStop = false;
-            this.serviceName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.serviceName.TrailingIcon = null;
-            this.serviceName.UseSystemPasswordChar = false;
-            this.serviceName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.petType_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 38);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Avail Service";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // productPanel
             // 
@@ -675,12 +516,171 @@
             this.label4.Text = "Avail Product ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // servicePanel
+            // 
+            this.servicePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.servicePanel.Controls.Add(this.panel6);
+            this.servicePanel.Depth = 0;
+            this.servicePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.servicePanel.Location = new System.Drawing.Point(23, 192);
+            this.servicePanel.Margin = new System.Windows.Forms.Padding(14);
+            this.servicePanel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.servicePanel.Name = "servicePanel";
+            this.servicePanel.Padding = new System.Windows.Forms.Padding(14);
+            this.servicePanel.Size = new System.Drawing.Size(494, 349);
+            this.servicePanel.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel6.Controls.Add(this.fullGroom);
+            this.panel6.Controls.Add(this.petSize);
+            this.panel6.Controls.Add(this.petType);
+            this.panel6.Controls.Add(this.servicePrice);
+            this.panel6.Controls.Add(this.serviceName);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(14, 14);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(466, 321);
+            this.panel6.TabIndex = 0;
+            // 
+            // fullGroom
+            // 
+            this.fullGroom.AutoSize = true;
+            this.fullGroom.Font = new System.Drawing.Font("Copperplate Gothic Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullGroom.Location = new System.Drawing.Point(299, 20);
+            this.fullGroom.Name = "fullGroom";
+            this.fullGroom.Size = new System.Drawing.Size(149, 24);
+            this.fullGroom.TabIndex = 5;
+            this.fullGroom.Text = "Full Groom";
+            this.fullGroom.UseVisualStyleBackColor = true;
+            this.fullGroom.CheckedChanged += new System.EventHandler(this.fullGroom_CheckedChanged);
+            // 
+            // petSize
+            // 
+            this.petSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.petSize.Font = new System.Drawing.Font("Century", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.petSize.FormattingEnabled = true;
+            this.petSize.Items.AddRange(new object[] {
+            "Select Size",
+            "Small ",
+            "Medium",
+            "Large",
+            "Extra Large",
+            "2XL"});
+            this.petSize.Location = new System.Drawing.Point(232, 230);
+            this.petSize.Name = "petSize";
+            this.petSize.Size = new System.Drawing.Size(179, 35);
+            this.petSize.TabIndex = 4;
+            // 
+            // petType
+            // 
+            this.petType.AnimateReadOnly = false;
+            this.petType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.petType.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.petType.Depth = 0;
+            this.petType.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.petType.HideSelection = true;
+            this.petType.Hint = "Pet Type";
+            this.petType.LeadingIcon = null;
+            this.petType.Location = new System.Drawing.Point(53, 219);
+            this.petType.MaxLength = 32767;
+            this.petType.MouseState = MaterialSkin.MouseState.OUT;
+            this.petType.Name = "petType";
+            this.petType.PasswordChar = '\0';
+            this.petType.PrefixSuffixText = null;
+            this.petType.ReadOnly = false;
+            this.petType.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.petType.SelectedText = "";
+            this.petType.SelectionLength = 0;
+            this.petType.SelectionStart = 0;
+            this.petType.ShortcutsEnabled = true;
+            this.petType.Size = new System.Drawing.Size(154, 48);
+            this.petType.TabIndex = 1;
+            this.petType.TabStop = false;
+            this.petType.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.petType.TrailingIcon = null;
+            this.petType.UseSystemPasswordChar = false;
+            this.petType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.petType_KeyPress);
+            // 
+            // servicePrice
+            // 
+            this.servicePrice.AnimateReadOnly = false;
+            this.servicePrice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.servicePrice.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.servicePrice.Depth = 0;
+            this.servicePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.servicePrice.HideSelection = true;
+            this.servicePrice.Hint = "Service Price";
+            this.servicePrice.LeadingIcon = null;
+            this.servicePrice.Location = new System.Drawing.Point(53, 140);
+            this.servicePrice.MaxLength = 32767;
+            this.servicePrice.MouseState = MaterialSkin.MouseState.OUT;
+            this.servicePrice.Name = "servicePrice";
+            this.servicePrice.PasswordChar = '\0';
+            this.servicePrice.PrefixSuffixText = null;
+            this.servicePrice.ReadOnly = false;
+            this.servicePrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.servicePrice.SelectedText = "";
+            this.servicePrice.SelectionLength = 0;
+            this.servicePrice.SelectionStart = 0;
+            this.servicePrice.ShortcutsEnabled = true;
+            this.servicePrice.Size = new System.Drawing.Size(358, 48);
+            this.servicePrice.TabIndex = 1;
+            this.servicePrice.TabStop = false;
+            this.servicePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.servicePrice.TrailingIcon = null;
+            this.servicePrice.UseSystemPasswordChar = false;
+            this.servicePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.petType_KeyPress);
+            // 
+            // serviceName
+            // 
+            this.serviceName.AnimateReadOnly = false;
+            this.serviceName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.serviceName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.serviceName.Depth = 0;
+            this.serviceName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.serviceName.HideSelection = true;
+            this.serviceName.Hint = "Service Name";
+            this.serviceName.LeadingIcon = null;
+            this.serviceName.Location = new System.Drawing.Point(53, 74);
+            this.serviceName.MaxLength = 32767;
+            this.serviceName.MouseState = MaterialSkin.MouseState.OUT;
+            this.serviceName.Name = "serviceName";
+            this.serviceName.PasswordChar = '\0';
+            this.serviceName.PrefixSuffixText = null;
+            this.serviceName.ReadOnly = false;
+            this.serviceName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.serviceName.SelectedText = "";
+            this.serviceName.SelectionLength = 0;
+            this.serviceName.SelectionStart = 0;
+            this.serviceName.ShortcutsEnabled = true;
+            this.serviceName.Size = new System.Drawing.Size(358, 48);
+            this.serviceName.TabIndex = 1;
+            this.serviceName.TabStop = false;
+            this.serviceName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.serviceName.TrailingIcon = null;
+            this.serviceName.UseSystemPasswordChar = false;
+            this.serviceName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.petType_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(184, 38);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Avail Service";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.totalPrice);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.materialButton1);
+            this.panel4.Controls.Add(this.completeOrder);
             this.panel4.Controls.Add(this.receiptDgv);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(1236, 162);
@@ -689,15 +689,15 @@
             this.panel4.Size = new System.Drawing.Size(566, 776);
             this.panel4.TabIndex = 10;
             // 
-            // label3
+            // totalPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(119, 728);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "00";
+            this.totalPrice.AutoSize = true;
+            this.totalPrice.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalPrice.Location = new System.Drawing.Point(147, 728);
+            this.totalPrice.Name = "totalPrice";
+            this.totalPrice.Size = new System.Drawing.Size(40, 28);
+            this.totalPrice.TabIndex = 2;
+            this.totalPrice.Text = "00";
             // 
             // label2
             // 
@@ -705,35 +705,35 @@
             this.label2.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(36, 728);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 28);
+            this.label2.Size = new System.Drawing.Size(102, 28);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Total:";
+            this.label2.Text = "Total: ₱";
             // 
-            // materialButton1
+            // completeOrder
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(359, 716);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(190, 41);
-            this.materialButton1.TabIndex = 1;
-            this.materialButton1.Text = "Complete Order";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
+            this.completeOrder.AutoSize = false;
+            this.completeOrder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.completeOrder.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.completeOrder.Depth = 0;
+            this.completeOrder.HighEmphasis = true;
+            this.completeOrder.Icon = null;
+            this.completeOrder.Location = new System.Drawing.Point(359, 716);
+            this.completeOrder.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.completeOrder.MouseState = MaterialSkin.MouseState.HOVER;
+            this.completeOrder.Name = "completeOrder";
+            this.completeOrder.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.completeOrder.Size = new System.Drawing.Size(190, 41);
+            this.completeOrder.TabIndex = 1;
+            this.completeOrder.Text = "Complete Order";
+            this.completeOrder.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.completeOrder.UseAccentColor = false;
+            this.completeOrder.UseVisualStyleBackColor = true;
+            this.completeOrder.Click += new System.EventHandler(this.completeOrder_Click);
             // 
             // receiptDgv
             // 
             this.receiptDgv.AllowUserToAddRows = false;
             this.receiptDgv.AllowUserToDeleteRows = false;
-            this.receiptDgv.AllowUserToResizeColumns = false;
             this.receiptDgv.AllowUserToResizeRows = false;
             this.receiptDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.receiptDgv.ColumnHeadersHeight = 45;
@@ -822,12 +822,12 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cashierDgv)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.servicePanel.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.productPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.servicePanel.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.receiptDgv)).EndInit();
@@ -857,7 +857,7 @@
         private System.Windows.Forms.DataGridView cashierDgv;
         private MaterialSkin.Controls.MaterialCard productPanel;
         private System.Windows.Forms.Label label2;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton completeOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
@@ -883,7 +883,7 @@
         public MaterialSkin.Controls.MaterialTextBox2 petType;
         public System.Windows.Forms.Label cashierName;
         public System.Windows.Forms.Label ID;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label totalPrice;
         public System.Windows.Forms.DataGridView receiptDgv;
         private System.Windows.Forms.Timer timer1;
     }

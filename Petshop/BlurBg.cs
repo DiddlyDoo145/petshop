@@ -14,7 +14,8 @@ namespace Petshop
     public partial class BlurBg : Form
     {
         public static BlurBg instance;
-        public bool pickCashier, employeeManage;
+        public bool pickCashier, employeeManage, checkout;
+        public string price;
         public BlurBg()
         {
             InitializeComponent();
@@ -47,6 +48,10 @@ namespace Petshop
             {
                 timer1.Start();
             }
+            else if(checkout == true)
+            {
+                timer3.Start();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -70,15 +75,19 @@ namespace Petshop
             }
         }
 
-        private void BlurBg_Click(object sender, EventArgs e)
+        public void BlurBg_Click(object sender, EventArgs e)
         {
-            if(pickCashier == true)
+            if (pickCashier == true)
             {
                 timer2.Start();
             }
-            else if(employeeManage == true)
+            else if (employeeManage == true)
             {
                 timer1.Start();
+            }
+            else if (checkout == true)
+            {
+                timer3.Start();
             }
         }
 
@@ -100,6 +109,31 @@ namespace Petshop
                 assignCashier aC = new assignCashier();
                 aC.StartPosition = FormStartPosition.CenterScreen;
                 aC.Show();
+            }
+        }
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            bool totalCheckout = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name == "checkoutTotal")
+                {
+                    BlurBg bbg = new BlurBg();
+                    bbg.BringToFront();
+                    totalCheckout = true;
+                    f.StartPosition = FormStartPosition.CenterScreen;
+                    f.BringToFront();
+                    break;
+                }
+            }
+            if (totalCheckout == false)
+            {
+                BlurBg bbg = new BlurBg();
+                bbg.BringToFront();
+                checkoutTotal cT = new checkoutTotal();
+                cT.StartPosition = FormStartPosition.CenterScreen;
+                cT.Show();
+                checkoutTotal.instance.orderTotal.Text = price;
             }
         }
     }

@@ -58,13 +58,13 @@
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.label4 = new System.Windows.Forms.Label();
             this.productUnit = new System.Windows.Forms.ComboBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pPrice = new MaterialSkin.Controls.MaterialTextBox2();
             this.newStocks = new MaterialSkin.Controls.MaterialTextBox2();
             this.pStock = new MaterialSkin.Controls.MaterialTextBox2();
-            this.label1 = new System.Windows.Forms.Label();
             this.pName = new MaterialSkin.Controls.MaterialTextBox2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -84,7 +84,6 @@
             // 
             this.ProductTable.AllowUserToAddRows = false;
             this.ProductTable.AllowUserToDeleteRows = false;
-            this.ProductTable.AllowUserToResizeColumns = false;
             this.ProductTable.AllowUserToResizeRows = false;
             this.ProductTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductTable.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -380,18 +379,6 @@
             this.productUnit.TabIndex = 64;
             this.productUnit.SelectedIndexChanged += new System.EventHandler(this.productUnit_SelectedIndexChanged);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(545, 14);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(92, 21);
-            this.linkLabel1.TabIndex = 63;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Click here";
-            this.linkLabel1.Click += new System.EventHandler(this.Reset_Click);
-            // 
             // materialCard2
             // 
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -421,6 +408,31 @@
             this.label3.Size = new System.Drawing.Size(275, 38);
             this.label3.TabIndex = 40;
             this.label3.Text = "Product Information";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(545, 14);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(92, 21);
+            this.linkLabel1.TabIndex = 63;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Click here";
+            this.linkLabel1.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(405, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 21);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "New Product?";
             // 
             // pPrice
             // 
@@ -514,19 +526,6 @@
             this.pStock.TrailingIcon = null;
             this.pStock.UseSystemPasswordChar = false;
             this.pStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pStock_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(405, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 21);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "New Product?";
             // 
             // pName
             // 

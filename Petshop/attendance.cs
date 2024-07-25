@@ -96,7 +96,7 @@ namespace Petshop
                 if (insert > 0)
                 {
                     getSalary();
-                    MessageBox.Show("Employee attendance set to present");
+                    MessageBox.Show("Employee attendance set to present", "Success", MessageBoxButtons.OK);
                 }
             }
         }
@@ -104,56 +104,73 @@ namespace Petshop
         private void timeOut_Click(object sender, EventArgs e)
         {
             string status = "Timed out";
+            string status1 = "Present";
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd3 = new MySqlCommand("SELECT * FROM attendance WHERE employee_id = @id AND attendance_date = @date AND attendance_status = @status", dbConnect.myconnect);
-            cmd3.Parameters.AddWithValue("@id", empId.Text);
-            cmd3.Parameters.AddWithValue("@date", _Date.ToString("MM-dd-yyyy"));
-            cmd3.Parameters.AddWithValue("@status", status);
-            myReader1 = cmd3.ExecuteReader();
+            MySqlCommand cmd4 = new MySqlCommand("SELECT * FROM attendance WHERE employee_id = @id AND attendance_date = @date AND attendance_status = @status", dbConnect.myconnect);
+            cmd4.Parameters.AddWithValue("@id", empId.Text);
+            cmd4.Parameters.AddWithValue("@date", _Date.ToString("MM-dd-yyyy"));
+            cmd4.Parameters.AddWithValue("@status", status1);
+            myReader1 = cmd4.ExecuteReader();
             if (myReader1.Read())
             {
-                MessageBox.Show("Employee have already been timed out for today", "Notice!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dbConnect.CloseConnection();
+                dbConnect = new Conclass();
+                dbConnect.OpenConnection();
+                MySqlCommand cmd3 = new MySqlCommand("SELECT * FROM attendance WHERE employee_id = @id AND attendance_date = @date AND attendance_status = @status", dbConnect.myconnect);
+                cmd3.Parameters.AddWithValue("@id", empId.Text);
+                cmd3.Parameters.AddWithValue("@date", _Date.ToString("MM-dd-yyyy"));
+                cmd3.Parameters.AddWithValue("@status", status);
+                myReader1 = cmd3.ExecuteReader();
+                if (myReader1.Read())
+                {
+                    MessageBox.Show("Employee have already been timed out for today.", "Notice!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DateTime timeOfDay = DateTime.Now;
+                    TimeSpan offWork = new TimeSpan(timeOfDay.Hour, timeOfDay.Minute, 0);
+                    DateTime timeOfClose = DateTime.Today.AddHours(17);
+                    TimeSpan closing = new TimeSpan(timeOfClose.Hour, timeOfClose.Minute, 0);
+                    TimeSpan difference = offWork - closing;
+                    int OTHour = difference.Hours;
+                    int OTMin = difference.Minutes;
+                    dbConnect = new Conclass();
+                    dbConnect.OpenConnection();
+                    MySqlCommand cmd = new MySqlCommand("SELECT overtime_rate.otRate_pay, overtime_rate.otRate_id FROM overtime_rate RIGHT JOIN position ON overtime_rate.position_id = position.position_id RIGHT JOIN employee ON position.position_id = employee.position_id WHERE employee.employee_id = @id", dbConnect.myconnect);
+                    cmd.Parameters.AddWithValue("@id", empId.Text);
+                    myReader = cmd.ExecuteReader();
+                    if (myReader.Read())
+                    {
+                        OTRate = myReader["otRate_pay"].ToString();
+                        rateID = myReader["otRate_id"].ToString();
+                    }
+                    dbConnect.CloseConnection();
+                    if (OTMin >= 45)
+                    {
+                        OTHour++;
+                    }
+                    addOThrs = OTHour.ToString();
+                    getOThours();
+                    dbConnect.CloseConnection();
+                    dbConnect = new Conclass();
+                    dbConnect.OpenConnection();
+                    MySqlCommand cmd1 = new MySqlCommand("UPDATE attendance SET attendance_status = @stat WHERE employee_id = @empid AND attendance_date = @date", dbConnect.myconnect);
+                    cmd1.Parameters.AddWithValue("@empid", empId.Text);
+                    cmd1.Parameters.AddWithValue("@date", _Date.ToString("MM-dd-yyyy"));
+                    cmd1.Parameters.AddWithValue("@stat", status);
+                    int update = cmd1.ExecuteNonQuery();
+                    if (update > 0)
+                    {
+                        MessageBox.Show("Employee timed out", "Success", MessageBoxButtons.OK);
+                    }
+                }
             }
             else
             {
-                DateTime timeOfDay = DateTime.Now;
-                TimeSpan offWork = new TimeSpan(timeOfDay.Hour, timeOfDay.Minute, 0);
-                DateTime timeOfClose = DateTime.Today.AddHours(17);
-                TimeSpan closing = new TimeSpan(timeOfClose.Hour, timeOfClose.Minute, 0);
-                TimeSpan difference = offWork - closing;
-                int OTHour = difference.Hours;
-                int OTMin = difference.Minutes;
-                dbConnect = new Conclass();
-                dbConnect.OpenConnection();
-                MySqlCommand cmd = new MySqlCommand("SELECT overtime_rate.otRate_pay, overtime_rate.otRate_id FROM overtime_rate RIGHT JOIN position ON overtime_rate.position_id = position.position_id RIGHT JOIN employee ON position.position_id = employee.position_id WHERE employee.employee_id = @id", dbConnect.myconnect);
-                cmd.Parameters.AddWithValue("@id", empId.Text);
-                myReader = cmd.ExecuteReader();
-                if (myReader.Read())
-                {
-                    OTRate = myReader["otRate_pay"].ToString();
-                    rateID = myReader["otRate_id"].ToString();
-                }
-                dbConnect.CloseConnection();
-                if (OTMin >= 45)
-                {
-                    OTHour++;
-                }
-                addOThrs = OTHour.ToString();
-                getOThours();
-                dbConnect.CloseConnection();
-                dbConnect = new Conclass();
-                dbConnect.OpenConnection();
-                MySqlCommand cmd1 = new MySqlCommand("UPDATE attendance SET attendance_status = @stat WHERE employee_id = @empid AND attendance_date = @date", dbConnect.myconnect);
-                cmd1.Parameters.AddWithValue("@empid", empId.Text);
-                cmd1.Parameters.AddWithValue("@date", _Date.ToString("MM-dd-yyyy"));
-                cmd1.Parameters.AddWithValue("@stat", status);
-                int update = cmd1.ExecuteNonQuery();
-                if (update > 0)
-                {
-                    MessageBox.Show("Employee timed out", "Timed out");
-                }
+                MessageBox.Show("Employee hasn't timed in for today.", "Notice!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+           
         }
 
         #endregion
@@ -196,7 +213,7 @@ namespace Petshop
         {
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd1 = new MySqlCommand("INSERT INTO payroll VALUES('', @newEmp, @ot, @newDate, '0')", dbConnect.myconnect);
+            MySqlCommand cmd1 = new MySqlCommand("INSERT INTO payroll VALUES('', @newEmp, @ot, '0', @newDate)", dbConnect.myconnect);
             cmd1.Parameters.AddWithValue("@ot", OTid);
             cmd1.Parameters.AddWithValue("@newEmp", empId.Text);
             cmd1.Parameters.AddWithValue("@newDate", _Date.ToString("MM-yyyy"));
@@ -255,7 +272,7 @@ namespace Petshop
             DateTime monthyear = DateTime.Now;
             dbConnect = new Conclass();
             dbConnect.OpenConnection();
-            MySqlCommand cmd1 = new MySqlCommand("INSERT INTO overtime VALUES('', @rate, @id, '0', @date, '0')", dbConnect.myconnect);
+            MySqlCommand cmd1 = new MySqlCommand("INSERT INTO overtime VALUES('', @rate, @id, '0', '0', @date)", dbConnect.myconnect);
             cmd1.Parameters.AddWithValue("@rate", rateID);
             cmd1.Parameters.AddWithValue("@id", empId.Text);
             cmd1.Parameters.AddWithValue("@date", monthyear.ToString("MM-yyyy"));
